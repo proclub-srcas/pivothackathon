@@ -26,12 +26,12 @@ async function StatsSection() {
   ]
 
   return (
-    <section className="relative h-[80vh] max-h-[90vh] w-full overflow-x-visible bg-black">
+    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-x-visible bg-black">
       <div className="w-full h-32 absolute top-0 z-10">
         <Image
           src={"/stats-upper.svg"}
           alt="glass design"
-          className="w-full -mt-81.25"
+          className="w-full -mt-[25%] "
           width={100}
           height={100}
         />
@@ -41,13 +41,13 @@ async function StatsSection() {
         <Image
           src={"/stats-bg.svg"}
           alt="glass design"
-          className="w-full -mt-81.25"
+          className="w-full h-full object-cover"
           width={100}
           height={100}
         />
       </div>
 
-      <div className="w-full h-32 absolute bottom-0 z-10">
+      <div className="w-full h-32 absolute bottom-0 z-10 -mb-24 md:-mb-16 lg:-mb-6 xl:mb-0">
         <Image
           src={"/stats-bottom.svg"}
           alt="glass design"
@@ -57,31 +57,37 @@ async function StatsSection() {
         />
       </div>
 
-      <div className="size-full flex justify-center items-center gap-6">
-        <Image
-          src={"/stats-registrations.svg"}
-          alt="glass design"
-          width={300}
-          height={300}
-        />
-        <Image
-          src={"/stats-participants.svg"}
-          alt="glass design"
-          width={300}
-          height={300}
-        />{" "}
-        <Image
-          src={"/stats-volunteers.svg"}
-          alt="glass design"
-          width={300}
-          height={300}
-        />{" "}
-        <Image
-          src={"/stats-projects.svg"}
-          alt="glass design"
-          width={300}
-          height={300}
-        />
+      <div className="size-full flex justify-center items-center px-4 py-8 md:py-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl">
+          <Image
+            src={"/stats-registrations.svg"}
+            alt="glass design"
+            className="w-full h-auto max-w-[150px] md:max-w-50 xl:max-w-[300px] mx-auto"
+            width={300}
+            height={300}
+          />
+          <Image
+            src={"/stats-participants.svg"}
+            alt="glass design"
+            className="w-full h-auto max-w-[150px] md:max-w-50 xl:max-w-[300px] mx-auto"
+            width={300}
+            height={300}
+          />
+          <Image
+            src={"/stats-volunteers.svg"}
+            alt="glass design"
+            className="w-full h-auto max-w-[150px] md:max-w-[200px] xl:max-w-[300px] mx-auto"
+            width={300}
+            height={300}
+          />
+          <Image
+            src={"/stats-projects.svg"}
+            alt="glass design"
+            className="w-full h-auto max-w-[150px] md:max-w-[200px] xl:max-w-[300px] mx-auto"
+            width={300}
+            height={300}
+          />
+        </div>
       </div>
     </section>
   )
