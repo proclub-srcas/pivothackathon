@@ -22,7 +22,7 @@ async function StatsSection() {
       label: "Projects",
       description: "Innovative submissions from various domains.",
     },
-  ]
+  ];
 
   return (
     <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-visible bg-black mt-0">
@@ -46,15 +46,7 @@ async function StatsSection() {
         />
       </div>
 
-      <div className="w-full h-32 absolute bottom-0 z-10 -mb-24 md:-mb-16 lg:-mb-6 xl:mb-0">
-        <Image
-          src={"/stats-bottom.svg"}
-          alt="glass design"
-          className="w-full"
-          width={100}
-          height={100}
-        />
-      </div>
+      
 
       <div className="size-full flex justify-center items-center px-4 py-8 md:py-0">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl">
@@ -89,7 +81,7 @@ async function StatsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default StatsSection
+export default StatsSection;
