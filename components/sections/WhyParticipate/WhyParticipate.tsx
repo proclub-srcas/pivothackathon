@@ -29,9 +29,7 @@ export default function WhyParticipate() {
   });
 
   return (
-    <div className="relative w-full z-20 flex m-0 flex-col" ref={containerRef} style={{
-      height:"900px"
-    }}>
+    <div className="relative w-full z-20 flex m-0 flex-col mx-sm:h-[600px]" ref={containerRef}>
       <div className="relative w-full h-32 bottom-52 -mb-100 z-20 max-sm:mt-50 max-sm:-mb-78 max-sm:z-1">
           <Image
             src={"/stats-bottom.svg"}
@@ -43,7 +41,7 @@ export default function WhyParticipate() {
           <Image
             src={scrollDown}
             alt="scroll down"
-            className="absolute left-1/2 top-4 animate-bounce max-sm:w-[25px] max-sm:h-[28px]"
+            className="absolute left-1/2 top-30 animate-bounce max-sm:w-[25px] max-sm:h-[28px]  max-sm:top-4"
           />
       </div>
       <div 
