@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Kanit, Poppins } from "next/font/google";
 import "./globals.css";
+import GlassNavBar from "@/components/navbar";
+import { ViewTransitions } from 'next-view-transitions'
 
-export const poppins = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
@@ -35,12 +37,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} antialiased overflow-x-hidden`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${poppins.className} antialiased overflow-x-hidden bg-black`}
+        >
+          <GlassNavBar />
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

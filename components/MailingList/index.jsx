@@ -1,4 +1,3 @@
-import { poppins } from "@/app/layout";
 import Image from "next/image";
 
 const MailingList = () => {
@@ -75,7 +74,7 @@ const MailingList = () => {
                       <div className="mr-3 flex-shrink-0">
                         <Image src="/MailingList/bullet_p.svg" width={20} height={20} alt="bullet" className="w-4 h-4 md:w-5 md:h-5" />
                       </div>
-                      <span className={`text-[#6b21a8] text-base md:text-xl leading-tight ${poppins.className} ${i === 2 ? "font-black" : "font-light"}`}>
+                      <span className={`text-[#6b21a8] text-base md:text-xl leading-tight font-poppins ${i === 2 ? "font-black" : "font-light"}`}>
                         {text}
                       </span>
                     </li>

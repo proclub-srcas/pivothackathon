@@ -4,7 +4,6 @@ import Link from "next/link";
 const Hero = () => {
 	return (
 		<div className="h-screen w-screen bg-linear-to-tr flex items-center justify-center text-white font-sans overflow-hidden">
-
 			<div className="absolute sm:w-30 w-20 top-0 sm:right-11 right-6 z-20 h-40">
 				<Image
 					src="/mlh-badge.svg"
@@ -35,7 +34,7 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className={`absolute sm:top-30 top-5 sm:left-0 -left-2 z-20 h-40 font-kanit sm:scale-80 scale-70 lg:scale-100 md:scale-90 lg:left-10 md:left-5 bg-blue-700/700`}>
+			<div className={`absolute sm:top-35 top-5 sm:left-0 -left-2 z-20 h-40 font-kanit sm:scale-80 scale-70 lg:scale-100 md:scale-90 lg:left-15 md:left-5 bg-blue-700/700`}>
 				<div className="bg-blue-400/400 left-0 w-full flex sm:hidden items-center justify-left gap-5 pb-6">
 					<Link href="https://www.linkedin.com/company/bitbyte-tpc/posts/?feedView=all" className="relative w-7 h-7">
 						<Image
@@ -82,7 +81,7 @@ const Hero = () => {
 				</p>
 			</div>
 
-			<div className="absolute w-full h-115 sm:top-[20vh] top-[28vh] z-20">
+			<div className="absolute w-full h-135 sm:top-[20vh] top-[28vh] z-20">
 				<Image
 					src="/hb4_logo.svg"
 					alt="HackByte 4 logo"
