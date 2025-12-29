@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MailingList = () => {
   return (
-    <div className="w-full min-h-screen relative bg-[linear-gradient(206deg,_#4E0088_13.13%,_#180029_86.33%)] overflow-hidden flex flex-col items-center justify-center py-20">
+    <div className="w-full min-h-screen relative bg-[linear-gradient(206deg,_#4E0088_13.13%,_#180029_86.33%)] overflow-hidden flex flex-col items-center justify-center py-20 z-20">
       <div className="absolute top-[-50px] md:top-[-180px] left-[-20%] md:left-[-40px] w-[80vw] md:w-[620px] aspect-square z-0 opacity-60 md:opacity-100 pointer-events-none">
         <Image
           src="/MailingList/lightning_left.svg"
