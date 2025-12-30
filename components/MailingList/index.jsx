@@ -21,8 +21,8 @@ const MailingList = () => {
         />
       </div>
 
-      <div className="absolute top-0 md:top-[-90px] left-[5%] md:left-[100px] z-10 pt-10 md:pt-16 pointer-events-none">
-        <div className="relative w-[120px] h-[120px] md:w-[210px] md:h-[210px] rotate-[-147]">
+      <div className="absolute top-0 md:top-[-90px] left-[5%] md:left-[100px] z-10 pt-10 md:pt-23 pointer-events-none">
+        <div className="relative w-[120px] h-[120px] md:w-[220px] md:h-[220px] rotate-[-147]">
           <Image
             src="/MailingList/siren.svg"
             alt="soundhorn-svg"
@@ -32,7 +32,7 @@ const MailingList = () => {
         </div>
       </div>
 
-      <div className="absolute top-[100px] md:top-[50px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[93px] z-20 w-[90%] md:w-[800px] h-[150px] md:h-[240px] pointer-events-none">
+      <div className="absolute top-[100px] md:top-[80px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[93px] z-20 w-[90%] md:w-[800px] h-[150px] md:h-[240px] pointer-events-none">
         <Image
           src="/MailingList/join_newsletter.svg"
           alt="Join Our Newsletter"

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Hero = () => {
 	return (
 		<div className="h-screen w-screen bg-linear-to-tr flex items-center justify-center text-white font-sans overflow-hidden">
-			<div className="absolute sm:w-30 w-20 top-0 sm:right-11 right-6 z-20 h-40">
+			<div className="absolute sm:w-33 w-20 top-0 sm:right-18 right-6 z-20 h-80">
 				<Image
 					src="/mlh-badge.svg"
 					alt="MLH badge"
@@ -24,7 +24,7 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className="absolute w-20 -top-6 right-45 z-20 h-40 sm:block hidden">
+			{/* <div className="absolute w-20 -top-6 right-45 z-20 h-40 sm:block hidden">
 				<Image
 					src="/orange_flare.svg"
 					alt="Orange flare decoration"
@@ -32,7 +32,7 @@ const Hero = () => {
 					className="object-contain"
 					priority
 				/>
-			</div>
+			</div> */}
 
 			<div className={`absolute sm:top-35 top-5 sm:left-0 -left-2 z-20 h-40 font-kanit sm:scale-80 scale-70 lg:scale-100 md:scale-90 lg:left-15 md:left-5 bg-blue-700/700`}>
 				<div className="bg-blue-400/400 left-0 w-full flex sm:hidden items-center justify-left gap-5 pb-6">
