@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Kanit, Poppins } from "next/font/google";
 import "./globals.css";
 import GlassNavBar from "@/components/navbar";
+import {Footer} from "@/components/footer";
 import { ViewTransitions } from 'next-view-transitions'
 
 const poppins = Poppins({
@@ -44,6 +45,7 @@ export default function RootLayout({
         >
           <GlassNavBar />
           {children}
+          <Footer />
         </body>
       </html>
     </ViewTransitions>
