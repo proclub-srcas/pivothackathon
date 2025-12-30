@@ -49,7 +49,7 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="h-[200px] w-full relative z-0">
+      <div className="h-[100px] lg:h-[200px] w-full relative z-0">
         <div className="relative w-full h-[150%]">
           <Image
             src="/Gallery/White Streaks.svg"
@@ -61,8 +61,8 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="h-[450px] w-full bg-gradient-to-r from-[#8A00DA] to-[#BA45E8] border-y-4 border-white z-20 -translate-y-6 relative flex items-center justify-center">
-        <div className="absolute top-[-140px] left-1/2 -translate-x-1/2 w-full h-48">
+      <div className="h-[350px] lg:h-[450px] w-full bg-gradient-to-r from-[#8A00DA] to-[#BA45E8] border-y-4 border-white z-20 -translate-y-6 relative flex items-center justify-center">
+        <div className="absolute lg:top-[-140px] top-[-120px] left-1/2 -translate-x-1/2 w-full h-48">
           <Image
             src="/Gallery/our committee.svg"
             alt="Footer Ornament"
@@ -80,7 +80,7 @@ export default function Gallery() {
             priority
           />
         </div>
-        <div className="h-[300px] w-full max-w-2xl border-4 border-white rounded-3xl bg-black relative overflow-hidden">
+        <div className="h-[200px] lg:h-[350px] w-full max-w-[90%] lg:max-w-2xl border-4 border-white rounded-3xl bg-black relative overflow-hidden">
           <Image
             src="/Gallery/committee.png"
             alt="Our Committee Photo"
