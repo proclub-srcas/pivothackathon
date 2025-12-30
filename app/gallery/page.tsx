@@ -80,7 +80,15 @@ export default function Gallery() {
             priority
           />
         </div>
-        <div className="h-[300px] w-full max-w-2xl border-4 border-white rounded-3xl bg-black"></div>
+        <div className="h-[300px] w-full max-w-2xl border-4 border-white rounded-3xl bg-black relative overflow-hidden">
+          <Image
+            src="/Gallery/committee.png"
+            alt="Our Committee Photo"
+            fill
+            className="w-full object-cover"
+            priority
+          />
+        </div>
       </div>
     </section>
   )
