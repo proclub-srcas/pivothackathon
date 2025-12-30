@@ -1,15 +1,79 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="w-full h-20 mt-6 flex items-center justify-end px-6">
-      <Image
-        src="/tpc_and_iiit_logo_colored.svg"
-        alt="footer logo"
-        width={220}
-        height={60}
-        className="h-full w-auto object-contain"
-      />
+    <footer className="relative w-full flex flex-col" style={{
+      backgroundImage: 'url(/blackbgFooter.png)',
+      backgroundSize: 'cover',
+    }}>
+      {/*socials tape*/}
+      <div className=" relative flex flex-row w-full justify-between items-center h-[216px] bg-[#62009b] border-white border-t-12 border-b-12 px-8 max-sm:h-[230px] max-sm:border-b-3 max-sm:border-t-3 max-sm:items-start max-sm:px-4">
+        <Image src="/HbSmallLogo.svg" alt="Hackbyte logo" width={500} height={300} className="z-20 relative left-40 max-sm:w-[200px] max-sm:h-[120px] max-sm:-left-5 max-sm:-top-12 "/>
+        <div className="flex flex-col items-end gap-6 p-4 max-sm:pr-0 max-sm:pl-0 max-sm:w-full">
+          {/*pages*/}
+          <div>
+            <ul className=" relative flex flex-row gap-6 justify-around text-white font-bold font-gotham text-lg 
+                            max-sm:text-xs 
+                            max-sm:grid
+                            max-sm:grid-cols-4
+                            max-sm:gap-x-2
+                            max-sm:w-full
+                            max-sm:gap-y-2
+                            max-sm:pr-1\
+                            max-sm:justify-center 
+                            max-sm:left-0"
+            >
+              <li className="text-center"><Link href="/">Home</Link></li>
+              <li className="text-center"><Link href="/contact">Contact</Link></li>  
+              <li className="text-center"><Link href="/faqs">FAQs</Link></li>
+              <li className="text-center"><Link href="/humans">Humans</Link></li>
+              <li className="text-center"><Link href="/schedule">Schedule</Link></li>
+              <li className="text-center" ><Link href="/prizes">Prizes</Link></li>
+              <li className="text-center"><Link href="/partners">Partners</Link></li>
+              <li className="text-center"><Link href="/gallery">Gallery</Link></li>
+            </ul>
+          </div>
+          {/*socials*/}
+          <div className="flex flex-row gap-10 justify-between items-center max-sm:flex-col max-sm:gap-4 max-sm:w-full max-sm:absolute max-sm:left-2 max-sm:top-20">
+            <p className="text-white text-6xl font-extrabold font-kanit max-sm:text-3xl max-sm:block">Follow our socials</p>
+            <ul className="flex flex-row gap-6 justify-between items-center">
+              <li>
+                <Link href="https://www.linkedin.com/company/bitbyte-tpc/posts/?feedView=all">
+                  <Image src="/linkdin.svg" alt="linkedIn" width={38} height={38} className="max-sm:w-[20px] max-sm:h-[px]" />
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.instagram.com/hackbyte.tpc/?hl=en">
+                  <Image src="/insta.svg" alt="instagram" width={38} height={38} className="max-sm:w-[20px] max-sm:h-[px]"/>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://x.com/HackbyteTPC">
+                  <Image src="/x.svg" alt="x" width={38} height={38} className="max-sm:w-[20px] max-sm:h-[px]"/>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://discord.com/invite/6RDuTPnAME">
+                  <Image src="/discord.svg" alt="discord" width={38} height={38} className="max-sm:w-[20px] max-sm:h-[px]"/>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          {/*copyright*/}
+          <div>
+            <p className="text-[#D9D9D9] font-bold opacity-51 text-lg font-gotham max-sm:top-45 max-sm:absolute max-sm:bottom-0 max-sm:text-sm max-sm:block max-sm:w-full max-sm:left-0 text-center">@2025 Hackbyte, All rights reserved</p>
+          </div>
+        </div>
+      </div>
+      {/*Broken glass*/}
+      <div>
+        <Image src="BrokenGlassFooter.svg" alt="broken glass" className="inline-block w-full" width={1298} height={138}/>
+      </div>
+      {/*patch the reality*/}
+      <div>
+        <Image src="/PatchTheReality-footer.svg" alt="patch the reality" width={764} height={100} className="mx-auto mt-25 mb-10 max-sm:mt-10 max-sm:w-[360px]"/>
+      </div>
     </footer>
   )
 }
