@@ -5,6 +5,7 @@ import {
   TwitterLogoIcon,
   GitHubLogoIcon,
 } from "@radix-ui/react-icons";
+import beLogo from "@/public/behanceLogo.svg"
 
 interface HumanCardProps {
   name: string;
@@ -13,6 +14,7 @@ interface HumanCardProps {
   linkedin?: string;
   twitter?: string;
   github?: string;
+  behance?: string;
 }
 
 export default function HumanCard({
@@ -22,6 +24,7 @@ export default function HumanCard({
   linkedin,
   twitter,
   github,
+  behance
 }: HumanCardProps) {
   return (
     <div className="w-full max-w-[300px] flex flex-col gap-3">
@@ -62,6 +65,11 @@ export default function HumanCard({
           {github && (
             <Link href={github} target="_blank">
               <GitHubLogoIcon className="w-[1em] h-[1em]" />
+            </Link>
+          )}
+          {behance && (
+            <Link href={behance} target="_blank">
+              <Image src={beLogo} alt="behance" className="w-[1em] h-[1em]" />
             </Link>
           )}
         </div>

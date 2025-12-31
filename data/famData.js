@@ -1,156 +1,140 @@
-import Aditya from "@/public/Humans/family/aditya.webp";
-import Aish from "@/public/Humans/family/aish.webp";
-import Aman from "@/public/Humans/family/aman.webp";
-import Aryan from "@/public/Humans/family/aryan.webp";
-import Bhavik from "@/public/Humans/family/bhavik.webp";
-import Deepanshu from "@/public/Humans/family/deepanshu.webp";
-import Divyansh2 from "@/public/Humans/family/divyansh.webp";
-import Manoj from "@/public/Humans/family/manoj.webp";
-import Nitya from "@/public/Humans/family/nitya.webp";
-import Prajwal1 from "@/public/Humans/family/prajjwal.webp";
-import Prajwal2 from "@/public/Humans/family/prajwal.webp";
-import Priyansh from "@/public/Humans/family/priyansh.webp";
-import Sambhav from "@/public/Humans/family/sambhav.webp";
-import Samyak from "@/public/Humans/family/samyak.webp";
-import Tushir from "@/public/Humans/family/tushir.webp";
-import Vansh from "@/public/Humans/family/vansh.webp";
-import Varun from "@/public/Humans/family/varun.webp";
+import priyansh from "@/public/Humans/family/priyansh.webp";
+import bhavik from "@/public/Humans/family/bhavik.webp";
+import samyak from "@/public/Humans/family/samyak.webp";
+import divyansh from "@/public/Humans/family/divyansh.webp";
+import vansh from "@/public/Humans/family/vansh.webp";
+import aditya from "@/public/Humans/family/aditya.webp";
+import varun from "@/public/Humans/family/varun.webp";
+import deepanshu from "@/public/Humans/family/deepanshu.webp";
+import sambhav from "@/public/Humans/family/sambhav.webp";
+import tushir from "@/public/Humans/family/tushir.webp";
+import aman from "@/public/Humans/family/aman.webp";
+import aish from "@/public/Humans/family/aish.webp";
+import prajjwal from "@/public/Humans/family/prajjwal.webp";
+import aryan from "@/public/Humans/family/aryan.webp";
+import prajwal from "@/public/Humans/family/prajwal.webp";
+import manoj from "@/public/Humans/family/manoj.webp";
+import nitya from "@/public/Humans/family/nitya.webp";
 
 export const famm = [
   {
-    name: "Aditya",
-    role: "family",
-    image: Aditya,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Bhavik Agrawal",
+    image: bhavik,
+    linkedin: "https://www.linkedin.com/in/bhavikagarwal2001/",
+    twitter: "https://twitter.com/BhavikAgarwal13",
+    github: "https://github.com/Bhavik-ag",
   },
   {
-    name: "Aish",
-    role: "family",
-    image: Aish,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Samyak Bhargava",
+    image: samyak,
+    linkedin: "https://www.linkedin.com/in/sammybh6/",
+    twitter: "#",
+    github: "https://github.com/sammybh6",
   },
   {
-    name: "Aman",
-    role: "family",
-    image: Aman,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Priyansh Mehta",
+    image: priyansh,
+    linkedin: "https://www.linkedin.com/in/Priyansh61/",
+    twitter: "https://twitter.com/Priyansh_61",
+    github: "https://github.com/Priyansh61",
   },
   {
-    name: "Aryan",
-    role: "family",
-    image: Aryan,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Divyansh Tripathi",
+    image: divyansh,
+    linkedin: "https://www.linkedin.com/in/tdivyansh/",
+    twitter: "https://twitter.com/theoden42",
+    github: "https://github.com/theoden42",
   },
   {
-    name: "Bhavik",
-    role: "family",
-    image: Bhavik,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Vansh Mittal",
+    image: vansh,
+    linkedin: "https://www.linkedin.com/in/vansh-mittal-21869922a/",
+    twitter: "https://twitter.com/mittalvansh_11",
+    github: "https://github.com/mittalvansh",
   },
   {
-    name: "Deepanshu",
-    role: "family",
-    image: Deepanshu,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Aditya Raj",
+    image: aditya,
+    linkedin: "https://www.linkedin.com/in/contactadityaraj/",
+    twitter: "#",
+    github: "#",
+    behance: "https://www.behance.net/adi_ux",
   },
   {
-    name: "Divyansh",
-    role: "family",
-    image: Divyansh2,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Varun Singh",
+    image: varun,
+    linkedin: "https://www.linkedin.com/in/varun-singh-018242224/",
+    twitter: "#",
+    github: "https://github.com/varun7singh",
   },
   {
-    name: "Manoj",
-    role: "family",
-    image: Manoj,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Deepanshu Singh",
+    image: deepanshu,
+    linkedin: "https://www.linkedin.com/in/sdeepanshu17/",
+    twitter: "https://twitter.com/sdeepanshu17",
+    github: "#",
   },
   {
-    name: "Nitya",
-    role: "family",
-    image: Nitya,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Sambhav Gupta",
+    image: sambhav,
+    linkedin: "https://www.linkedin.com/in/sambhavgupta0705",
+    twitter: "https://x.com/sambhavgupta75",
+    github: "https://github.com/sambhavgupta0705",
   },
   {
-    name: "Prajjwal",
-    role: "family",
-    image: Prajwal1,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Tushir Sahu",
+    image: tushir,
+    linkedin: "https://www.linkedin.com/in/tushir-sahu-b95549205/",
+    twitter: "https://twitter.com/Tushir_Sahu",
+    github: "https://github.com/TushirSahu",
   },
   {
-    name: "Prajwal",
-    role: "family",
-    image: Prajwal2,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Aman Srivastava",
+    image: aman,
+    linkedin: "https://www.linkedin.com/in/aman-srivastava-16726822a/",
+    twitter: "#",
+    github: "#",
   },
   {
-    name: "Priyansh",
-    role: "family",
-    image: Priyansh,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Aishwarya Saxena",
+    image: aish,
+    linkedin: "https://www.linkedin.com/in/aishwarya-saxena-05713618b/",
+    twitter: "#",
+    github: "#",
   },
   {
-    name: "Sambhav",
-    role: "family",
-    image: Sambhav,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Prajjwal Kapoor",
+    image: prajjwal,
+    linkedin: "https://www.linkedin.com/in/prajjwal-kapoor/",
+    twitter: "https://twitter.com/the_prajjwal",
+    github: "https://github.com/prajjwalkapoor",
   },
   {
-    name: "Samyak",
-    role: "family",
-    image: Samyak,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Aryan Pandey",
+    image: aryan,
+    linkedin: "https://linkedin.com/in/aryan1113",
+    twitter: "https://twitter.com/aisehiaryan",
+    github: "https://github.com/aryan1113",
   },
   {
-    name: "Tushir",
-    role: "family",
-    image: Tushir,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Prajwal Rayal",
+    image: prajwal,
+    linkedin: "http://linkedin.com/in/prajwal-rayal",
+    twitter: "https://twitter.com/rayalprajwal",
+    github: "https://github.com/PrajwalRayal",
   },
   {
-    name: "Vansh",
-    role: "family",
-    image: Vansh,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Manoj Panjwani",
+    image: manoj,
+    linkedin: "https://www.linkedin.com/in/manojpanjwani03/",
+    twitter: "#",
+    github: "#",
   },
   {
-    name: "Varun",
-    role: "family",
-    image: Varun,
-    linkedin: "https://linkedin.com/in/john",
-    twitter: "https://trustme.com",
-    github: "https://github.com/john",
+    name: "Nitya Tiwari",
+    image: nitya,
+    linkedin: "https://www.linkedin.com/in/nitya-tiwari-960797229/",
+    twitter: "https://twitter.com/nityatiwariii",
+    github: "#",
   },
 ];
