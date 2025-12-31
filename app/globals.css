@@ -1,51 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI",
-    Roboto, Arial, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family:
+        var(--font-geist-sans),
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
 }
 
 .font-kanit {
-  font-family: var(--font-kanit), var(--font-geist-sans), sans-serif;
+    font-family: var(--font-kanit), var(--font-geist-sans), sans-serif;
 }
 
 .text-stroke-brand-thick {
-  -webkit-text-stroke: 10px #62009B;
-  paint-order: stroke fill;
+    -webkit-text-stroke: 10px #62009b;
+    paint-order: stroke fill;
+}
+
+.text-stroke-number {
+    paint-order: stroke fill;
 }
 
 .text-stroke-white-thick {
-  -webkit-text-stroke: 10px #ffffff;
-  paint-order: stroke fill;
+    -webkit-text-stroke: 10px #ffffff;
+    paint-order: stroke fill;
 }
 
 .text-stroke-white-medium {
-  -webkit-text-stroke: 4px #ffffff;
-  paint-order: stroke fill;
+    -webkit-text-stroke: 4px #ffffff;
+    paint-order: stroke fill;
 }
 
 .text-stroke-white-thin {
-  -webkit-text-stroke: 2px #ffffff;
-  paint-order: stroke fill;
+    -webkit-text-stroke: 2px #ffffff;
+    paint-order: stroke fill;
 }
