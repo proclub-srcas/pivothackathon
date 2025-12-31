@@ -90,9 +90,7 @@ const MailingList = () => {
                           />
                       </div>
                       <span
-                        className={`text-[#6b21a8] text-[4vw] md:text-xl leading-tight ${
-                          poppins.className
-                        } ${i === 2 ? "font-[900]" : "font-[400]"}`}
+                        className={`text-[#6b21a8] text-[4vw] md:text-xl leading-tight font-poppins ${i === 2 ? "font-[900]" : "font-[400]"}`}
                       >
                         {text}
                       </span>
