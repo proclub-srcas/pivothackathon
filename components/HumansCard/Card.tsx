@@ -9,7 +9,7 @@ import beLogo from "@/public/behanceLogo.svg"
 
 interface HumanCardProps {
   name: string;
-  role: string;
+  role?: string;
   image: StaticImageData;
   linkedin?: string;
   twitter?: string;
@@ -37,13 +37,13 @@ export default function HumanCard({
         <Image src={image} alt={name} fill className="object-cover"/>
       </div>
       <div className="flex flex-col gap-[0.25em] items-start pl-1">
-        <p
+        {/* <p
           className="
             text-[#777777] font-Poppins text-sm sm:text-base font-semibold leading-[140%]
           "
         >
-          {role}
-        </p>
+          Organizer
+        </p> */}
         <p
           className="
             text-white font-Kanit text-xl sm:text-2xl font-semibold leading-[140%]
