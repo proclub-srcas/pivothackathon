@@ -34,16 +34,18 @@ export default function HumanCard({
   rounded-2xl
   bg-white
   overflow-hidden">
-        <Image src={image} alt={name} fill className="object-cover"/>
+        <Image src={image} alt={name} fill className="object-cover" />
       </div>
       <div className="flex flex-col gap-[0.25em] items-start pl-1">
-        {/* <p
-          className="
-            text-[#777777] font-Poppins text-sm sm:text-base font-semibold leading-[140%]
-          "
-        >
-          Organizer
-        </p> */}
+        {role && (
+          <p
+            className="
+              text-[#777777] font-Poppins text-sm sm:text-base font-semibold leading-[140%]
+            "
+          >
+            {role}
+          </p>
+        )}
         <p
           className="
             text-white font-Kanit text-xl sm:text-2xl font-semibold leading-[140%]
