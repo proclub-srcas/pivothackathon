@@ -9,14 +9,16 @@ import { ScrollingBackground } from "./ScrollingBackground";
 import bg from "./assets/bg.png";
 import whyParticipate from "./assets/why-paricipate.svg";
 import hb4 from "./assets/hb4.svg";
-import qm from "./assets/qm.svg";
 import collab from "./assets/collab.png";
+import shards from "./assets/stats-bottom.svg"
 import prizes from "./assets/prizes.png";
 import workshops from "./assets/workshops.png";
 import mentorship from "./assets/mentorship.png";
 import recruitment from "./assets/recruitment.png";
 import alert from "./assets/Alert.svg";
 import scrollDown from "./assets/scroll-down.svg";
+import crack from "./assets/crack.svg"
+import brokenNormal from "./assets/brokenNormal.svg"
 
 export default function WhyParticipate() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,23 +31,26 @@ export default function WhyParticipate() {
   });
 
   return (
-    <div className="relative w-full z-20 flex m-0 flex-col mx-sm:h-[600px]" ref={containerRef}>
-      <div className="relative w-full h-32 bottom-52 -mb-100 z-20 max-sm:mt-50 max-sm:-mb-78 max-sm:z-1">
+    <div className="w-full h-full z-10 gap-0 flex-col justify-between flex m-0 flex-col" ref={containerRef}>
+      <div className="w-full z-10 -mb-139 max-sm:-mb-20 max-sm:z-50">
           <Image
-            src={"/stats-bottom.svg"}
+            src={shards}
             alt="glass design"
-            className="w-full"
-            width={100}
-            height={100}
+            className="w-full z-50 max-sm:hidden"
+          />
+          <Image
+            src={brokenNormal}
+            alt="broken normal"
+            className="w-full z-50 hidden max-sm:inline-block"
           />
           <Image
             src={scrollDown}
             alt="scroll down"
-            className="absolute left-1/2 top-30 animate-bounce max-sm:w-[25px] max-sm:h-[28px]  max-sm:top-4"
+            className="relative mx-auto bottom-150 animate-bounce max-sm:w-[25px] max-sm:h-[28px] max-sm:-top-18"
           />
       </div>
       <div 
-        className="relative flex flex-row justify-around top-50 shrink-0 max-sm:top-5 max-sm:z-20 max-sm:mb-5 max-sm:flex-col max-sm:h-30" 
+        className="relative w-full flex flex-row justify-around shrink-0 -mb-75 max-sm:flex-col max-sm:-mb-10" 
         style={{ 
           background: "linear-gradient(90deg, rgba(43, 8, 69, 1) 0%, #450079 100%)",
         }}
@@ -53,26 +58,18 @@ export default function WhyParticipate() {
         <Image
           src={whyParticipate}
           alt="Why Participate?"
-          className="relative inline-block left-30 top-4 w-[900px] z-10 max-sm:w-[300px] max-sm:left-20 max-sm:top-5 max-sm:absolute"
+          className="relative inline-block w-[55%] z-10 left-50 -top-20 max-sm:left-0 max-sm:top-0 max-sm:mt-10 max-sm:mx-auto max-sm:w-[90%] max-sm:-mb-5"
         />
-        {/*HB logo and question marks*/}
-        <div className="relative right-10 bottom-9 max-sm:right-0 max-sm:-bottom-1 shrink-0 ">
-          <Image
-              src={hb4}
-              alt="HackByte Logo"
-              className="relative inline-block z-20 max-sm:w-[155px] max-sm:h-[135px] max-sm:left-35 max-sm:top-2 max-sm:mt-6"
-            />
-          <Image
-            src={qm}
-            alt="Question Mark"
-            className="relative inline-block z-50 -ml-40 mb-18 max-sm:w-[48px] max-sm:h-[65px] max-sm:ml-23 max-sm:top-11"
-          />
-        </div>
+        <Image
+          src={crack}
+          alt="crack"
+          className="absolute hidden max-sm:inline-block w-[60%] left-[24%] top-[20%] z-10"
+        />
+        <Image src={hb4} alt="hackbyte 4.0 logo" className="relative inline-block z-10 w-[30%] h-[80%] -top-16 max-sm:top-0 max-sm:w-[35%] max-sm:left-10 max-sm:mx-auto "/>
       </div>
-
       {/*Scroll ref*/}
       <section
-        className="relative isolate w-full h-full overflow-hidden border-t-white border-t-12 border-b-white border-b-12 p-0 max-sm:h-[450px]"
+        className="relative min-h-[500px] -full h-full overflow-hidden border-t-white border-t-12 border-b-white border-b-12 p-0 max-sm:h-[450px]"
         style={{
           background: "linear-gradient(180deg, #8A00DA 0%, #BA45E8 100%)",
         }}
