@@ -1,9 +1,38 @@
 "use client";
-
+import { useState } from "react";
 import Image from "next/image";
 import FadeInView from "@/components/FadeInView";
 
 const MailingList = () => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubscribe = async () => {
+  if (!email) return;
+
+    const formData = new FormData();
+    formData.append("entry.1008749988", email);
+
+    try {
+      await fetch(
+        // Removed the '/e/' from the URL below
+        "https://docs.google.com/forms/d/1APq2vApbi9Aysa-h_9cKiNxl2o77UnOojfVztmgdUDc/formResponse",
+        {
+          method: "POST",
+          body: formData,
+          mode: "no-cors", // This is crucial, explained below
+        }
+      );
+      
+      // Since 'no-cors' is opaque, we assume success if no error was thrown
+      setEmail("");
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Form submission failed", error);
+    }
+  };
+
+
   return (
     <div className="w-full min-h-screen relative bg-[linear-gradient(206deg,_#4E0088_13.13%,_#180029_86.33%)] overflow-hidden flex flex-col items-center justify-center py-20">
       {/* Lightning Left - no animation (decorative background) */}
@@ -143,6 +172,8 @@ const MailingList = () => {
                 <input
                   type="email"
                   placeholder="Enter your email here"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="
                     w-full
                     h-12 md:h-20
@@ -159,6 +190,8 @@ const MailingList = () => {
                     font-kanit"
                 />
                 <button
+                onClick={handleSubscribe}
+                disabled={submitted}
                   className="
                     w-full md:w-auto
                     h-12 md:h-16
@@ -175,7 +208,7 @@ const MailingList = () => {
                     shadow-[0_4px_0_rgba(0,0,0,0.25)]
                     md:absolute md:right-2 md:top-1/2 md:-translate-y-1/2"
                 >
-                  Subscribe
+                  {submitted ? "Subscribed" : "Subscribe"}
                 </button>
               </div>
             </div>

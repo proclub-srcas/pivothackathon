@@ -68,7 +68,7 @@ async function StatsSection() {
                 text-stroke-number
                 [-webkit-text-stroke:8px_#62009b]
                 md:[-webkit-text-stroke:14px_#62009b]
-                lg:[-webkit-text-stroke:20px_#62009b]
+                
                 font-extrabold
                 text-[32px] md:text-[81px]
                 leading-none"
