@@ -11,28 +11,31 @@ export function Footer() {
       }}
     >
       {/*socials tape*/}
-      <div className=" relative flex flex-row w-full justify-between items-center h-[216px] bg-[#62009b] border-white border-t-12 border-b-12 px-8 max-sm:h-[230px] max-sm:border-b-3 max-sm:border-t-3 max-sm:items-start max-sm:px-4">
+      <div className=" relative flex flex-row w-full justify-between items-center h-[216px] bg-[#62009b] border-white border-t-12 border-b-12 px-8 max-sm:h-[230px] max-sm:border-b-3 max-sm:border-t-3 max-sm:items-start max-sm:px-4 max-sm:inline-block">
+
+
         <Image
           src="/HbSmallLogo.svg"
           alt="Hackbyte logo"
           width={500}
           height={300}
-          className="z-20 relative left-40 max-sm:w-[200px] max-sm:h-[120px] max-sm:-left-5 max-sm:-top-12 "
+          className="z-20 relative left-40 max-sm:w-[200px] max-sm:h-[100px] max-sm:-left-15 max-sm:-top-10"
         />
         <div className="flex flex-col items-end gap-6 p-4 max-sm:pr-0 max-sm:pl-0 max-sm:w-full">
           {/*pages*/}
           <div>
             <ul
-              className=" relative flex flex-row gap-6 justify-around text-white font-bold font-gotham text-lg 
-                            max-sm:text-xs 
+              className="relative flex flex-row gap-6 justify-around text-white font-bold font-gotham text-lg 
+                            max-sm:text-[70%]
                             max-sm:grid
                             max-sm:grid-cols-4
-                            max-sm:gap-x-2
-                            max-sm:w-full
                             max-sm:gap-y-2
-                            max-sm:pr-1\
-                            max-sm:justify-center 
-                            max-sm:left-0"
+                            max-sm:gap-x-3
+                            max-sm:w-[86%]
+                            max-sm:left-[18%]
+                            max-sm:bottom-25
+                            max-sm:justify-items-center
+                            "
             >
               <li className="text-center">
                 <Link href="/">Home</Link>
@@ -41,7 +44,7 @@ export function Footer() {
                 <Link href="/contact">Contact</Link>
               </li>
               <li className="text-center">
-                <Link href="/faqs">FAQs</Link>
+                <Link href="/faq">FAQs</Link>
               </li>
               <li className="text-center">
                 <Link href="/humans">Humans</Link>
@@ -61,7 +64,7 @@ export function Footer() {
             </ul>
           </div>
           {/*socials*/}
-          <div className="flex flex-row gap-10 justify-between items-center max-sm:flex-col max-sm:gap-4 max-sm:w-full max-sm:absolute max-sm:left-2 max-sm:top-20">
+          <div className="flex flex-row gap-10 justify-between items-center max-sm:flex-col max-sm:gap-4 max-sm:w-full max-sm:absolute max-sm:left-2 max-sm:top-18">
             <p className="text-white text-6xl font-extrabold font-kanit max-sm:text-3xl max-sm:block">
               Follow our socials
             </p>
@@ -73,7 +76,7 @@ export function Footer() {
                     alt="linkedIn"
                     width={38}
                     height={38}
-                    className="max-sm:w-[20px] max-sm:h-[px]"
+                    className="max-sm:w-[25px] max-sm:h-[25px]"
                   />
                 </Link>
               </li>
@@ -84,7 +87,7 @@ export function Footer() {
                     alt="instagram"
                     width={38}
                     height={38}
-                    className="max-sm:w-[20px] max-sm:h-[px]"
+                    className="max-sm:w-[25px] max-sm:h-[25px]"
                   />
                 </Link>
               </li>
@@ -95,7 +98,7 @@ export function Footer() {
                     alt="x"
                     width={38}
                     height={38}
-                    className="max-sm:w-[20px] max-sm:h-[px]"
+                    className="max-sm:w-[25px] max-sm:h-[25px]"
                   />
                 </Link>
               </li>
@@ -106,7 +109,7 @@ export function Footer() {
                     alt="discord"
                     width={38}
                     height={38}
-                    className="max-sm:w-[20px] max-sm:h-[px]"
+                    className="max-sm:w-[25px] max-sm:h-[25px]"
                   />
                 </Link>
               </li>

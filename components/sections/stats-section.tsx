@@ -46,16 +46,6 @@ async function StatsSection() {
         />
       </div>
 
-      <div className="w-full h-32 absolute bottom-0 z-10 -mb-24 md:-mb-16 lg:-mb-6 xl:mb-0">
-        <Image
-          src="/stats-bottom.svg"
-          alt="glass design"
-          className="w-full"
-          width={100}
-          height={100}
-        />
-      </div>
-
       <div className="relative z-20 size-full flex justify-center items-center px-4 font-kanit">
       <FadeInView delay={0.2}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 md:gap-10 max-w-7xl w-full">
