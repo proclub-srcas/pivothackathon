@@ -39,13 +39,13 @@ const NAV_ITEMS = [
     icon: Handshake,
     href: "/sponsors",
   },
-  // {
-  //   id: "updates",
-  //   label: "Prizes",
-  //   activeIcon: "/Prizes.svg",
-  //   icon: Trophy,
-  //   href: "/prizes",
-  // },
+  {
+    id: "prizes",
+    label: "Prizes",
+    activeIcon: "/Prizes.svg",
+    icon: Trophy,
+    href: "/prizes",
+  },
   // {
   //   id: "calendar",
   //   label: "Schedule",
