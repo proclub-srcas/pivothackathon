@@ -68,7 +68,7 @@ function HeroSection() {
           <motion.div variants={fadeInUp} className="mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-medium">
               <Calendar className="w-4 h-4" />
-              January 2026
+              February 2026
             </span>
           </motion.div>
 
