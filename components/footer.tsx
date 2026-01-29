@@ -37,28 +37,22 @@ export function Footer() {
                             "
             >
               <li className="text-center">
-                <Link href="/">Home</Link>
+                <Link href="#">Home</Link>
               </li>
               <li className="text-center">
-                <Link href="/contact">Contact</Link>
+                <Link href="#about">About</Link>
               </li>
               <li className="text-center">
-                <Link href="/faq">FAQs</Link>
+                <Link href="#problems">Problems</Link>
               </li>
               <li className="text-center">
-                <Link href="/humans">Humans</Link>
+                <Link href="#guidelines">Guidelines</Link>
               </li>
               <li className="text-center">
-                <Link href="/schedule">Schedule</Link>
+                <Link href="#timeline">Timeline</Link>
               </li>
               <li className="text-center">
-                <Link href="/prizes">Prizes</Link>
-              </li>
-              <li className="text-center">
-                <Link href="/sponsors">Partners</Link>
-              </li>
-              <li className="text-center">
-                <Link href="/gallery">Gallery</Link>
+                <Link href="#faq">FAQs</Link>
               </li>
             </ul>
           </div>
@@ -69,7 +63,7 @@ export function Footer() {
             </p>
             <ul className="flex flex-row gap-6 justify-between items-center">
               <li>
-                <Link href="https://www.linkedin.com/company/bitbyte-tpc">
+                <Link href="#">
                   <Image
                     src="/linkdin.svg"
                     alt="linkedIn"
@@ -80,7 +74,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://www.instagram.com/hackbyte.tpc">
+                <Link href="#">
                   <Image
                     src="/insta.svg"
                     alt="instagram"
@@ -113,7 +107,7 @@ export function Footer() {
                 </Link>
               </li> */}
               <li>
-                <Link href="https://whatsapp.com/channel/0029Vb712h5J3juqIsG6Ah3y">
+                <Link href="#">
                   <Image
                     src="/whatsapp.png"
                     alt="whatsapp"

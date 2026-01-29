@@ -29,21 +29,21 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hackbyte.in'),
+  metadataBase: new URL('https://srcas-lnt-hackathon.com'),
   title: {
-    default: "HackByte 4.0 | IIITDMJ Hackathon",
-    template: "%s | HackByte 4.0"
+    default: "SRCAS × L&T Hackathon 2026",
+    template: "%s | SRCAS × L&T Hackathon"
   },
-  description: "HackByte is IIITDMJ's student-run hackathon. Join us for 3 days of coding, innovation, and fun. April 3-5, 2026.",
+  description: "SRCAS × L&T Technology Services Hackathon 2026. Join us for 36 hours of coding, innovation, and fun. February 2026.",
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ["Hackathon", "IIITDMJ", "Coding", "HackByte", "Jabalpur", "Tech Event"],
+  keywords: ["Hackathon", "SRCAS", "L&T Technology Services", "Coding", "Coimbatore", "Tech Event"],
   openGraph: {
-    title: "HackByte 4.0 | IIITDMJ Hackathon",
-    description: "Join us for 3 days of coding, innovation, and fun at IIITDM Jabalpur.",
-    url: 'https://hackbyte.in',
-    siteName: 'HackByte',
+    title: "SRCAS × L&T Hackathon 2026",
+    description: "Join us for 36 hours of coding, innovation, and fun at SRCAS, Coimbatore.",
+    url: 'https://srcas-lnt-hackathon.com',
+    siteName: 'SRCAS × L&T Hackathon',
     images: [
       {
         url: '/hackbyte_home_page.png',

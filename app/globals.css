@@ -50,6 +50,16 @@ html.lenis body {
     pointer-events: none;
 }
 
+/* Hide native scrollbar when using Lenis */
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 @theme inline {
     /* L&T Color System */
     --color-primary: var(--primary);

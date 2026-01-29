@@ -150,7 +150,7 @@ function HeroSection() {
 // ============================================
 function AboutSection() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -163,24 +163,24 @@ function AboutSection() {
             variants={fadeInUp}
             className="text-[#005CAA] font-semibold uppercase tracking-wider text-sm"
           >
-            Who We Are and 
+            Who We Are and
           </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-8"
           >
             <div className="max-w-7xl mx-auto relative z-10">
-                  {/* Section Title */}
-                   <div className="flex flex-col items-center justify-center mb-20 text-center space-y-4">
-                  <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
-                                  What is{' '}
-                                  <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
-                                    SRCAS × L&T
-                                  </span>
-                                </Typography.H2>
-                                <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
-                              </div>
-                      </div>
+              {/* Section Title */}
+              <div className="flex flex-col items-center justify-center mb-20 text-center space-y-4">
+                <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
+                  What is{' '}
+                  <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
+                    SRCAS × L&T
+                  </span>
+                </Typography.H2>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
+              </div>
+            </div>
           </motion.h2>
           <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -253,7 +253,7 @@ function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-white">
+    <section id="faq" className="py-24 bg-white">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial="hidden"
