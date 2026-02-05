@@ -26,17 +26,18 @@ const NAV_ITEMS = [
     href: "#",
   },
   {
-    id: "about",
+    id: "Users",
     label: "About",
-    activeIcon: "/About.svg",
-    icon: Info,
+    activeIcon: "/Users.svg",
+    icon: Users,
     href: "#about",
   },
   {
     id: "problems",
     label: "Problems",
-    activeIcon: "/Sponsor.svg",
-    icon: Handshake,
+    activeIcon: "/problem-icon.png",
+    icon: Handshake, // Fallback, but we'll override with custom image
+    customIcon: "/problem-icon.png",
     href: "#problems",
   },
   {
@@ -172,12 +173,13 @@ const DesktopNavBar: React.FC = () => {
                     }
                                     `}
                 >
-                  {isActive ? (
+                  {isActive || (item as { customIcon?: string }).customIcon ? (
                     <Image
-                      src={item.activeIcon}
+                      src={(item as { customIcon?: string }).customIcon || item.activeIcon}
                       alt={item.label}
                       width={24}
                       height={24}
+                      className={isActive ? "" : "opacity-60 hover:opacity-100 transition-opacity"}
                     />
                   ) : (
                     <LucideIcon size={22} strokeWidth={2} />
@@ -257,7 +259,7 @@ const MobileNavBar: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <div className="fixed sm:hidden bottom-24 right-4 z-50">
+    <div className="fixed sm:hidden top-8 right-4 z-50">
       {/* Single Unified Menu Container */}
       <div
         ref={menuRef}
@@ -295,14 +297,34 @@ const MobileNavBar: React.FC = () => {
           />
         </svg>
 
+        {/* Hamburger / Close Button */}
+        <button
+          onClick={handleToggle}
+          className={`
+                        flex items-center justify-center
+                        flex-shrink-0
+                        rounded-2xl
+                        bg-[#005CAA]
+                        transition-all duration-300 ease-out
+                        active:scale-95
+                        ${isOpen ? "w-10 h-10 self-end" : "w-14 h-14"}
+                    `}
+        >
+          {isOpen ? (
+            <X size={20} className="text-white" />
+          ) : (
+            <Menu size={24} className="text-white" />
+          )}
+        </button>
+
         {/* Nav Items */}
         <div
           className={`
-                        flex flex-col-reverse gap-1
+                        flex flex-col gap-1
                         transition-all duration-300 ease-out
                         overflow-hidden
                         ${isOpen
-              ? "max-h-[500px] opacity-100"
+              ? "max-h-[500px] opacity-100 pt-2"
               : "max-h-0 opacity-0"
             }
                     `}
@@ -337,12 +359,13 @@ const MobileNavBar: React.FC = () => {
                     }
                                     `}
                 >
-                  {isActive ? (
+                  {isActive || (item as { customIcon?: string }).customIcon ? (
                     <Image
-                      src={item.activeIcon}
+                      src={(item as { customIcon?: string }).customIcon || item.activeIcon}
                       alt={item.label}
                       width={24}
                       height={24}
+                      className={isActive ? "" : "opacity-60"}
                     />
                   ) : (
                     <LucideIcon size={24} strokeWidth={1.5} />
@@ -368,26 +391,6 @@ const MobileNavBar: React.FC = () => {
             );
           })}
         </div>
-
-        {/* Hamburger / Close Button */}
-        <button
-          onClick={handleToggle}
-          className={`
-                        flex items-center justify-center
-                        flex-shrink-0
-                        rounded-2xl
-                        bg-[#005CAA]
-                        transition-all duration-300 ease-out
-                        active:scale-95
-                        ${isOpen ? "w-10 h-10 self-end" : "w-14 h-14"}
-                    `}
-        >
-          {isOpen ? (
-            <X size={20} className="text-white" />
-          ) : (
-            <Menu size={24} className="text-white" />
-          )}
-        </button>
       </div>
     </div>
   );

@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Kanit, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Kanit, Poppins, Caveat } from "next/font/google";
 import "./globals.css";
 import GlassNavBar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ViewTransitions } from 'next-view-transitions'
 import SmoothScroll from "@/components/SmoothScroll";
+import InteractiveBackground from "@/components/InteractiveBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-caveat",
 });
 
 const geistSans = Geist({
@@ -31,19 +38,19 @@ const kanit = Kanit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://srcas-lnt-hackathon.com'),
   title: {
-    default: "SRCAS × L&T Hackathon 2026",
-    template: "%s | SRCAS × L&T Hackathon"
+    default: "PIVOT Hackathon 2026 | i2i - Idea to Impact",
+    template: "%s | PIVOT Hackathon"
   },
-  description: "SRCAS × L&T Technology Services Hackathon 2026. Join us for 36 hours of coding, innovation, and fun. February 2026.",
+  description: "PIVOT Hackathon 2026 - i2i (Idea to Impact). Join us for 24 hours of coding, innovation, and fun. February 2026.",
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ["Hackathon", "SRCAS", "L&T Technology Services", "Coding", "Coimbatore", "Tech Event"],
+  keywords: ["Hackathon", "PIVOT", "i2i", "Idea to Impact", "SRCAS", "L&T Technology Services", "Coding", "Coimbatore", "Tech Event"],
   openGraph: {
-    title: "SRCAS × L&T Hackathon 2026",
-    description: "Join us for 36 hours of coding, innovation, and fun at SRCAS, Coimbatore.",
+    title: "PIVOT Hackathon 2026 | i2i - Idea to Impact",
+    description: "Join us for 24 hours of coding, innovation, and fun at SRCAS, Coimbatore.",
     // url: 'https://srcas-lnt-hackathon.com',
-    siteName: 'SRCAS × L&T Hackathon',
+    siteName: 'PIVOT Hackathon 2026',
     images: [
       {
         url: '/hackbyte_home_page.png',
@@ -69,8 +76,9 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${poppins.className} antialiased overflow-x-hidden bg-white`}
+          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${caveat.variable} ${poppins.className} antialiased overflow-x-hidden bg-white`}
         >
+          <InteractiveBackground />
           <SmoothScroll>
             <GlassNavBar />
             {children}

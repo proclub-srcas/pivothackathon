@@ -28,6 +28,33 @@
     overflow-x: hidden;
 }
 
+/* Hide scrollbar for all browsers */
+html {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Handwriting font for sticky notes */
+.font-handwriting {
+    font-family: var(--font-caveat), 'Caveat', 'Comic Sans MS', 'Segoe Script', cursive;
+}
+
 /* Lenis Smooth Scroll */
 html.lenis,
 html.lenis body {
@@ -52,12 +79,15 @@ html.lenis body {
 
 /* Hide native scrollbar when using Lenis */
 html {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
 html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 @theme inline {

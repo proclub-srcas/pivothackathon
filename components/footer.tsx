@@ -1,152 +1,109 @@
 import Image from "next/image"
 import Link from "next/link"
 
+const navLinks = [
+  { href: "#", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#problems", label: "Problem" },
+  { href: "#prizes", label: "Prizes" },
+  { href: "#timeline", label: "Schedule" },
+  // { href: "#about", label: "Humans" },
+  { href: "#faq", label: "FAQs" },
+  { href: "#contact", label: "Contact" },
+]
+
 export function Footer() {
   return (
-    <footer
-      className="relative w-full flex flex-col"
-      style={{
-        background: "linear-gradient(to bottom, #F8FAFC, #FFFFFF)",
-      }}
-    >
-      {/*socials tape*/}
-      <div className=" relative flex flex-row w-full justify-between items-center h-[216px] bg-[#005CAA] border-[#003366] border-t-4 border-b-4 px-8 max-sm:h-[230px] max-sm:border-b-2 max-sm:border-t-2 max-sm:items-start max-sm:px-4 max-sm:inline-block">
+    <footer className="relative w-full flex flex-col bg-gray-900">
+      {/* Main Footer Content */}
+      <div className="relative flex flex-col items-center py-16 px-6">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-white mb-2">
+            PIVOT
+          </h2>
+          <p className="text-gray-400 text-xl italic">
+            i2i - Idea to Impact
+          </p>
+        </div>
 
+        {/* Logos */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
+          {/* SRCAS Logo */}
+          <div className="flex items-center">
+            <Image
+              src="/srcas-logo.png"
+              alt="Sri Ramakrishna College of Arts and Science"
+              width={300}
+              height={100}
+              className="h-20 md:h-24 w-auto object-contain"
+            />
+          </div>
 
-        <Image
-          src="/HbSmallogo.svg"
-          alt="L&T hack logo"
-          width={500}
-          height={300}
-          className="z-20 relative left-40 max-sm:w-[200px] max-sm:h-[100px] max-sm:-left-15 max-sm:-top-10"
-        />
-        <div className="flex flex-col items-end gap-6 p-4 max-sm:pr-0 max-sm:pl-0 max-sm:w-full">
-          {/*pages*/}
-          <div>
-            <ul
-              className="relative flex flex-row gap-6 justify-around text-white font-bold font-gotham text-lg 
-                            max-sm:text-[70%]
-                            max-sm:grid
-                            max-sm:grid-cols-4
-                            max-sm:gap-y-2
-                            max-sm:gap-x-3
-                            max-sm:w-[86%]
-                            max-sm:left-[18%]
-                            max-sm:bottom-25
-                            max-sm:justify-items-center
-                            "
-            >
-              <li className="text-center">
-                <Link href="#">Home</Link>
-              </li>
-              <li className="text-center">
-                <Link href="#about">About</Link>
-              </li>
-              <li className="text-center">
-                <Link href="#problems">Problems</Link>
-              </li>
-              <li className="text-center">
-                <Link href="#guidelines">Guidelines</Link>
-              </li>
-              <li className="text-center">
-                <Link href="#timeline">Timeline</Link>
-              </li>
-              <li className="text-center">
-                <Link href="#faq">FAQs</Link>
-              </li>
-            </ul>
-          </div>
-          {/*socials*/}
-          <div className="flex flex-row gap-10 justify-between items-center max-sm:flex-col max-sm:gap-4 max-sm:w-full max-sm:absolute max-sm:left-2 max-sm:top-18">
-            <p className="text-white text-6xl font-extrabold font-kanit max-sm:text-3xl max-sm:block">
-              Follow our socials
-            </p>
-            <ul className="flex flex-row gap-6 justify-between items-center">
-              <li>
-                <Link href="#">
-                  <Image
-                    src="/linkdin.svg"
-                    alt="linkedIn"
-                    width={38}
-                    height={38}
-                    className="max-sm:w-[25px] max-sm:h-[25px]"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <Image
-                    src="/insta.svg"
-                    alt="instagram"
-                    width={38}
-                    height={38}
-                    className="max-sm:w-[25px] max-sm:h-[25px]"
-                  />
-                </Link>
-              </li>
-              {/* <li>
-                <Link href="https://x.com/HackbyteTPC">
-                  <Image
-                    src="/x.svg"
-                    alt="x"
-                    width={38}
-                    height={38}
-                    className="max-sm:w-[25px] max-sm:h-[25px]"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href="https://discord.com/invite/NTueHjdPn8">
-                  <Image
-                    src="/discord.svg"
-                    alt="discord"
-                    width={38}
-                    height={38}
-                    className="max-sm:w-[25px] max-sm:h-[25px]"
-                  />
-                </Link>
-              </li> */}
-              <li>
-                <Link href="#">
-                  <Image
-                    src="/whatsapp.png"
-                    alt="whatsapp"
-                    width={38}
-                    height={38}
-                    className="max-sm:w-[25px] max-sm:h-[25px]"
-                  />
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {/*copyright*/}
-          <div>
-            <p className="text-white/90 font-bold text-lg font-gotham max-sm:top-45 max-sm:absolute max-sm:bottom-0 max-sm:text-sm max-sm:block max-sm:w-full max-sm:left-0 text-center">
-              @2025 SRCAS, All rights reserved
-            </p>
+          {/* Programming Club Logo */}
+          <div className="flex items-center">
+            <Image
+              src="/programming-club-logo.png"
+              alt="Programming Club"
+              width={200}
+              height={80}
+              className="h-16 md:h-20 w-auto object-contain"
+            />
           </div>
         </div>
       </div>
-      {/*Broken glass*/}
-      {/* <div>
-        <Image
-          src="BrokenGlassFooter.svg"
-          alt="broken glass"
-          className="inline-block w-full"
-          width={1298}
-          height={138}
-        />
+
+      {/* Blue Bar with Navigation & Socials */}
+      <div className="relative w-full bg-[#005CAA] py-5 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Navigation Links */}
+          <nav>
+            <ul className="flex flex-wrap justify-center gap-4 md:gap-8 text-white font-medium">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-white/80 transition-colors text-sm md:text-base"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://linkedin.com"
+              target="_blank"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            >
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </Link>
+            <Link
+              href="https://instagram.com"
+              target="_blank"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            >
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
-      {/*patch the reality*/}
-      {/* <div>
-        <Image
-          src="/PatchTheReality-footer.svg"
-          alt="patch the reality"
-          width={764}
-          height={100}
-          className="mx-auto mt-25 mb-10 max-sm:mt-10 max-sm:w-[360px]"
-        />
-      </div> */}
+
+      {/* Copyright Bar */}
+      <div className="w-full bg-gray-950 py-4 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-400 text-sm">
+            © 2025 SRCAS Programming Club, All rights reserved
+          </p>
+        </div>
+      </div>
     </footer>
   )
 }

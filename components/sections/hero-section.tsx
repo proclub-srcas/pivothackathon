@@ -93,16 +93,16 @@ const Hero = () => {
 						Our Theme
 					</h2>
 					<h1 className="italic text-3xl text-[#FFF7E591] font-medium">
-						Patch The Reality
+						i2i - Idea to Impact
 					</h1>
 				</FadeInView>
 			</div>
 
-			{/* Main Logo - HACK L&T */}
+			{/* Main Logo - PIVOT */}
 			<div className="absolute inset-0 flex flex-col items-center justify-center z-10">
 				<FadeInView delay={0.2} yOffset={30}>
 					<div className="text-center select-none">
-						{/* HACK Text */}
+						{/* PIVOT Text */}
 						<h1
 							className="font-kanit font-black text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
 							style={{
@@ -112,20 +112,8 @@ const Hero = () => {
 								textShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2)'
 							}}
 						>
-							HACK
+							PIVOT
 						</h1>
-						{/* L&T Text */}
-						<h2
-							className="font-kanit font-black text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
-							style={{
-								fontSize: 'clamp(3rem, 12vw, 10rem)',
-								lineHeight: '1',
-								letterSpacing: '0.15em',
-								textShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2)'
-							}}
-						>
-							L&T
-						</h2>
 					</div>
 				</FadeInView>
 			</div>

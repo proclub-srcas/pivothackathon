@@ -32,7 +32,7 @@ const GuidelinesSection: React.FC = () => {
   return (
     <section id="guidelines" className="relative py-24 px-4 overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
       <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-primary-soft/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
@@ -46,7 +46,7 @@ const GuidelinesSection: React.FC = () => {
           <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
             Guidelines for{' '}
             <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
-              SRCAS × L&T Hackathon
+              PIVOT Hackathon
             </span>
           </Typography.H2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
@@ -84,6 +84,52 @@ const GuidelinesSection: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* PPT Download Section */}
+        <div className="mt-20 relative overflow-hidden rounded-3xl">
+          {/* Dark Background with dot pattern */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `radial-gradient(circle, #ffffff 1px, transparent 1px)`,
+              backgroundSize: '24px 24px',
+            }}
+          />
+
+          {/* Content */}
+          <div className="relative z-10 py-16 px-8 md:px-16 text-center">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+              Download Our Official PPT Template
+            </h3>
+            <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+              All participants must use this official PPT template for their submissions. This ensures
+              uniformity and fairness in presentation across all teams.
+            </p>
+
+            {/* Download Button */}
+            <a
+              href="/ppt-template.pptx"
+              download
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white font-semibold rounded-xl transition-all duration-300 backdrop-blur-sm group hover:scale-105"
+            >
+              <svg
+                className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                />
+              </svg>
+              Download PPT
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -13,8 +13,15 @@ import {
 import ProblemSection from "@/components/problems/ProblemSection";
 import Timeline from "@/components/sections/timeline";
 import GuidelinesSection from "@/components/guidelines/guidelines";
+import PrizesSection from "@/components/sections/PrizesSection";
+import ContactSection from "@/components/sections/ContactSection";
+import JumpingText from "@/components/JumpingText";
+import { FaqList } from '@/components/faq/faq-list';
+
+import DodgeHero from "@/components/DodgeHero"
 
 import { Typography } from '@/components/Typography';
+
 
 // ============================================
 // ANIMATION VARIANTS
@@ -41,7 +48,7 @@ const staggerContainer = {
 // ============================================
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden">
       {/* Subtle gradient accent */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#005CAA]/5 rounded-full blur-3xl" />
@@ -86,11 +93,12 @@ function HeroSection() {
             variants={fadeInUp}
             className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto"
           >
-            <span className="font-semibold text-gray-800">SRCAS</span> ×{" "}
-            <span className="font-semibold text-[#005CAA]">
-              L&T Technology Services
-            </span>{" "}
-            Hackathon 2026
+            <br />
+            <span className=" text-5xl font-semibold text-[#005CAA]">PIVOT</span> - <span className="text-5xl font-semibold text-gray-800">Hackathon 2026</span>
+            <br />
+            <span className="text-lg mt-2 block">
+              <span className="font-semibold text-[#005CAA]"> i2i (Idea to Impact)</span>
+            </span>
           </motion.p>
 
           {/* CTA Buttons */}
@@ -104,7 +112,7 @@ function HeroSection() {
             </button>
             <button className="flex items-center gap-2 px-8 py-4 border-2 border-[#005CAA] text-[#005CAA] font-semibold rounded-xl hover:bg-[#005CAA]/5 transition-all duration-300">
               <Download className="w-5 h-5" />
-              Download Brochure
+              Guidelines for the Abstract
             </button>
           </motion.div>
 
@@ -118,7 +126,7 @@ function HeroSection() {
               <p className="text-gray-500 mt-1">Prize Pool</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-[#005CAA]">36</p>
+              <p className="text-4xl font-bold text-[#005CAA]">24</p>
               <p className="text-gray-500 mt-1">Hours</p>
             </div>
             {/* <div>
@@ -150,7 +158,7 @@ function HeroSection() {
 // ============================================
 function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-gray-50">
+    <section id="about" className="py-24 bg-white/80 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -163,7 +171,12 @@ function AboutSection() {
             variants={fadeInUp}
             className="text-[#005CAA] font-semibold uppercase tracking-wider text-sm"
           >
-            Who We Are and
+            <JumpingText
+              text="Who We Are and"
+              defaultColor="#005CAA"
+              hoverColor="#003366"
+              jumpHeight={6}
+            />
           </motion.span>
           <motion.h2
             variants={fadeInUp}
@@ -173,9 +186,19 @@ function AboutSection() {
               {/* Section Title */}
               <div className="flex flex-col items-center justify-center mb-20 text-center space-y-4">
                 <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
-                  What is{' '}
+                  <JumpingText
+                    text="What is "
+                    defaultColor="#000000"
+                    hoverColor="#005CAA"
+                    jumpHeight={12}
+                  />
                   <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
-                    SRCAS × L&T
+                    <JumpingText
+                      text="PIVOT Hackathon"
+                      defaultColor="#005CAA"
+                      hoverColor="#003366"
+                      jumpHeight={14}
+                    />
                   </span>
                 </Typography.H2>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
@@ -184,31 +207,28 @@ function AboutSection() {
           </motion.h2>
           <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with{" "}
-              <span className="font-semibold text-[#005CAA]">
-                L&T Technology Services
-              </span>{" "}
-              to host an industry-focused hackathon that bridges academia and innovation.
+              Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">L&T Technology Services</span> to
+              host an industry-focused hackathon that bridges academia and innovation.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              This 36-hour event brings together the brightest minds to solve
-              real-world challenges across sustainability, healthcare, smart cities,
-              and emerging technologies. Join us in shaping the future through
-              collaboration, creativity, and cutting-edge technology.
+              This 24-hour event brings together the brightest minds to solve real-world
+              challenges across sustainability, healthcare, smart cities, and emerging
+              technologies. Join us in shaping the future through collaboration, creativity,
+              and cutting-edge technology.
             </p>
           </motion.div>
 
           {/* Partner logos placeholder */}
           <motion.div
             variants={fadeInUp}
-            className="mt-12 flex justify-center items-center gap-12"
+            className="mt-12 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12"
           >
-            <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100">
-              <p className="text-2xl font-bold text-gray-800">SRCAS</p>
+            <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full md:w-auto">
+              <p className="text-xl md:text-2xl font-bold text-gray-800">SRCAS</p>
             </div>
-            <span className="text-gray-400 text-2xl">×</span>
-            <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100">
-              <p className="text-2xl font-bold text-[#005CAA]">L&T Technology Services</p>
+            <span className="text-gray-400 text-2xl rotate-90 md:rotate-0">×</span>
+            <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full md:w-auto">
+              <p className="text-xl md:text-2xl font-bold text-[#005CAA]">L&T Technology Services</p>
             </div>
           </motion.div>
         </motion.div>
@@ -253,7 +273,7 @@ function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-24 bg-transparent">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -403,13 +423,17 @@ function FAQSection() {
 // ============================================
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-transparent">
       <HeroSection />
+      <DodgeHero />
       <AboutSection />
       <ProblemSection />
+      <FaqList />
       <GuidelinesSection />
+      <PrizesSection />
       <Timeline />
       <FAQSection />
+      <ContactSection />
     </main>
   );
 }
