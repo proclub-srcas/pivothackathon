@@ -21,6 +21,7 @@ import { FaqList } from '@/components/faq/faq-list';
 import DodgeHero from "@/components/DodgeHero"
 
 import { Typography } from '@/components/Typography';
+import Image from "next/image"
 
 
 // ============================================
@@ -82,22 +83,43 @@ function HeroSection() {
           {/* Main Headline */}
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight flex flex-wrap justify-center gap-x-4"
           >
-            Innovating for{" "}
-            <span className="text-[#005CAA]">Tomorrow</span>
+            <JumpingText
+              text="Innovating for"
+              defaultColor="#111827"
+              hoverColor="#005CAA"
+            />
+            <JumpingText
+              text="Tomorrow"
+              defaultColor="#005CAA"
+              hoverColor="#003366"
+            />
           </motion.h1>
+
+          {/* PIVOT Logo */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-4">
+            <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center">
+                <Image
+                  src="/pivot-logo.png"
+                  alt="PIVOT"
+                  width={500}
+                  height={300}
+                  className="h-32 md:h-40 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
 
           {/* Sub-headline */}
           <motion.p
             variants={fadeInUp}
-            className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto"
           >
-            <br />
-            <span className=" text-5xl font-semibold text-[#005CAA]">PIVOT</span> - <span className="text-5xl font-semibold text-gray-800">Hackathon 2026</span>
-            <br />
+            <span className=" text-5xl font-semibold text-[#005CAA]"></span>  <span className="text-5xl font-semibold text-gray-800"></span>
             <span className="text-lg mt-2 block">
-              <span className="font-semibold text-[#005CAA]"> i2i (Idea to Impact)</span>
+              <span className="font-semibold text-[#005CAA]"> </span>
             </span>
           </motion.p>
 
@@ -106,10 +128,28 @@ function HeroSection() {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button className="flex items-center gap-2 px-8 py-4 bg-[#005CAA] text-white font-semibold rounded-xl hover:bg-[#004a8c] transition-all duration-300 shadow-lg shadow-[#005CAA]/20 hover:shadow-xl hover:shadow-[#005CAA]/30 hover:-translate-y-0.5">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              animate={{
+                boxShadow: [
+                  "0px 0px 0px rgba(0, 92, 170, 0)",
+                  "0px 0px 20px rgba(0, 92, 170, 0.4)",
+                  "0px 0px 0px rgba(0, 92, 170, 0)",
+                ],
+              }}
+              transition={{
+                boxShadow: {
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+              }}
+              className="flex items-center gap-2 px-8 py-4 bg-[#005CAA] text-white font-semibold rounded-xl hover:bg-[#004a8c] transition-all duration-300 shadow-lg"
+            >
               Register Now
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </motion.button>
             <button className="flex items-center gap-2 px-8 py-4 border-2 border-[#005CAA] text-[#005CAA] font-semibold rounded-xl hover:bg-[#005CAA]/5 transition-all duration-300">
               <Download className="w-5 h-5" />
               Guidelines for the Abstract
@@ -119,7 +159,7 @@ function HeroSection() {
           {/* Stats Row */}
           <motion.div
             variants={fadeInUp}
-            className="mt-16 flex flex-wrap justify-center gap-12 text-center"
+            className="mt-6 flex flex-wrap justify-center gap-12 text-center"
           >
             <div>
               <p className="text-4xl font-bold text-[#005CAA]">₹50K+</p>
@@ -129,10 +169,6 @@ function HeroSection() {
               <p className="text-4xl font-bold text-[#005CAA]">24</p>
               <p className="text-gray-500 mt-1">Hours</p>
             </div>
-            {/* <div>
-              <p className="text-4xl font-bold text-[#005CAA]">500+</p>
-              <p className="text-gray-500 mt-1">Participants</p>
-            </div> */}
             <div>
               <p className="text-4xl font-bold text-[#005CAA]">4</p>
               <p className="text-gray-500 mt-1">Tracks</p>
@@ -144,12 +180,13 @@ function HeroSection() {
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
+        animate={{ y: [0, 10, 0] }
+        }
         transition={{ duration: 2, repeat: Infinity }}
       >
         <ChevronDown className="w-8 h-8 text-[#005CAA]/50" />
-      </motion.div>
-    </section>
+      </motion.div >
+    </section >
   );
 }
 
@@ -226,7 +263,7 @@ function AboutSection() {
             <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full md:w-auto">
               <p className="text-xl md:text-2xl font-bold text-gray-800">SRCAS</p>
             </div>
-            <span className="text-gray-400 text-2xl rotate-90 md:rotate-0">×</span>
+            <span className="text-gray-400 text-2xl rotate-90 md:rotate-0"> 🤝 </span>
             <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full md:w-auto">
               <p className="text-xl md:text-2xl font-bold text-[#005CAA]">L&T Technology Services</p>
             </div>

@@ -103,9 +103,9 @@ const ContactSection: React.FC = () => {
 
                         <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
                             <p className="text-gray-700 leading-relaxed">
-                                2XCP+WQ4, Bus Stop, Avinashi Road Between<br />
-                                Fun Mall & Lakshmi Mills, Nava India Rd,<br />
-                                Peelamedu, Tamil Nadu 641006
+                                SRI RAMAKRISHNA COLLEGE OF ARTS & SCIENCE <br />
+                                Nava India, Avinashi Road <br />
+                                Coimbatore, Tamil Nadu 641006
                             </p>
                         </div>
                     </motion.div>
@@ -181,7 +181,7 @@ const ContactSection: React.FC = () => {
 
                     <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-2xl bg-white/80 backdrop-blur-md">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2649563948785!2d77.0231!3d11.0245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857a0c0a0a0a1%3A0x1234567890abcdef!2sSri%20Ramakrishna%20College%20of%20Arts%20and%20Science!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2649563948785!2d76.9868191!3d11.0226208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85849d74c3695%3A0x9153ec3168293ec5!2sSri%20Ramakrishna%20College%20of%20Arts%20%26%20Science!5e0!3m2!1sen!2sin!4v1709283746000!5m2!1sen!2sin"
                             width="100%"
                             height="350"
                             style={{ border: 0 }}
@@ -194,7 +194,7 @@ const ContactSection: React.FC = () => {
 
                     <div className="mt-4 text-center">
                         <a
-                            href="https://maps.google.com/?q=Sri+Ramakrishna+College+of+Arts+and+Science+Coimbatore"
+                            href="https://maps.app.goo.gl/W7uqokm1bK1miC1b9"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-gray-500 hover:text-[#005CAA] transition-colors text-sm"

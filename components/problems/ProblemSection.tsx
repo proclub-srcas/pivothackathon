@@ -124,7 +124,8 @@ export default function ProblemSection() {
                   key={problem.id}
                   layout
                   animate={{ width: targetWidth }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                  // slow donw the 0.5 to 0.3
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
                   onMouseEnter={() =>
                     isDesktop && lockedIndex === null && setActiveIndex(idx)
                   }
@@ -134,9 +135,9 @@ export default function ProblemSection() {
                   onClick={() =>
                     setLockedIndex((prev) => (prev === idx ? null : idx))
                   }
-                  className={`group relative h-[520px] rounded-3xl overflow-hidden cursor-pointer border transition-all duration-500 ${isActive
-                      ? 'border-white/60 shadow-2xl shadow-purple-900/20'
-                      : 'border-white/10'
+                  className={`group relative h-[520px] rounded-3xl overflow-hidden cursor-pointer border transition-all duration-300 ${isActive
+                    ? 'border-white/60 shadow-2xl shadow-purple-900/20'
+                    : 'border-white/10'
                     }`}
                   style={forcedStyle}
                 >
@@ -152,8 +153,8 @@ export default function ProblemSection() {
                   {/* 2. GRADIENT OVERLAY */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-t transition-colors duration-500 ${isActive
-                        ? 'from-black/95 via-black/60 to-transparent'
-                        : 'from-black/80 via-black/20 to-transparent'
+                      ? 'from-black/95 via-black/60 to-transparent'
+                      : 'from-black/80 via-black/20 to-transparent'
                       }`}
                   />
 
@@ -168,7 +169,7 @@ export default function ProblemSection() {
                   <div className="absolute inset-x-0 bottom-0 h-full p-6 pointer-events-none">
                     {/* TITLE */}
                     <div
-                      className="absolute left-6 right-6 transition-all duration-500 ease-in-out"
+                      className="absolute left-6 right-6 transition-all duration-300 ease-in-out"
                       style={{
                         bottom: isActive ? '140px' : '30px',
                       }}
@@ -180,7 +181,7 @@ export default function ProblemSection() {
 
                     {/* DESCRIPTION */}
                     <div
-                      className={`absolute left-6 right-6 bottom-6 transition-all duration-500 ease-in-out ${isActive ? 'delay-300' : 'delay-0'
+                      className={`absolute left-6 right-6 bottom-6 transition-all duration-300 ease-in-out ${isActive ? 'delay-75' : 'delay-0'
                         }`}
                       style={{
                         opacity: isActive ? 1 : 0,

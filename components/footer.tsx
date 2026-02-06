@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -12,12 +13,22 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ]
 
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0, 0, 0.2, 1] as const },
+  },
+};
+
 export function Footer() {
   return (
     <footer className="relative w-full flex flex-col bg-gray-900">
       {/* Main Footer Content */}
       <div className="relative flex flex-col items-center py-16 px-6">
-        {/* Heading */}
+        {/* Heading 
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-white mb-2">
             PIVOT
@@ -25,6 +36,23 @@ export function Footer() {
           <p className="text-gray-400 text-xl italic">
             i2i - Idea to Impact
           </p>
+        </div> 
+        */}
+
+        {/* PIVOT Logo */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
+          {/* PIVOT Logo */}
+          <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center">
+              <Image
+                src="/pivot-logo.png"
+                alt="PIVOT"
+                width={500}
+                height={300}
+                className="h-20 md:h-24 w-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Logos */}
