@@ -14,7 +14,7 @@ export const FaqList: React.FC = () => {
   return (
     <section
       className="min-h-screen flex flex-col items-center justify-center py-24 w-full relative overflow-hidden"
-      id="faqs"
+      id="problems"
     >
       {/* Decorative Left Element - Pixel Question Mark */}
       <motion.div
@@ -55,53 +55,50 @@ export const FaqList: React.FC = () => {
         </svg>
       </motion.div>
 
-        {/* ================= CONTENT ================= */}
-              <div className="relative z-10 max-w-[1400px] mx-auto px-6">
-                {/* HEADING */}
-                <motion.div
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.4 }}
-                  className="w-full flex flex-col items-center gap-4"
-                >
-                  <span
-                    className="font-wc-rough-trad text-[clamp(2.5rem,5vw,4rem)] text-black text-center font-bold "
-                    style={{ letterSpacing: '2px' }}
-                  >
-                    <div className="max-w-7xl mx-auto relative z-10">
-                      {/* Section Title */}
-                      <div className="flex flex-col items-center justify-center mb-20 text-center space-y-4">
-                        <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
-                          Problem{' '}
-                          <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
-                            STATEMENTS
-                          </span>
-                        </Typography.H2>
-                        <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
-                      </div>
-                    </div>
+      {/* ================= CONTENT ================= */}
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6">
+        {/* HEADING */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+          className="w-full flex flex-col items-center gap-4"
+        >
+          <span
+            className="font-wc-rough-trad text-[clamp(2.5rem,5vw,4rem)] text-black text-center font-bold "
+            style={{ letterSpacing: '2px' }}
+          >
+            <div className="max-w-7xl mx-auto relative z-10">
+              {/* Section Title */}
+              <div className="flex flex-col items-center justify-center mb-20 text-center space-y-4">
+                <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
+                  Problem{' '}
+                  <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
+                    STATEMENTS
                   </span>
-                  <p className="text-gray-700 text-center max-w-2xl text-sm md:text-base font-averta-std">
-                    Choose from our curated problem statements focusing on
-                    cybersecurity, sustainability, and smart city solutions.
-                  </p>
-        
-                </motion.div>
+                </Typography.H2>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
+              </div>
             </div>
-      <div className="w-full max-w-2xl flex flex-col gap-4 mt-32 relative z-10">
+          </span>
+          <p className="text-gray-700 text-center max-w-2xl text-sm md:text-base font-averta-std">
+            Choose from our curated problem statements focusing on
+            mechanical, software-based, AI-driven, or a combination.
+          </p>
+
+        </motion.div>
+      </div>
+      <div className="w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-6 mt-32 relative z-10 items-start">
         {questions.map((question, index) => (
           <Dropdown
             key={`question` + index}
             question={question.question}
             answer={question.answer}
-            finalHeightAnswer={question.answerStyle}
-            finalHeightQuestion={question.questionStyle}
-            fontSizeScaling={question.fontSizeScaling}
           />
         ))}
       </div>
     </section>
   );
 }
-;
+  ;

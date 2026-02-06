@@ -3,14 +3,14 @@ import Image from "next/image"
 import Link from "next/link"
 
 const navLinks = [
-  { href: "#", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#problems", label: "Problem" },
-  { href: "#prizes", label: "Prizes" },
-  { href: "#timeline", label: "Schedule" },
+  { href: "/#", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#problems", label: "Problem" },
+  { href: "/#prizes", label: "Prizes" },
+  { href: "/#timeline", label: "Schedule" },
   // { href: "#about", label: "Humans" },
-  { href: "#faq", label: "FAQs" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#faq", label: "FAQs" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 
@@ -42,7 +42,7 @@ export function Footer() {
         {/* PIVOT Logo */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
           {/* PIVOT Logo */}
-          <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+          <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-md shadow-xl border border-gray-900 hover:border-[#005CAA]/100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center">
               <Image
                 src="/pivot-logo.png"
@@ -76,6 +76,17 @@ export function Footer() {
               width={200}
               height={80}
               className="h-16 md:h-20 w-auto object-contain"
+            />
+          </div>
+
+          {/* L&T Logo */}
+          <div className="flex items-center">
+            <Image
+              src="/L_and_T_Technology_Services.png"
+              alt="L&T Technology Services"
+              width={200}
+              height={80}
+              className="h26 md:h-40 w-auto object-contain"
             />
           </div>
         </div>

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-   async redirects() {
+  async redirects() {
     return [
       {
         source: "/aftermovie",
@@ -21,6 +21,18 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "randomuser.me",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+      },
+    ],
   },
 };
 

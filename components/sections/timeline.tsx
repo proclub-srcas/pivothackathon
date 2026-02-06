@@ -22,7 +22,7 @@ const timelineEvents: TimelineEvent[] = [
     },
     {
         date: 'Feb 10, 2026',
-        title: 'Idea Submission Deadline',
+        title: 'ABSTRACT Submission Deadline',
         description: 'Submit your innovative ideas and project proposals.',
         icon: <Lightbulb className="w-6 h-6" />,
         type: 'milestone',

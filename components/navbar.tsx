@@ -23,14 +23,14 @@ const NAV_ITEMS = [
     label: "Home",
     activeIcon: "/Home.svg",
     icon: House,
-    href: "#",
+    href: "/",
   },
   {
     id: "Users",
     label: "About",
     activeIcon: "/Users.svg",
     icon: Users,
-    href: "#about",
+    href: "/about",
   },
   {
     id: "problems",
@@ -38,35 +38,35 @@ const NAV_ITEMS = [
     activeIcon: "/problem-icon.png",
     icon: Handshake, // Fallback, but we'll override with custom image
     customIcon: "/problem-icon.png",
-    href: "#problems",
+    href: "/#problems",
   },
   {
-    id: "guidelines",
-    label: "Guidelines",
+    id: "prizes",
+    label: "Prizes",
     activeIcon: "/Prizes.svg",
     icon: Trophy,
-    href: "#guidelines",
+    href: "/#prizes",
   },
   {
     id: "timeline",
     label: "Timeline",
     activeIcon: "/Calendar.svg",
     icon: Calendar,
-    href: "#timeline",
+    href: "/#timeline",
   },
   {
     id: "faq",
     label: "FAQs",
     activeIcon: "/About.svg",
     icon: Info,
-    href: "#faq",
+    href: "/#faq",
   },
   {
     id: "contact",
     label: "Contact",
     activeIcon: "/Contact.svg",
     icon: Phone,
-    href: "#contact",
+    href: "/#contact",
   },
 ];
 
@@ -76,11 +76,50 @@ const DesktopNavBar: React.FC = () => {
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [mounted, setMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Scroll Spy Logic
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5, rootMargin: "-10% 0px -10% 0px" }
+    );
+
+    NAV_ITEMS.forEach((item) => {
+      if (item.href.startsWith("/#")) {
+        const id = item.href.replace("/#", "");
+        const element = document.getElementById(id);
+        if (element) observer.observe(element);
+      }
+    });
+
+    // Special case for Home/Top
+    const handleScroll = () => {
+      if (window.scrollY < 100) setActiveSection("home");
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!navRef.current) return;
@@ -139,7 +178,25 @@ const DesktopNavBar: React.FC = () => {
           <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#005CAA]/5 to-transparent opacity-30 pointer-events-none rounded-t-full" />
 
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
+            const isHomeItem = item.href === "/";
+            const isHashLink = item.href.startsWith("/#");
+            const sectionId = isHashLink ? item.href.replace("/#", "") : "home";
+
+            let isActive = false;
+
+            if (pathname === "/") {
+              // We are on home page, rely on Scroll Spy
+              if (isHashLink) {
+                isActive = activeSection === sectionId;
+              } else if (isHomeItem) {
+                // Home item is active only if we are at the top (activeSection is 'home' or empty)
+                isActive = activeSection === "home" || activeSection === "";
+              }
+            } else {
+              // Other pages (e.g. /about), relies on exact match
+              isActive = pathname === item.href;
+            }
+
             const isHovered = hoveredTab === item.id;
             const LucideIcon = item.icon;
 

@@ -4,9 +4,6 @@ import Typography from '../Typography';
 export interface Question {
   question: string;
   answer: React.ReactNode;
-  answerStyle: string;
-  questionStyle: string;
-  fontSizeScaling?: string;
 }
 
 export const questions: Question[] = [
@@ -37,9 +34,6 @@ export const questions: Question[] = [
         </div>
       </div>
     ),
-    answerStyle: 'h-[600px] md:h-[600px]',
-    questionStyle: 'mb-[540px] -bottom-[540px] md:mb-[540px] md:-bottom-[540px]',
-    fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   },
   {
     question: 'Costing Automation',
@@ -69,9 +63,6 @@ export const questions: Question[] = [
         </div>
       </div>
     ),
-    answerStyle: 'h-[700px] md:h-[700px]', // Increased height for more content
-    questionStyle: 'mb-[640px] -bottom-[640px] md:mb-[640px] md:-bottom-[640px]',
-    fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   },
   {
     question: 'Design Automation - Pipe Routing',
@@ -100,9 +91,6 @@ export const questions: Question[] = [
         </div>
       </div>
     ),
-    answerStyle: 'h-[750px] md:h-[750px]', // Increased height for more content
-    questionStyle: 'mb-[690px] -bottom-[690px] md:mb-[690px] md:-bottom-[690px]',
-    fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   },
   {
     question: 'Autonomous Vehicle (Software)',
@@ -131,8 +119,5 @@ export const questions: Question[] = [
         </div>
       </div>
     ),
-    answerStyle: 'h-[700px] md:h-[700px]',
-    questionStyle: 'mb-[640px] -bottom-[640px] md:mb-[640px] md:-bottom-[640px]',
-    fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   }
 ];

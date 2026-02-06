@@ -98,7 +98,7 @@ const GuidelinesSection: React.FC = () => {
             }}
           />
 
-          {/* Content */}
+          {/* Content
           <div className="relative z-10 py-16 px-8 md:px-16 text-center">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
               Download Our Official PPT Template
@@ -108,7 +108,7 @@ const GuidelinesSection: React.FC = () => {
               uniformity and fairness in presentation across all teams.
             </p>
 
-            {/* Download Button */}
+            Download Button
             <a
               href="/ppt-template.pptx"
               download
@@ -129,7 +129,7 @@ const GuidelinesSection: React.FC = () => {
               </svg>
               Download PPT
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

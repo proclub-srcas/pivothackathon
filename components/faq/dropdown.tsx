@@ -1,80 +1,70 @@
 'use client';
 
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-
 import Typography from '../Typography';
 
 type DropdownProps = {
   question: string;
   answer: React.ReactNode;
-  finalHeightAnswer?: string;
-  finalHeightQuestion?: string;
-  fontSizeScaling?: string;
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({
   question,
   answer,
-  finalHeightAnswer,
-  finalHeightQuestion,
-  fontSizeScaling,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
-  const answerStyle = `absolute left-5 right-5 bg-white rounded-t-2xl z-1 mt-5
-            transition-all duration-200 ease-in ${!isOpen ? 'h-8' : finalHeightAnswer} 
-            transition-all duration-100 ${!isHover ? '-top-1' : '-top-2'}
-            justify-center`;
-  const backgroundStyle = `absolute -top-5 left-0 right-0 bg-[#0617B0] rounded-t-2xl 
-            border-t-2 border-l-2 border-r-2 border-[#ACACAC] min-w-60 z-0
-            transition-all duration-200 ease-in ${!isOpen ? 'h-10' : finalHeightAnswer}`;
-
-  const questionStyle = `relative bg-[#181818] rounded-2xl px-4 py-4 border-2 border-[#ACACAC] min-h-[80px] min-w-60 z-10
-            transition-all duration-200 ease-in ${!isOpen ? 'mb-0 -bottom-0' : finalHeightQuestion} `;
-
-  const typography = `mt-5 ml-5 mr-5 transition-all ease-in duration-200 ${!isOpen ? 'opacity-0' : 'opacity-100'} ${fontSizeScaling}`;
-
   return (
-    <div className=" relative w-full max-w-2xl mx-auto mb-4 mt-10 px-4 ">
-      <div className="relative">
-        <div>
-          {/* Blue Tab */}
-          <div
-            className={`absolute -top-9 left-0 right-120 h-7 bg-[#0617B0] rounded-t-2xl 
-            border-t-2 border-l-2 border-r-2 border-[#ACACAC] min-w-20 z-1`}
-          ></div>
-          <div
-            className={`absolute -top-4.5 left-0 right-10 h-3 bg-[#0617B0] border-l-2  border-[#ACACAC] z-1 min-w-20`}
-          ></div>
-          <div className={backgroundStyle}>
-            <div className={answerStyle}>
-              <div className={typography}>{answer}</div>
-            </div>
-          </div>
-        </div>
-        {/* Main Card */}
-        <div
-          className={questionStyle}
+    <div className="relative w-full mb-6">
+      {/* Decorative Tab - Visible only when open or hovered? Let's keep it consistent */}
+      <div
+        className={`absolute -top-3 left-6 w-32 h-6 bg-[#005CAA] rounded-t-xl transition-all duration-300 ease-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}
+      />
+
+      {/* Main Card */}
+      <div
+        className={`relative z-10 bg-[#181818] rounded-2xl border-2 border-[#ACACAC] overflow-hidden transition-all duration-300 ${isOpen ? 'shadow-xl shadow-blue-900/20' : ''}`}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        {/* Header */}
+        <button
           onClick={() => setIsOpen(!isOpen)}
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
+          className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none"
         >
-          <div className="w-full flex items-center justify-between relative top-[0.4em] z-1 min-h-5 hover:cursor-pointer">
-            <Typography.H6 className="  text-white">{question}</Typography.H6>
-            <div>
-              <Plus
-                size={32}
-                color="white"
-                className={`relative -top-[0.3em] transition-transform duration-300 origin-center 
-                ${!isHover ? 'rotate-0' : 'rotate-90'} ${!isOpen ? 'rotate-0' : 'rotate-135'}`}
-              />
-            </div>
+          <Typography.H6 className="text-white !mb-0 pr-4">{question}</Typography.H6>
+          <div
+            className={`flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'} ${isHover && !isOpen ? 'scale-110' : ''}`}
+          >
+            <Plus size={28} className="text-white" />
           </div>
-        </div>
+        </button>
+
+        {/* Expandable Body */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="bg-white"
+            >
+              <div className="p-6 border-t border-gray-200">
+                {answer}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+
+      {/* Background Offset Card Effect */}
+      <div
+        className={`absolute inset-0 bg-[#005CAA] rounded-2xl -z-10 transition-transform duration-300 ${isOpen ? 'translate-x-2 translate-y-2' : 'translate-x-0 translate-y-0'}`}
+      />
     </div>
   );
 };

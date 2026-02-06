@@ -192,11 +192,11 @@ const DodgeHero: React.FC = () => {
                 <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-4">
                     Can you <span className="font-black italic">catch</span> me ?!
                 </h2>
-                <p className="text-gray-500 text-lg lg:text-xl">
+                {/* <p className="text-gray-500 text-lg lg:text-xl">
                     {dodgeCount > 0
                         ? `Attempts: ${dodgeCount} ${dodgeCount > 15 ? "🔥" : dodgeCount > 10 ? "💪" : dodgeCount > 5 ? "😤" : ""}`
                         : "Try to click the sticky note!"}
-                </p>
+                </p> */}
                 {dodgeCount > 10 && !isCaught && (
                     <motion.p
                         initial={{ opacity: 0 }}

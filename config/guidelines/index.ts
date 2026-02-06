@@ -9,9 +9,9 @@ export const guidelinesData: Guideline[] = [
     {
         id: 'hackathon',
         icon: 'hackathon',
-        title: '36-Hour Hackathon',
+        title: '24-Hour Hackathon',
         description:
-            'An intense 36-hour coding marathon where you build innovative solutions to real-world problems.',
+            'An intense 24-hour coding marathon where you build innovative solutions to real-world problems.',
     },
     {
         id: 'register',
@@ -28,11 +28,11 @@ export const guidelinesData: Guideline[] = [
             'Form a team of 2 to 4 members. Cross-college teams are allowed and encouraged!',
     },
     {
-        id: 'no-prerequisites',
-        icon: 'no-prerequisites',
-        title: 'No Prerequisites',
+        id: 'venue',
+        icon: 'venue',
+        title: 'SRCAS Campus',
         description:
-            'Open to all skill levels! Whether you are a beginner or an expert, everyone is welcome.',
+            'The hackathon will be held at Sri Ramakrishna College of Arts and Science, Coimbatore.',
     },
     {
         id: 'id-card',
@@ -51,22 +51,22 @@ export const guidelinesData: Guideline[] = [
     {
         id: 'in-person',
         icon: 'in-person',
-        title: 'In-Person Event',
+        title: 'ABSTRACT SUBMISSION GUIDELINES',
         description:
-            'This is an offline event. All participants must be present at the venue throughout the hackathon.',
+            'Round 1 is focused on evaluating the idea and approach, not the final solution. Each team must submit a PDF abstract',
     },
     {
-        id: 'venue',
-        icon: 'venue',
-        title: 'SRCAS Campus',
+        id: 'engineering',
+        icon: 'no-prerequisites',
+        title: 'Only for Engineering Students',
         description:
-            'The hackathon will be held at Sri Ramakrishna College of Arts and Science, Coimbatore.',
+            'Open to all Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
     },
     {
-        id: 'safe',
+        id: 'Submission Format',
         icon: 'safe',
-        title: 'Safe & Inclusive',
+        title: 'Submission Format',
         description:
-            'We ensure a safe, inclusive, and harassment-free environment for all participants.',
+            'File format PDF only, Word limit 1200 words (strict), Pages Maximum 3 page.',
     },
 ];

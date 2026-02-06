@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 
 // Import existing components
-import ProblemSection from "@/components/problems/ProblemSection";
 import Timeline from "@/components/sections/timeline";
 import GuidelinesSection from "@/components/guidelines/guidelines";
 import PrizesSection from "@/components/sections/PrizesSection";
@@ -22,6 +21,7 @@ import DodgeHero from "@/components/DodgeHero"
 
 import { Typography } from '@/components/Typography';
 import Image from "next/image"
+import { Link } from "next-view-transitions";
 
 
 // ============================================
@@ -66,6 +66,40 @@ function HeroSection() {
         }}
       />
 
+      {/* Partner Logos Card - Top Right (Desktop Only) */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="absolute top-32 right-10 hidden 2xl:flex flex-col gap-6 p-6 bg-white/60 backdrop-blur-xl rounded-3xl border border-white/80 shadow-2xl z-20 hover:scale-105 transition-transform duration-300"
+      >
+        <div className="flex flex-col items-center gap-6">
+          <Image
+            src="/L&Ts-logo.jpeg"
+            alt="L&T Technology Services"
+            width={140}
+            height={60}
+            className="h-12 w-auto object-contain"
+          />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
+          <Image
+            src="/programming-club-1-logo.png"
+            alt="Programming Club"
+            width={80}
+            height={80}
+            className="h-16 w-auto object-contain"
+          />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
+          <Image
+            src="/srcas.png"
+            alt="SRCAS"
+            width={80}
+            height={80}
+            className="h-14 w-auto object-contain"
+          />
+        </div>
+      </motion.div>
+
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
           initial="hidden"
@@ -80,10 +114,27 @@ function HeroSection() {
             </span>
           </motion.div>
 
+
+
+          {/* PIVOT Logo */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-7">
+            {/* <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300"> */}
+            <div className="flex items-center">
+              <Image
+                src="/pivot-logo.png"
+                alt="PIVOT"
+                width={500}
+                height={300}
+                className="h-42 md:h-60 w-auto object-contain"
+              />
+            </div>
+            {/* </div> */}
+          </div>
+
           {/* Main Headline */}
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight flex flex-wrap justify-center gap-x-4"
+            className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight flex flex-wrap justify-center gap-x-4 "
           >
             <JumpingText
               text="Innovating for"
@@ -97,27 +148,12 @@ function HeroSection() {
             />
           </motion.h1>
 
-          {/* PIVOT Logo */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-4">
-            <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center">
-                <Image
-                  src="/pivot-logo.png"
-                  alt="PIVOT"
-                  width={500}
-                  height={300}
-                  className="h-32 md:h-40 w-auto object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Sub-headline */}
           <motion.p
             variants={fadeInUp}
-            className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto gap-16 md:gap-27 mb-12"
           >
-            <span className=" text-5xl font-semibold text-[#005CAA]"></span>  <span className="text-5xl font-semibold text-gray-800"></span>
+            <span className=" text-5xl font-semibold text-[#005CAA]  "></span>  <span className="text-5xl font-semibold text-gray-800"></span>
             <span className="text-lg mt-2 block">
               <span className="font-semibold text-[#005CAA]"> </span>
             </span>
@@ -229,7 +265,7 @@ function AboutSection() {
                     hoverColor="#005CAA"
                     jumpHeight={12}
                   />
-                  <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
+                  <span className="font-wc-rough-trad text-[#005CAA]">
                     <JumpingText
                       text="PIVOT Hackathon"
                       defaultColor="#005CAA"
@@ -254,20 +290,15 @@ function AboutSection() {
               and cutting-edge technology.
             </p>
           </motion.div>
-
-          {/* Partner logos placeholder */}
-          <motion.div
-            variants={fadeInUp}
-            className="mt-12 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12"
-          >
-            <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full md:w-auto">
-              <p className="text-xl md:text-2xl font-bold text-gray-800">SRCAS</p>
-            </div>
-            <span className="text-gray-400 text-2xl rotate-90 md:rotate-0"> 🤝 </span>
-            <div className="px-8 py-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full md:w-auto">
-              <p className="text-xl md:text-2xl font-bold text-[#005CAA]">L&T Technology Services</p>
-            </div>
-          </motion.div>
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/about"
+              className="group flex items-center gap-2 px-8 py-3 bg-[#005CAA] text-white font-semibold rounded-full hover:bg-[#004a8c] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              About Us
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
@@ -311,7 +342,9 @@ function FAQSection() {
 
   return (
     <section id="faq" className="py-24 bg-transparent">
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
+        {/* Background Card Container */}
+        {/* <div className="bg-white rounded-3xl shadow-2xl border-2 border-gray-300 p-8 md:p-12"> */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -365,95 +398,11 @@ function FAQSection() {
           </motion.div>
         </motion.div>
       </div>
+      {/* </div> */}
     </section>
   );
 }
 
-// ============================================
-// FOOTER SECTION
-// ============================================
-// function FooterSection() {
-//   return (
-//     <footer className="bg-[#003366] text-white py-16">
-//       <div className="max-w-6xl mx-auto px-6">
-//         <div className="grid md:grid-cols-3 gap-12 mb-12">
-//           {/* Brand */}
-//           <div>
-//             <h3 className="text-2xl font-bold mb-4">SRCAS × L&T</h3>
-//             <p className="text-white/70 leading-relaxed">
-//               Fostering innovation through industry-academia collaboration.
-//             </p>
-//           </div>
-
-//           {/* Quick Links */}
-//           <div>
-//             <h4 className="font-semibold mb-4 text-white/90">Quick Links</h4>
-//             <ul className="space-y-3">
-//               <li>
-//                 <a
-//                   href="#about"
-//                   className="text-white/70 hover:text-white transition-colors"
-//                 >
-//                   About
-//                 </a>
-//               </li>
-//               <li>
-//                 <a
-//                   href="#tracks"
-//                   className="text-white/70 hover:text-white transition-colors"
-//                 >
-//                   Problem Statements
-//                 </a>
-//               </li>
-//               <li>
-//                 <a
-//                   href="#timeline"
-//                   className="text-white/70 hover:text-white transition-colors"
-//                 >
-//                   Timeline
-//                 </a>
-//               </li>
-//               <li>
-//                 <a
-//                   href="#faq"
-//                   className="text-white/70 hover:text-white transition-colors"
-//                 >
-//                   FAQ
-//                 </a>
-//               </li>
-//             </ul>
-//           </div>
-
-//           {/* Contact */}
-//           <div>
-//             <h4 className="font-semibold mb-4 text-white/90">Contact Us</h4>
-//             <ul className="space-y-3">
-//               <li className="flex items-center gap-3 text-white/70">
-//                 <Mail className="w-5 h-5" />
-//                 hackathon@srcas.edu.in
-//               </li>
-//               <li className="flex items-center gap-3 text-white/70">
-//                 <Phone className="w-5 h-5" />
-//                 +91 98765 43210
-//               </li>
-//               <li className="flex items-center gap-3 text-white/70">
-//                 <MapPin className="w-5 h-5" />
-//                 Coimbatore, Tamil Nadu
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-
-//         {/* Bottom bar */}
-//         <div className="pt-8 border-t border-white/10 text-center">
-//           <p className="text-white/60 text-sm">
-//             © 2026 SRCAS Programming Club. Partnered with L&T Technology Services.
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
 
 // ============================================
 // MAIN PAGE COMPONENT
@@ -464,7 +413,6 @@ export default function Home() {
       <HeroSection />
       <DodgeHero />
       <AboutSection />
-      <ProblemSection />
       <FaqList />
       <GuidelinesSection />
       <PrizesSection />
