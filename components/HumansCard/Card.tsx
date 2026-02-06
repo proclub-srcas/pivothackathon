@@ -5,7 +5,6 @@ import {
   TwitterLogoIcon,
   GitHubLogoIcon,
 } from "@radix-ui/react-icons";
-import beLogo from "@/public/behanceLogo.svg"
 
 interface HumanCardProps {
   name: string;
@@ -69,9 +68,10 @@ export default function HumanCard({
               <GitHubLogoIcon className="w-[1em] h-[1em]" />
             </Link>
           )}
+
           {behance && (
             <Link href={behance} target="_blank">
-              <Image src={beLogo} alt="behance" className="w-[1em] h-[1em]" />
+              <span className="text-xs font-bold">Be</span>
             </Link>
           )}
         </div>
