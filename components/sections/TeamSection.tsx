@@ -19,9 +19,11 @@ interface TeamSectionProps {
     members: TeamMember[];
     id?: string;
     className?: string;
+    hideLinkedIn?: boolean;
+    centerItems?: boolean;
 }
 
-const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className = "" }) => {
+const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className = "", hideLinkedIn = false, centerItems = false }) => {
     return (
         <section
             id={id}
@@ -43,7 +45,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className
                     {title}
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${centerItems ? '3' : '4'} gap-8 ${centerItems ? 'justify-items-center' : ''}`}>
                     {members.map((member, idx) => (
                         <motion.div
                             key={idx}
@@ -63,16 +65,18 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className
                                 />
 
                                 {/* Hover Overlay */}
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                                    <Link
-                                        href={member.linkedin || '#'}
-                                        target="_blank"
-                                        className="flex items-center gap-2 px-6 py-2 bg-[#0077b5] text-white rounded-full font-semibold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:scale-105 shadow-xl"
-                                    >
-                                        <Linkedin className="w-4 h-4" />
-                                        Connect
-                                    </Link>
-                                </div>
+                                {!hideLinkedIn && (
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                        <Link
+                                            href={member.linkedin || '#'}
+                                            target="_blank"
+                                            className="flex items-center gap-2 px-6 py-2 bg-[#0077b5] text-white rounded-full font-semibold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:scale-105 shadow-xl"
+                                        >
+                                            <Linkedin className="w-4 h-4" />
+                                            Connect
+                                        </Link>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Info */}

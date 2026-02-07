@@ -22,6 +22,8 @@ import DodgeHero from "@/components/DodgeHero"
 import { Typography } from '@/components/Typography';
 import Image from "next/image"
 import { Link } from "next-view-transitions";
+import FloatingLogos from "@/components/FloatingLogos";
+
 
 
 // ============================================
@@ -66,40 +68,6 @@ function HeroSection() {
         }}
       />
 
-      {/* Partner Logos Card - Top Right (Desktop Only) */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        className="absolute top-32 right-10 hidden 2xl:flex flex-col gap-6 p-6 bg-white/60 backdrop-blur-xl rounded-3xl border border-white/80 shadow-2xl z-20 hover:scale-105 transition-transform duration-300"
-      >
-        <div className="flex flex-col items-center gap-6">
-          <Image
-            src="/L&Ts-logo.jpeg"
-            alt="L&T Technology Services"
-            width={140}
-            height={60}
-            className="h-12 w-auto object-contain"
-          />
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
-          <Image
-            src="/programming-club-1-logo.png"
-            alt="Programming Club"
-            width={80}
-            height={80}
-            className="h-16 w-auto object-contain"
-          />
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
-          <Image
-            src="/srcas.png"
-            alt="SRCAS"
-            width={80}
-            height={80}
-            className="h-14 w-auto object-contain"
-          />
-        </div>
-      </motion.div>
-
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
           initial="hidden"
@@ -137,12 +105,18 @@ function HeroSection() {
             className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight flex flex-wrap justify-center gap-x-4 "
           >
             <JumpingText
-              text="Innovating for"
+              text="Code to "
               defaultColor="#111827"
               hoverColor="#005CAA"
             />
             <JumpingText
-              text="Tomorrow"
+              text="Innovate"
+              defaultColor="#005CAA"
+              hoverColor="#003366"
+            />
+            <br />
+            <JumpingText className="text-5 md:text-7"
+              text="Build the Future "
               defaultColor="#005CAA"
               hoverColor="#003366"
             />
@@ -186,10 +160,14 @@ function HeroSection() {
               Register Now
               <ArrowRight className="w-5 h-5" />
             </motion.button>
-            <button className="flex items-center gap-2 px-8 py-4 border-2 border-[#005CAA] text-[#005CAA] font-semibold rounded-xl hover:bg-[#005CAA]/5 transition-all duration-300">
+            <a
+              href="/fileFolder/Abstract Submission Guidelines.pdf"
+              download="Abstract_Submission_Guidelines.pdf"
+              className="flex items-center gap-2 px-8 py-4 border-2 border-[#005CAA] text-[#005CAA] font-semibold rounded-xl hover:bg-[#005CAA]/5 transition-all duration-300"
+            >
               <Download className="w-5 h-5" />
               Guidelines for the Abstract
-            </button>
+            </a>
           </motion.div>
 
           {/* Stats Row */}
@@ -211,10 +189,48 @@ function HeroSection() {
             </div>
           </motion.div>
         </motion.div>
+
+
+        {/* Partners Logos */}
+
+
+        {/* Partners Logos - Direct Display */}
+        <motion.div variants={fadeInUp} className="mt-16 mb-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+          {/* SRCAS Logo */}
+          <Image
+            src="/srcas-logo.png"
+            alt="Sri Ramakrishna College of Arts and Science"
+            width={300}
+            height={100}
+            className="h-16 md:h-20 w-auto object-contain"
+          />
+
+          {/* Programming Club Logo */}
+          <Image
+            src="/programming-club-2-logo.png"
+            alt="Programming Club"
+            width={200}
+            height={80}
+            className="h-16 md:h-20 w-auto object-contain"
+          />
+
+          {/* L&T Logo */}
+          <Image
+            src="/L_and_T_Technology_Services-1-.png"
+            alt="L&T Technology Services"
+            width={200}
+            height={80}
+            className="h-16 md:h-20 w-auto object-contain"
+          />
+        </motion.div>
+
+
       </div>
 
       {/* Scroll indicator */}
+
       <motion.div
+
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }
         }
@@ -411,6 +427,7 @@ export default function Home() {
   return (
     <main className="bg-transparent">
       <HeroSection />
+      <FloatingLogos hideInHero={true} />
       <DodgeHero />
       <AboutSection />
       <FaqList />

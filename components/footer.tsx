@@ -39,11 +39,12 @@ export function Footer() {
         </div> 
         */}
 
+
         {/* PIVOT Logo */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12 w-full">
           {/* PIVOT Logo */}
-          <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-md shadow-xl border border-gray-900 hover:border-[#005CAA]/100 hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center">
+          <div className="w-full max-w-4xl p-6 rounded-2xl bg-white/80 backdrop-blur-md shadow-xl border border-gray-900 hover:border-[#005CAA]/100 hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center justify-center">
               <Image
                 src="/pivot-logo.png"
                 alt="PIVOT"
@@ -123,7 +124,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/proclub_srcas/"
               target="_blank"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             >
@@ -136,12 +137,15 @@ export function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="w-full bg-gray-950 py-4 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 SRCAS Programming Club, All rights reserved
+      <div className="w-full bg-gray-950 py-4 px-6 relative">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-gray-400 text-sm text-center">
+            Crafted with ❤️ by <a href="https://udhayasankar.vercel.app/" target="_blank" className="text-white hover:text-gray-200 transition-colors">உதய UD</a>
           </p>
         </div>
+        <p className="text-gray-400 text-sm absolute right-6 top-1/2 -translate-y-1/2">
+          © 2025 SRCAS Programming Club, All rights reserved
+        </p>
       </div>
     </footer>
   )

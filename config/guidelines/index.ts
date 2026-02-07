@@ -3,6 +3,11 @@ export interface Guideline {
     icon: string;
     title: string;
     description: string;
+    downloadLink?: {
+        url: string;
+        text: string;
+        filename: string;
+    };
 }
 
 export const guidelinesData: Guideline[] = [
@@ -49,18 +54,23 @@ export const guidelinesData: Guideline[] = [
             'All meals, snacks, and refreshments will be provided throughout the hackathon.',
     },
     {
-        id: 'in-person',
-        icon: 'in-person',
-        title: 'ABSTRACT SUBMISSION GUIDELINES',
-        description:
-            'Round 1 is focused on evaluating the idea and approach, not the final solution. Each team must submit a PDF abstract',
-    },
-    {
         id: 'engineering',
         icon: 'no-prerequisites',
         title: 'Only for Engineering Students',
         description:
             'Open to all Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
+    },
+        {
+        id: 'in-person',
+        icon: 'in-person',
+        title: 'Guidelines for PIVOT Hackathon',
+        description:
+            'Round 1 is focused on evaluating the idea and approach, not the final solution. Each team must submit a PDF abstract.',
+        downloadLink: {
+            url: '/fileFolder/Abstract Submission Guidelines.pdf',
+            text: 'Download Guidelines',
+            filename: 'Abstract_Submission_Guidelines.pdf'
+        }
     },
     {
         id: 'Submission Format',

@@ -78,9 +78,23 @@ const GuidelinesSection: React.FC = () => {
 
                 {/* Description */}
                 <div className="w-12 h-1 bg-gray-200 rounded-full mb-4 group-hover:bg-black transition-colors duration-300" />
-                <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                   {guideline.description}
                 </p>
+
+                {/* Download Link if available */}
+                {guideline.downloadLink && (
+                  <a
+                    href={guideline.downloadLink.url}
+                    download={guideline.downloadLink.filename}
+                    className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-[#005CAA] text-white font-semibold rounded-lg hover:bg-[#003366] transition-all duration-300 group/btn"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    {guideline.downloadLink.text}
+                  </a>
+                )}
               </div>
             </div>
           ))}

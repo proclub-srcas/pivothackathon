@@ -10,6 +10,11 @@ interface TimelineEvent {
     description: string;
     icon: React.ReactNode;
     type: 'start' | 'milestone' | 'end';
+    downloadLink?: {
+        url: string;
+        text: string;
+        filename: string;
+    };
 }
 
 const timelineEvents: TimelineEvent[] = [
@@ -19,6 +24,11 @@ const timelineEvents: TimelineEvent[] = [
         description: 'Online registrations begin. Form your teams and sign up!',
         icon: <Users className="w-6 h-6" />,
         type: 'start',
+        downloadLink: {
+            url: 'https://udhayasankar.vercel.app/',
+            text: 'Register Now',
+            filename: ''
+        }
     },
     {
         date: 'Feb 10, 2026',
@@ -26,6 +36,11 @@ const timelineEvents: TimelineEvent[] = [
         description: 'Submit your innovative ideas and project proposals.',
         icon: <Lightbulb className="w-6 h-6" />,
         type: 'milestone',
+        downloadLink: {
+            url: '/fileFolder/Abstract Submission Guidelines.pdf',
+            text: 'Download Guidelines',
+            filename: 'Abstract_Submission_Guidelines.pdf'
+        }
     },
     {
         date: 'Feb 14, 2026',
@@ -130,6 +145,20 @@ function TimelineItem({
                     <p className="text-gray-600 leading-relaxed">
                         {event.description}
                     </p>
+
+                    {/* Download Link if available */}
+                    {event.downloadLink && (
+                        <a
+                            href={event.downloadLink.url}
+                            download={event.downloadLink.filename}
+                            className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-[#005CAA] text-white font-semibold rounded-lg hover:bg-[#003366] transition-all duration-300 text-sm"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            {event.downloadLink.text}
+                        </a>
+                    )}
 
                     {/* Type indicator */}
                     {event.type === 'start' && (
