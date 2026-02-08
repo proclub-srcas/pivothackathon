@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { Typography } from '@/components/Typography';
@@ -11,6 +11,14 @@ const fadeInUp = {
 };
 
 export const FaqList: React.FC = () => {
+  // State to track which problem statement is currently open (accordion behavior)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    // If clicking the already open item, close it. Otherwise, open the clicked item
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section
       className="min-h-screen flex flex-col items-center justify-center py-24 w-full relative overflow-hidden"
@@ -95,6 +103,8 @@ export const FaqList: React.FC = () => {
             key={`question` + index}
             question={question.question}
             answer={question.answer}
+            isOpen={openIndex === index}
+            onToggle={() => handleToggle(index)}
           />
         ))}
       </div>

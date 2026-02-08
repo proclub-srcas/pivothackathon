@@ -55,8 +55,8 @@ export default function FloatingLogos({ hideInHero = false }: FloatingLogosProps
                 >
                     <div className="flex flex-col items-center gap-6">
                         <Image
-                            src="/L&Ts-logo.jpeg"
-                            alt="L&T Technology Services"
+                            src="/srcas.png"
+                            alt="SRCAS"
                             width={140}
                             height={60}
                             className="h-12 w-auto object-contain"
@@ -71,8 +71,8 @@ export default function FloatingLogos({ hideInHero = false }: FloatingLogosProps
                         />
                         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
                         <Image
-                            src="/srcas.png"
-                            alt="SRCAS"
+                            src="/L&Ts-logo.png"
+                            alt="L&T Technology Services"
                             width={80}
                             height={80}
                             className="h-14 w-auto object-contain"

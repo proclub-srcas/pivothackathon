@@ -8,13 +8,16 @@ import Typography from '../Typography';
 type DropdownProps = {
   question: string;
   answer: React.ReactNode;
+  isOpen: boolean;
+  onToggle: () => void;
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({
   question,
   answer,
+  isOpen,
+  onToggle,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -32,7 +35,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
       >
         {/* Header */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={onToggle}
           className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none"
         >
           <Typography.H6 className="text-white !mb-0 pr-4">{question}</Typography.H6>

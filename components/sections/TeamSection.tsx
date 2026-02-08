@@ -45,7 +45,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className
                     {title}
                 </h2>
 
-                <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${centerItems ? '3' : '4'} gap-8 ${centerItems ? 'justify-items-center' : ''}`}>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 ${centerItems ? 'lg:grid-cols-3 justify-items-center' : 'md:grid-cols-4'}`}>
                     {members.map((member, idx) => (
                         <motion.div
                             key={idx}

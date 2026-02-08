@@ -2,7 +2,8 @@ export interface Guideline {
     id: string;
     icon: string;
     title: string;
-    description: string;
+    description: string | string[];
+    isHighlighted?: boolean;
     downloadLink?: {
         url: string;
         text: string;
@@ -11,6 +12,14 @@ export interface Guideline {
 }
 
 export const guidelinesData: Guideline[] = [
+    {
+        id: 'engineering',
+        icon: 'no-prerequisites',
+        title: 'Only for Engineering Students',
+        description:
+            'Open to all Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
+        isHighlighted: true,
+    },
     {
         id: 'hackathon',
         icon: 'hackathon',
@@ -53,14 +62,8 @@ export const guidelinesData: Guideline[] = [
         description:
             'All meals, snacks, and refreshments will be provided throughout the hackathon.',
     },
+
     {
-        id: 'engineering',
-        icon: 'no-prerequisites',
-        title: 'Only for Engineering Students',
-        description:
-            'Open to all Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
-    },
-        {
         id: 'in-person',
         icon: 'in-person',
         title: 'Guidelines for PIVOT Hackathon',
@@ -76,7 +79,10 @@ export const guidelinesData: Guideline[] = [
         id: 'Submission Format',
         icon: 'safe',
         title: 'Submission Format',
-        description:
-            'File format PDF only, Word limit 1200 words (strict), Pages Maximum 3 page.',
+        description: [
+            'File format PDF only',
+            'Word limit 1200 words (strict)',
+            'Pages Maximum 3 page.'
+        ]
     },
 ];

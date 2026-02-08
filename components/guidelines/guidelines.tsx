@@ -57,14 +57,21 @@ const GuidelinesSection: React.FC = () => {
           {guidelinesData.map((guideline) => (
             <div key={guideline.id} className="group relative h-full">
               {/* Card Background & Border */}
-              <div className="absolute inset-0 bg-white rounded-2xl border border-gray-200 shadow-xl shadow-gray-200/40 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-gray-300/50 group-hover:-translate-y-2 group-hover:border-black/20" />
+              <div
+                className={`absolute inset-0 rounded-2xl border shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2
+                  ${guideline.isHighlighted
+                    ? 'bg-gradient-to-br from-[#005CAA]/5 via-white to-white border-[#005CAA] shadow-[#005CAA]/20 group-hover:shadow-[#005CAA]/30'
+                    : 'bg-white border-gray-200 shadow-gray-200/40 group-hover:shadow-gray-300/50 group-hover:border-black/20'
+                  }`}
+              />
 
               {/* Content */}
               <div className="relative p-8 flex flex-col items-center text-center h-full z-10 transition-transform duration-500 group-hover:-translate-y-2">
                 {/* Icon Container */}
                 <div className="mb-6 relative">
-                  <div className="absolute inset-0 bg-black blur-xl opacity-10 group-hover:opacity-25 transition-opacity duration-500 rounded-full" />
-                  <div className="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-gradient-to-br from-neutral-800 to-black shadow-lg group-hover:scale-110 transition-transform duration-500 rotate-3 group-hover:rotate-6">
+                  <div className={`absolute inset-0 blur-xl opacity-10 group-hover:opacity-25 transition-opacity duration-500 rounded-full ${guideline.isHighlighted ? 'bg-[#005CAA]' : 'bg-black'}`} />
+                  <div className={`relative w-16 h-16 flex items-center justify-center rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-500 rotate-3 group-hover:rotate-6
+                    ${guideline.isHighlighted ? 'bg-[#005CAA]' : 'bg-gradient-to-br from-neutral-800 to-black'}`}>
                     {iconMap[guideline.icon] || (
                       <Sparkles className="w-8 h-8 text-white" />
                     )}
@@ -72,15 +79,24 @@ const GuidelinesSection: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 font-averta-std group-hover:text-black transition-colors duration-300">
+                <h3 className={`text-xl md:text-2xl font-bold mb-4 font-averta-std transition-colors duration-300 ${guideline.isHighlighted ? 'text-[#005CAA]' : 'text-gray-900 group-hover:text-black'}`}>
                   {guideline.title}
                 </h3>
 
                 {/* Description */}
-                <div className="w-12 h-1 bg-gray-200 rounded-full mb-4 group-hover:bg-black transition-colors duration-300" />
-                <p className="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
-                  {guideline.description}
-                </p>
+                <div className={`w-12 h-1 rounded-full mb-4 transition-colors duration-300 ${guideline.isHighlighted ? 'bg-[#005CAA]/30 group-hover:bg-[#005CAA]' : 'bg-gray-200 group-hover:bg-black'}`} />
+
+                {Array.isArray(guideline.description) ? (
+                  <ul className="text-gray-600 leading-relaxed text-base md:text-lg mb-4 text-left list-disc pl-5 space-y-1 w-full">
+                    {guideline.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
+                    {guideline.description}
+                  </p>
+                )}
 
                 {/* Download Link if available */}
                 {guideline.downloadLink && (

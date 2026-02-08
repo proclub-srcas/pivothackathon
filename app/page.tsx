@@ -75,12 +75,12 @@ function HeroSection() {
           variants={staggerContainer}
         >
           {/* Badge */}
-          <motion.div variants={fadeInUp} className="mb-8">
+          {/* <motion.div variants={fadeInUp} className="mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-medium">
               <Calendar className="w-4 h-4" />
               February 2026
             </span>
-          </motion.div>
+          </motion.div> */}
 
 
 
@@ -115,10 +115,10 @@ function HeroSection() {
               hoverColor="#003366"
             />
             <br />
-            <JumpingText className="text-5 md:text-7"
+            <JumpingText className="text-3xl md:text-5xl"
               text="Build the Future "
-              defaultColor="#005CAA"
-              hoverColor="#003366"
+              defaultColor="#111827"
+              hoverColor="#005CAA"
             />
           </motion.h1>
 
@@ -188,47 +188,83 @@ function HeroSection() {
               <p className="text-gray-500 mt-1">Tracks</p>
             </div>
           </motion.div>
+
+
+
+
+
+          {/* Partners Logos - Full Width Blue Section with Diagonal */}
+          <motion.div
+            variants={fadeInUp}
+            className="mt-16 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
+          >
+            <div
+              className="relative w-full bg-[#005CAA] py-10 px-6"
+              style={{ transform: 'skewY(-3deg)' }}
+            >
+              <div
+                className="max-w-zxl mx-auto"
+                style={{ transform: 'skewY(2deg)' }}
+              >
+                <div className="flex flex-col items-center justify-center gap-4">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                    {/* SRCAS Logo */}
+                    <div style={{ transform: 'rotate(-2.6deg)' }}>
+                      <Image
+                        src="/srcas-logo.png"
+                        alt="Sri Ramakrishna College of Arts and Science"
+                        width={300}
+                        height={100}
+                        className="h-16 md:h-20 w-auto object-contain"
+                      />
+                    </div>
+
+                    {/* Programming Club Logo */}
+                    <div style={{ transform: 'rotate(-2.5deg)' }}>
+                      <Image
+                        src="/programming-club-logo.png"
+                        alt="Programming Club"
+                        width={200}
+                        height={80}
+                        className="h-16 md:h-20 w-auto object-contain"
+                      />
+                    </div>
+
+                    {/* L&T Logo */}
+                    <div style={{ transform: 'rotate(-2.7deg)' }}>
+                      <Image
+                        src="/L_and_T_Technology_Services.png"
+                        alt="L&T Technology Services"
+                        width={200}
+                        height={80}
+                        className="h-16 md:h-20 w-auto object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
 
-        {/* Partners Logos */}
-
-
-        {/* Partners Logos - Direct Display */}
-        <motion.div variants={fadeInUp} className="mt-16 mb-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-          {/* SRCAS Logo */}
-          <Image
-            src="/srcas-logo.png"
-            alt="Sri Ramakrishna College of Arts and Science"
-            width={300}
-            height={100}
-            className="h-16 md:h-20 w-auto object-contain"
-          />
-
-          {/* Programming Club Logo */}
-          <Image
-            src="/programming-club-2-logo.png"
-            alt="Programming Club"
-            width={200}
-            height={80}
-            className="h-16 md:h-20 w-auto object-contain"
-          />
-
-          {/* L&T Logo */}
-          <Image
-            src="/L_and_T_Technology_Services-1-.png"
-            alt="L&T Technology Services"
-            width={200}
-            height={80}
-            className="h-16 md:h-20 w-auto object-contain"
-          />
-        </motion.div>
 
 
       </div>
 
+      {/* Badge - Bottom Right */}
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="absolute bottom-8 right-8"
+      >
+        <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-medium backdrop-blur-sm border border-[#005CAA]/20">
+          <Calendar className="w-4 h-4" />
+          February 2026
+        </span>
+      </motion.div>
       {/* Scroll indicator */}
-
       <motion.div
 
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
