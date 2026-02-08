@@ -209,13 +209,13 @@ function HeroSection() {
                 <div className="flex flex-col items-center justify-center gap-4">
                   <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
                     {/* SRCAS Logo */}
-                    <div style={{ transform: 'rotate(-2.6deg)' }}>
+                    <div style={{ transform: 'rotate(-2deg)' }}>
                       <Image
                         src="/srcas-logo.png"
                         alt="Sri Ramakrishna College of Arts and Science"
                         width={300}
                         height={100}
-                        className="h-16 md:h-20 w-auto object-contain"
+                        className="h-24 md:h-36 w-auto object-contain"
                       />
                     </div>
 
@@ -237,7 +237,7 @@ function HeroSection() {
                         alt="L&T Technology Services"
                         width={200}
                         height={80}
-                        className="h-16 md:h-20 w-auto object-contain"
+                        className="h-28 md:h-36 w-auto object-contain"
                       />
                     </div>
                   </div>
