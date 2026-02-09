@@ -13,6 +13,7 @@ import {
   Utensils,
   User,
   ShieldCheck,
+  Wifi,
 } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -26,6 +27,7 @@ const iconMap: Record<string, React.ReactNode> = {
   'in-person': <User className="w-8 h-8 text-white" />,
   venue: <MapPin className="w-8 h-8 text-white" />,
   safe: <ShieldCheck className="w-8 h-8 text-white" />,
+  connectivity: <Wifi className="w-8 h-8 text-white" />,
 };
 
 const GuidelinesSection: React.FC = () => {

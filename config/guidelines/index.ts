@@ -17,7 +17,7 @@ export const guidelinesData: Guideline[] = [
         icon: 'no-prerequisites',
         title: 'Only for Engineering Students',
         description:
-            'Open to all Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
+            'Open to final year and prefinal years Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
         isHighlighted: true,
     },
     {
@@ -56,11 +56,11 @@ export const guidelinesData: Guideline[] = [
             'All participants must carry a valid college ID card for verification during the event.',
     },
     {
-        id: 'free-food',
-        icon: 'free-food',
-        title: 'Meals Provided',
+        id: 'connectivity',
+        icon: 'connectivity',
+        title: 'Wi-Fi & Connectivity',
         description:
-            'All meals, snacks, and refreshments will be provided throughout the hackathon.',
+            'Internet and charging stations will be available for all participants.',
     },
 
     {

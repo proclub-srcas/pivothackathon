@@ -470,7 +470,7 @@ export default function Home() {
       <AboutSection />
       <FaqList />
       <GuidelinesSection />
-      <PrizesSection />
+      {/* <PrizesSection /> */}
       <Timeline />
       <FAQSection />
       <ContactSection />
