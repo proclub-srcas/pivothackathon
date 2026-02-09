@@ -201,7 +201,7 @@ function HeroSection() {
             className="mt-16 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
           >
             <div
-              className="relative w-full bg-[#005CAA] py-10 px-6"
+              className="relative w-full bg-[#005CAA] py-0.1 px-2"
               style={{ transform: 'skewY(-3deg)' }}
             >
               <div
