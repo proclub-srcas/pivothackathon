@@ -30,12 +30,16 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const GuidelinesSection: React.FC = () => {
   return (
-    <section id="guidelines" className="relative py-24 px-4 overflow-hidden">
+    <section
+      id="guidelines"
+      className="relative py-24 px-4 overflow-hidden"
+      style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 800px' }}
+    >
       {/* Background Decor */}
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm transform-gpu" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-      <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-primary-soft/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-primary-soft/30 rounded-full blur-3xl pointer-events-none transform-gpu will-change-transform translate-z-0" />
+      <div className="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-3xl pointer-events-none transform-gpu will-change-transform translate-z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Title */}
@@ -55,7 +59,7 @@ const GuidelinesSection: React.FC = () => {
         {/* Guidelines Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {guidelinesData.map((guideline) => (
-            <div key={guideline.id} className="group relative h-full">
+            <div key={guideline.id} className="group relative h-full transform-gpu will-change-transform">
               {/* Card Background & Border */}
               <div
                 className={`absolute inset-0 rounded-2xl border shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2

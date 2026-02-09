@@ -56,38 +56,35 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Logos */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
+        {/* Logos Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-items-center mb-12 w-full max-w-5xl mx-auto">
           {/* SRCAS Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center w-full h-24 relative grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300">
             <Image
               src="/srcas-logo.png"
               alt="Sri Ramakrishna College of Arts and Science"
-              width={300}
-              height={100}
-              className="h-20 md:h-24 w-auto object-contain"
+              fill
+              className="object-contain"
             />
           </div>
 
           {/* Programming Club Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center w-full h-20 relative grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300">
             <Image
               src="/programming-club-logo.png"
               alt="Programming Club"
-              width={200}
-              height={80}
-              className="h-16 md:h-20 w-auto object-contain"
+              fill
+              className="object-contain"
             />
           </div>
 
           {/* L&T Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center w-full h-24 relative grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300">
             <Image
               src="/L_and_T_Technology_Services.png"
               alt="L&T Technology Services"
-              width={200}
-              height={80}
-              className="h26 md:h-40 w-auto object-contain"
+              fill
+              className="object-contain"
             />
           </div>
         </div>

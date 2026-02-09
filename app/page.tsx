@@ -261,7 +261,7 @@ function HeroSection() {
       >
         <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-medium backdrop-blur-sm border border-[#005CAA]/20">
           <Calendar className="w-4 h-4" />
-          February 2026
+          March  2026
         </span>
       </motion.div>
       {/* Scroll indicator */}
