@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import {
   ChevronDown,
   Calendar,
@@ -9,20 +10,21 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-// Import existing components
-import Timeline from "@/components/sections/timeline";
-import GuidelinesSection from "@/components/guidelines/guidelines";
-import PrizesSection from "@/components/sections/PrizesSection";
-import ContactSection from "@/components/sections/ContactSection";
+// Lazy load below-the-fold components
+const Timeline = dynamic(() => import("@/components/sections/timeline"), {
+  loading: () => <div className="h-96 w-full animate-pulse bg-gray-50/50 rounded-3xl" />,
+});
+const GuidelinesSection = dynamic(() => import("@/components/guidelines/guidelines"));
+const PrizesSection = dynamic(() => import("@/components/sections/PrizesSection"));
+const ContactSection = dynamic(() => import("@/components/sections/ContactSection"));
+const FaqList = dynamic(() => import('@/components/faq/faq-list').then(mod => mod.FaqList));
+const DodgeHero = dynamic(() => import("@/components/DodgeHero"));
+const FloatingLogos = dynamic(() => import("@/components/FloatingLogos"));
+
 import JumpingText from "@/components/JumpingText";
-import { FaqList } from '@/components/faq/faq-list';
-
-import DodgeHero from "@/components/DodgeHero"
-
 import { Typography } from '@/components/Typography';
 import Image from "next/image"
 import { Link } from "next-view-transitions";
-import FloatingLogos from "@/components/FloatingLogos";
 
 
 
