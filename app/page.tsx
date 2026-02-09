@@ -217,7 +217,7 @@ function HeroSection() {
                         alt="Sri Ramakrishna College of Arts and Science"
                         width={300}
                         height={100}
-                        className="h-28 md:h-34 w-   object-contain"
+                        className="h-40 md:h-52 w-auto object-contain"
                       />
                     </div>
 
