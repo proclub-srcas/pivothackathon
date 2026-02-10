@@ -82,7 +82,7 @@ export function Footer() {
           <div className="flex items-center justify-center w-full h-24 relative grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300">
             <Image
               src="/L_and_T_Technology_Services.png"
-              alt="L&T Technology Services"
+              alt="Larsen & Toubro Limited"
               fill
               className="object-contain"
             />

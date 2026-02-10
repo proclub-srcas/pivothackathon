@@ -23,9 +23,9 @@ export const guidelinesData: Guideline[] = [
     {
         id: 'hackathon',
         icon: 'hackathon',
-        title: '24-Hour Hackathon',
+        title: '12-Hour Hackathon',
         description:
-            'An intense 24-hour coding marathon where you build innovative solutions to real-world problems.',
+            'An intense 12-hour coding marathon where you build innovative solutions to real-world problems.',
     },
     {
         id: 'register',

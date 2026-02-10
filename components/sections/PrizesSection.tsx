@@ -7,55 +7,55 @@ import { Trophy, Medal, Award, Sparkles, Gift } from 'lucide-react';
 const prizes = [
     {
         position: '1st',
-        title: 'Grand Prize',
-        amount: '₹25,000',
+        title: 'Winner',
+        reward: 'Premier Internship',
+        subReward: 'Direct Opportunity',
         icon: Trophy,
         color: 'from-yellow-400 to-amber-500',
         bgGlow: 'bg-yellow-400/20',
         borderColor: 'border-yellow-400/30',
         shadowColor: 'shadow-yellow-500/20',
-        features: ['Cash Prize', 'Internship Opportunity', 'L&T Swag Kit', 'Certificate of Excellence'],
+        features: ['Premier Internship Offer', 'Executive Mentorship', 'Exclusive L&T Swag Kit', 'Trophy of Excellence'],
     },
     {
         position: '2nd',
-        title: 'Runner Up',
-        amount: '₹15,000',
+        title: '1st Runner Up',
+        reward: 'Priority Access',
+        subReward: 'Internship Fast-Track',
         icon: Medal,
         color: 'from-gray-300 to-gray-400',
         bgGlow: 'bg-gray-300/20',
         borderColor: 'border-gray-300/30',
         shadowColor: 'shadow-gray-400/20',
-        features: ['Cash Prize', 'L&T Swag Kit', 'Certificate of Merit'],
+        features: ['Internship Interview', 'Resume Spotlight', 'Exclusive L&T Swag Kit', 'Certificate of Merit'],
     },
     {
         position: '3rd',
-        title: 'Second Runner Up',
-        amount: '₹10,000',
+        title: '2nd Runner Up',
+        reward: 'Talent Spotlight',
+        subReward: 'Evaluation Pool',
         icon: Award,
         color: 'from-amber-600 to-amber-700',
         bgGlow: 'bg-amber-600/20',
         borderColor: 'border-amber-500/30',
         shadowColor: 'shadow-amber-600/20',
-        features: ['Cash Prize', 'L&T Swag Kit', 'Certificate of Merit'],
+        features: ['Internship Consideration', 'Profile Recommendation', 'Exclusive L&T Swag Kit', 'Certificate of Merit'],
     },
 ];
 
 const specialPrizes = [
     {
         title: 'Best Innovation',
-        amount: '₹5,000',
         description: 'Most creative and innovative solution',
         icon: Sparkles,
     },
     {
         title: 'Best UI/UX',
-        amount: '₹5,000',
         description: 'Best designed user interface',
         icon: Gift,
     },
     {
         title: "People's Choice",
-        amount: '₹5,000',
         description: 'Voted by fellow participants',
         icon: Trophy,
     },
@@ -100,7 +100,7 @@ const PrizesSection: React.FC = () => {
                     <motion.div variants={fadeInUp} className="mb-4">
                         <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-semibold uppercase tracking-wider">
                             <Trophy className="w-4 h-4" />
-                            Prizes Worth ₹50,000+
+                            Career Defining Opportunities
                         </span>
                     </motion.div>
 
@@ -114,10 +114,11 @@ const PrizesSection: React.FC = () => {
 
                     <motion.p
                         variants={fadeInUp}
-                        className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto"
+                        className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
                     >
-                        Compete for exciting prizes, internship opportunities, and recognition
-                        from industry leaders at L&T Technology Services.
+                        More than just a hackathon — it's your gateway to the industry.
+                        Top performers will secure <span className="text-[#005CAA] font-semibold">career-defining internship opportunities</span> with
+                        Larsen & Toubro Limited, working on real-world engineering challenges.
                     </motion.p>
                 </motion.div>
 
@@ -127,76 +128,63 @@ const PrizesSection: React.FC = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
                     variants={staggerContainer}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16"
+                    className="flex justify-center mb-16"
                 >
-                    {prizes.map((prize, index) => {
-                        const Icon = prize.icon;
-                        const isFirst = index === 0;
-
-                        return (
-                            <motion.div
-                                key={prize.position}
-                                variants={fadeInUp}
-                                className={`relative group ${isFirst ? 'md:-mt-8' : ''}`}
-                            >
-                                {/* Card */}
-                                <div className={`
-                  relative h-full p-8 rounded-3xl 
-                  bg-white/90 backdrop-blur-md border ${prize.borderColor}
-                  shadow-xl ${prize.shadowColor}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="relative group max-w-2xl w-full"
+                    >
+                        {/* Card */}
+                        <div className={`
+                  relative h-full p-10 rounded-3xl 
+                  bg-white/90 backdrop-blur-md border border-yellow-400/30
+                  shadow-xl shadow-yellow-500/20
                   transition-all duration-500
                   group-hover:shadow-2xl group-hover:-translate-y-2
                   overflow-hidden
+                  text-center
                 `}>
-                                    {/* Glow effect */}
-                                    <div className={`absolute -top-20 -right-20 w-40 h-40 ${prize.bgGlow} rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-100 opacity-50`} />
+                            {/* Glow effect */}
+                            <div className={`absolute -top-40 -right-40 w-80 h-80 bg-yellow-400/20 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-100 opacity-50`} />
 
-                                    {/* Position badge */}
-                                    <div className={`
-                    absolute top-4 right-4 
-                    w-12 h-12 rounded-xl 
-                    bg-gradient-to-br ${prize.color}
-                    flex items-center justify-center
-                    shadow-lg
-                    transform rotate-12 group-hover:rotate-0 transition-transform duration-300
-                  `}>
-                                        <span className="text-white font-bold text-lg">{prize.position}</span>
-                                    </div>
-
-                                    {/* Icon */}
-                                    <div className={`
-                    w-20 h-20 mb-6 rounded-2xl 
-                    bg-gradient-to-br ${prize.color}
+                            {/* Icon */}
+                            <div className={`
+                    w-24 h-24 mb-8 rounded-2xl mx-auto
+                    bg-gradient-to-br from-yellow-400 to-amber-500
                     flex items-center justify-center
                     shadow-xl
                     group-hover:scale-110 transition-transform duration-300
                   `}>
-                                        <Icon className="w-10 h-10 text-white" />
-                                    </div>
+                                <Trophy className="w-12 h-12 text-white" />
+                            </div>
 
-                                    {/* Content */}
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{prize.title}</h3>
-                                    <p className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${prize.color} bg-clip-text text-transparent mb-6`}>
-                                        {prize.amount}
-                                    </p>
+                            {/* Content */}
+                            <h3 className="text-2xl font-bold text-gray-500 mb-2 uppercase tracking-wider">Top Performers</h3>
+                            <div className="mb-8">
+                                <p className={`text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent leading-tight mb-4`}>
+                                    Internship Opportunity
+                                </p>
+                                <p className="text-gray-600 font-medium text-xl leading-relaxed">
+                                    Best performing teams will get exclusive Internship Opportunities
+                                    with <span className="text-[#005CAA] font-bold">Larsen & Toubro Limited</span>.
+                                </p>
+                            </div>
 
-                                    {/* Features */}
-                                    <ul className="space-y-3">
-                                        {prize.features.map((feature, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-gray-600">
-                                                <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${prize.color}`} />
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </motion.div>
-                        );
-                    })}
+                            {/* Features */}
+                            <ul className="flex flex-wrap justify-center gap-4 mt-6">
+                                {['Direct Industry Entry', 'Executive Mentorship', 'Exclusive L&T Swag Kit', 'Certificate of Excellence'].map((feature, i) => (
+                                    <li key={i} className="flex items-center gap-2 text-gray-700 bg-gray-50 px-4 py-2 rounded-full border border-gray-100">
+                                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500`} />
+                                        {feature}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* Special Category Prizes */}
-                <motion.div
+                {/* <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -242,7 +230,7 @@ const PrizesSection: React.FC = () => {
                             );
                         })}
                     </div>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Bottom CTA */}
                 <motion.div

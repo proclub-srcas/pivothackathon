@@ -70,6 +70,33 @@ function HeroSection() {
         }}
       />
 
+      {/* Partners Logos - Top Right */}
+      <div className="absolute top-6 right-10 z-30 hidden md:flex items-center gap-8">
+        <Image
+          src="/srcas-1-logo.png"
+          alt="SRCAS"
+          width={180}
+          height={100}
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+        />
+        <div className="w-[1px] h-12 bg-gray-400/30" />
+        <Image
+          src="/programming-club-2-logo.png"
+          alt="Programming Club"
+          width={180}
+          height={100}
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+        />
+        <div className="w-[1px] h-12 bg-gray-400/30" />
+        <Image
+          src="/L_T.jpg"
+          alt="Larsen & Toubro Limited"
+          width={200}
+          height={100}
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
           initial="hidden"
@@ -178,8 +205,8 @@ function HeroSection() {
             className="mt-6 flex flex-wrap justify-center gap-12 text-center"
           >
             <div>
-              <p className="text-4xl font-bold text-[#005CAA]">₹50K+</p>
-              <p className="text-gray-500 mt-1">Prize Pool</p>
+              <p className="text-4xl font-bold text-[#005CAA]">Internship</p>
+              <p className="text-gray-500 mt-1">Opportunity</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-[#005CAA]">24</p>
@@ -195,58 +222,7 @@ function HeroSection() {
 
 
 
-          {/* Partners Logos - Full Width Blue Section with Diagonal */}
-          <motion.div
-            variants={fadeInUp}
-            className="mt-16 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
-          >
-            <div
-              className="relative w-full bg-[#005CAA] py-0.1 px-2"
-              style={{ transform: 'skewY(-3deg)' }}
-            >
-              <div
-                className="max-w-zxl mx-auto"
-                style={{ transform: 'skewY(2deg)' }}
-              >
-                <div className="flex flex-col items-center justify-center gap-4">
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                    {/* SRCAS Logo */}
-                    <div style={{ transform: 'rotate(-2.6deg)' }}>
-                      <Image
-                        src="/srcas-logo.png"
-                        alt="Sri Ramakrishna College of Arts and Science"
-                        width={300}
-                        height={100}
-                        className="h-40 md:h-52 w-auto object-contain"
-                      />
-                    </div>
 
-                    {/* Programming Club Logo */}
-                    <div style={{ transform: 'rotate(-2.5deg)' }}>
-                      <Image
-                        src="/programming-club-logo.png"
-                        alt="Programming Club"
-                        width={200}
-                        height={80}
-                        className="h-20 md:h-24 w-auto object-contain"
-                      />
-                    </div>
-
-                    {/* L&T Logo */}
-                    <div style={{ transform: 'rotate(-2.7deg)' }}>
-                      <Image
-                        src="/L_and_T_Technology_Services.png"
-                        alt="L&T Technology Services"
-                        width={200}
-                        height={80}
-                        className="h-20 md:h-28 w-auto object-contain"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
 
 
@@ -334,7 +310,7 @@ function AboutSection() {
           </motion.h2>
           <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">L&T Technology Services</span> to
+              Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">Larsen & Toubro Limited</span> to
               host an industry-focused hackathon that bridges academia and innovation.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -367,7 +343,7 @@ const faqs = [
   {
     question: "Who can participate in the hackathon?",
     answer:
-      "The hackathon is open to all undergraduate and postgraduate students. Teams can have 2-4 members. At least one team member must be from a recognized institution.",
+      "The hackathon is open to final year and prefinal years Engineering Students! Whether you are a beginner or an expert, everyone is welcome. Teams can have 2-4 members. At least one team member must be from a recognized institution.",
   },
   {
     question: "Is there a registration fee?",
@@ -382,12 +358,12 @@ const faqs = [
   {
     question: "Can I start working on my project before the event?",
     answer:
-      "No, all projects must be started from scratch during the hackathon. However, you can research and plan your ideas beforehand.",
+      "Yes! You can start working on your project.",
   },
   {
     question: "How are the winners selected?",
     answer:
-      "Projects are judged based on innovation, technical complexity, practical applicability, and presentation quality by a panel of industry experts from L&T Technology Services.",
+      "Projects are judged based on innovation, technical complexity, practical applicability, and presentation quality by a panel of industry experts from Larsen & Toubro Limited.",
   },
 ];
 
@@ -470,7 +446,7 @@ export default function Home() {
       <AboutSection />
       <FaqList />
       <GuidelinesSection />
-      {/* <PrizesSection /> */}
+      <PrizesSection />
       <Timeline />
       <FAQSection />
       <ContactSection />

@@ -135,8 +135,14 @@ export default function AboutPage() {
                                             SRCAS
                                         </h3>
                                         <p className="text-gray-600 text-base mb-4 leading-relaxed">
-                                            SRCAS is a premier educational institution committed to
-                                            academic excellence and holistic development.
+                                            Sri Ramakrishna College of Arts and Science
+                                            (SRCAS), Coimbatore, ranked 76th in NIRF
+                                            2025, excels in teaching, research, and learning
+                                            resources. Accredited with NAAC 'A+' grade
+                                            and affiliated to Bharathiar University, SRCAS
+                                            offers diverse programs and empowers
+                                            students through innovation and quality
+                                            education.
                                         </p>
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-base text-[#005CAA]">
@@ -195,7 +201,7 @@ export default function AboutPage() {
                                     </motion.div>
                                 </div>
 
-                                {/* Second Row: L&T Technology Services (Centered) */}
+                                {/* Second Row:  Larsen & Toubro Limited(Centered) */}
                                 <div className="flex justify-center">
                                     <motion.div
                                         whileHover={{ y: -5 }}
@@ -205,7 +211,7 @@ export default function AboutPage() {
                                             <div className="p-3 bg-white rounded-xl shadow-sm">
                                                 <Image
                                                     src="/L&Ts-logo.jpeg"
-                                                    alt="L&T Technology Services Logo"
+                                                    alt="Larsen & Toubro Limited Logo"
                                                     width={80}
                                                     height={80}
                                                     className="w-20 h-20 object-contain"
@@ -213,13 +219,13 @@ export default function AboutPage() {
                                             </div>
                                         </div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                                            L&T Technology Services
+                                            Larsen & Toubro
                                         </h3>
                                         <p className="text-gray-600 text-base mb-4 leading-relaxed">
-                                            A global leader in Engineering and R&D services, LTTS
-                                            empowers businesses with innovative solutions across
-                                            industries including automotive, aerospace, industrial
-                                            products, and smart cities.
+                                            Larsen & Toubro is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services.
+                                            It operates in over 50 countries worldwide. A strong, customer-focused approach and the constant quest for
+                                            top-class quality have enabled L&T to attain and sustain leadership in its major lines of business for over
+                                            eight decades.
                                         </p>
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-base text-[#005CAA]">
@@ -288,7 +294,7 @@ export default function AboutPage() {
 
 
 
-                                {/* L&T Technology Services Card - Mobile */}
+                                {/*Larsen & Toubro Limited Card - Mobile */}
                                 <motion.div
                                     whileHover={{ y: -5 }}
                                     className="bg-gradient-to-br from-[#005CAA]/5 via-white to-[#005CAA]/5 rounded-2xl shadow-lg border border-[#005CAA]/20 p-8 hover:shadow-xl transition-all duration-300"
@@ -297,7 +303,7 @@ export default function AboutPage() {
                                         <div className="p-3 bg-white rounded-xl shadow-sm">
                                             <Image
                                                 src="/L&Ts-logo.jpeg"
-                                                alt="L&T Technology Services Logo"
+                                                alt="Larsen & Toubro Limited Logo"
                                                 width={80}
                                                 height={80}
                                                 className="w-20 h-20 object-contain"
@@ -305,13 +311,13 @@ export default function AboutPage() {
                                         </div>
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                                        L&T Technology Services
+                                        Larsen & Toubro
                                     </h3>
                                     <p className="text-gray-600 mb-4 leading-relaxed">
-                                        A global leader in Engineering and R&D services, LTTS
-                                        empowers businesses with innovative solutions across
-                                        industries including automotive, aerospace, industrial
-                                        products, and smart cities.
+                                        Larsen & Toubro is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services.
+                                        It operates in over 50 countries worldwide. A strong, customer-focused approach and the constant quest for
+                                        top-class quality have enabled L&T to attain and sustain leadership in its major lines of business for over
+                                        eight decades.
                                     </p>
                                     <div className="space-y-2">
                                         <div className="flex items-center gap-2 text-sm text-[#005CAA]">

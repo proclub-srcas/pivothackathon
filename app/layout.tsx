@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ["Hackathon", "PIVOT", "i2i", "Idea to Impact", "SRCAS", "L&T Technology Services", "Coding", "Coimbatore", "Tech Event"],
+  keywords: ["Hackathon", "PIVOT", "i2i", "Idea to Impact", "SRCAS", "Larsen & Toubro Limited", "Coding", "Coimbatore", "Tech Event"],
   openGraph: {
     title: "PIVOT Hackathon 2026 | i2i - Idea to Impact",
     description: "Join us for 24 hours of coding, innovation, and fun at SRCAS, Coimbatore.",
