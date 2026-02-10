@@ -121,3 +121,54 @@ export const questions: Question[] = [
     ),
   }
 ];
+
+export const srcasQuestions: Question[] = [
+  {
+    question: 'SRCAS Problem Statement 1',
+    answer: (
+      <div className="text-left text-sm md:text-base space-y-4">
+        <Typography.H6>Problem Statement 1</Typography.H6>
+        <div>
+          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
+          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    question: 'SRCAS Problem Statement 2',
+    answer: (
+      <div className="text-left text-sm md:text-base space-y-4">
+        <Typography.H6>Problem Statement 2</Typography.H6>
+        <div>
+          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
+          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    question: 'SRCAS Problem Statement 3',
+    answer: (
+      <div className="text-left text-sm md:text-base space-y-4">
+        <Typography.H6>Problem Statement 3</Typography.H6>
+        <div>
+          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
+          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    question: 'SRCAS Problem Statement 4',
+    answer: (
+      <div className="text-left text-sm md:text-base space-y-4">
+        <Typography.H6>Problem Statement 4</Typography.H6>
+        <div>
+          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
+          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+        </div>
+      </div>
+    ),
+  }
+];

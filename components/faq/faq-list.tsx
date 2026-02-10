@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { Typography } from '@/components/Typography';
 import { Dropdown } from '@/components/faq/dropdown';
-import { questions } from './index';
+import { questions, srcasQuestions } from './index';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -13,6 +13,10 @@ const fadeInUp = {
 export const FaqList: React.FC = () => {
   // State to track which problem statement is currently open (accordion behavior)
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // State to track if we are showing SRCAS specific problem statements
+  const [isSrcas, setIsSrcas] = useState(false);
+
+  const activeQuestions = isSrcas ? srcasQuestions : questions;
 
   const handleToggle = (index: number) => {
     // If clicking the already open item, close it. Otherwise, open the clicked item
@@ -87,20 +91,66 @@ export const FaqList: React.FC = () => {
                   </span>
                 </Typography.H2>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
+                <div className="bg-[#005CAA]/5 border border-[#005CAA]/10 rounded-2xl p-6 mt-6 max-w-3xl mx-auto backdrop-blur-sm">
+                  <p className="text-gray-700 text-center text-lg font-medium leading-relaxed">
+                    🎓 <span className="font-bold text-[#005CAA]">Engineering Students</span>, explore the challenges below.
+                    <br />
+                    🏛️ <span className="font-bold text-[#005CAA]">SRCAS Students</span>, switch to view your exclusive problem statements.
+                  </p>
+                </div>
               </div>
             </div>
           </span>
-          <p className="text-gray-700 text-center max-w-2xl text-sm md:text-base font-averta-std">
-            Choose from our curated problem statements focusing on
-            mechanical, software-based, AI-driven, or a combination.
-          </p>
-
         </motion.div>
+
+        {/* TOGGLE BUTTONS */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+          className="flex flex-wrap justify-center gap-40 mt-8 mb-16 relative z-20"
+        >
+          <button
+            onClick={() => {
+              setIsSrcas(false);
+              setOpenIndex(null);
+            }}
+            className={`
+              relative inline-flex items-center gap-2 px-8 py-3 rounded-full 
+              font-semibold transition-all duration-300 shadow-lg border-2
+              ${!isSrcas
+                ? 'bg-[#005CAA] text-white border-[#005CAA] hover:bg-[#004a8c]'
+                : 'bg-white text-[#005CAA] border-[#005CAA] hover:bg-[#005CAA]/5'
+              }
+            `}
+          >
+            Engineering Students
+          </button>
+
+          <button
+            onClick={() => {
+              setIsSrcas(true);
+              setOpenIndex(null);
+            }}
+            className={`
+              relative inline-flex items-center gap-2 px-8 py-3 rounded-full 
+              font-semibold transition-all duration-300 shadow-lg border-2
+              ${isSrcas
+                ? 'bg-[#005CAA] text-white border-[#005CAA] hover:bg-[#004a8c]'
+                : 'bg-white text-[#005CAA] border-[#005CAA] hover:bg-[#005CAA]/5'
+              }
+            `}
+          >
+            Only For SRCAS Students
+          </button>
+        </motion.div>
+
       </div>
-      <div className="w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-6 mt-32 relative z-10 items-start">
-        {questions.map((question, index) => (
+      <div className="w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 relative z-10 items-start">
+        {activeQuestions.map((question, index) => (
           <Dropdown
-            key={`question` + index}
+            key={`${isSrcas ? 'srcas' : 'standard'}-question-${index}`}
             question={question.question}
             answer={question.answer}
             isOpen={openIndex === index}
@@ -108,7 +158,6 @@ export const FaqList: React.FC = () => {
           />
         ))}
       </div>
-    </section>
+    </section >
   );
-}
-  ;
+};
