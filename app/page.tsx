@@ -77,7 +77,7 @@ function HeroSection() {
           alt="SRCAS"
           width={180}
           height={100}
-          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
         />
         <div className="w-[1px] h-12 bg-gray-400/30" />
         <Image
@@ -85,15 +85,15 @@ function HeroSection() {
           alt="Programming Club"
           width={180}
           height={100}
-          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
         />
         <div className="w-[1px] h-12 bg-gray-400/30" />
         <Image
-          src="/L_T.jpg"
+          src="/L&T logo 1.jpeg"
           alt="Larsen & Toubro Limited"
           width={200}
           height={100}
-          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
         />
       </div>
 
@@ -349,6 +349,16 @@ const faqs = [
     question: "Is there a registration fee?",
     answer:
       "No, participation is completely free! We believe innovation should be accessible to everyone.",
+  },
+  {
+    question: "What are the competition rounds and how are teams selected?",
+    answer:
+      "The event has two rounds: Round 1 is abstract submission and shortlisting; Round 2 is a concept presentation by shortlisted teams. Abstracts are reviewed for relevance, structure, feasibility and originality; shortlisted teams get time to refine their concept for final evaluation.",
+  },
+  {
+    question: "What must be included in the abstract and how will it be evaluated?",
+    answer:
+      "The abstract should show your understanding of the chosen problem statement, the core idea/solution, planned approach or framework, and expected outcome/usefulness. Evaluators score submissions on relevance to the problem, logical structure, feasibility within the timeline, and originality.",
   },
   {
     question: "What should I bring to the hackathon?",

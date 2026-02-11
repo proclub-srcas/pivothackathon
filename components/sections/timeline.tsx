@@ -32,7 +32,7 @@ const timelineEvents: TimelineEvent[] = [
     },
     {
         date: 'Feb 28, 2026',
-        title: 'ABSTRACT Submission Deadline',
+        title: 'Round 1 – Abstract Submission Deadline',
         description: 'Submit your innovative ideas and project proposals.',
         icon: <Lightbulb className="w-6 h-6" />,
         type: 'milestone',
@@ -50,9 +50,16 @@ const timelineEvents: TimelineEvent[] = [
         type: 'milestone',
     },
     {
+        date: 'March 10, 2026',
+        title: 'Round 2 – Concept Presentation',
+        description: 'PPT preparation & refinement',
+        icon: <CheckCircle className="w-6 h-6" />,
+        type: 'milestone',
+    },
+    {
         date: 'March 14, 2026',
         title: 'Hackathon Begins',
-        description: '24-hour coding marathon starts! Build, innovate, create.',
+        description: '12-hour coding marathon starts! Build, innovate, create.',
         icon: <Code className="w-6 h-6" />,
         type: 'milestone',
     },

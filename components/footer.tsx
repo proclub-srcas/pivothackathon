@@ -81,7 +81,7 @@ export function Footer() {
           {/* L&T Logo */}
           <div className="flex items-center justify-center w-full h-24 relative grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300">
             <Image
-              src="/L_and_T_Technology_Services.png"
+              src="/L&T logo 1.png"
               alt="Larsen & Toubro Limited"
               fill
               className="object-contain"
@@ -136,9 +136,9 @@ export function Footer() {
       {/* Copyright Bar */}
       <div className="w-full bg-gray-950 py-4 px-6 relative">
         <div className="max-w-7xl mx-auto">
-          <p className="text-gray-400 text-sm text-center">
+          {/* <p className="text-gray-400 text-sm text-center">
             Crafted with ❤️ by <a href="https://udhayasankar.vercel.app/" target="_blank" className="text-white hover:text-gray-200 transition-colors">உதய UD</a>
-          </p>
+          </p> */}
         </div>
         <p className="text-gray-400 text-sm absolute right-6 top-1/2 -translate-y-1/2">
           © 2025 SRCAS Programming Club, All rights reserved
