@@ -118,7 +118,7 @@ const PrizesSection: React.FC = () => {
                     >
                         More than just a hackathon — it's your gateway to the industry.
                         Top performers will secure <span className="text-[#005CAA] font-semibold">career-defining internship opportunities</span> with
-                        Larsen & Toubro Limited, working on real-world engineering challenges.
+                        L&T Product Development Centre, working on real-world engineering challenges.
                     </motion.p>
                 </motion.div>
 
@@ -166,7 +166,7 @@ const PrizesSection: React.FC = () => {
                                 </p>
                                 <p className="text-gray-600 font-medium text-xl leading-relaxed">
                                     Best performing teams will get exclusive Internship Opportunities
-                                    with <span className="text-[#005CAA] font-bold">Larsen & Toubro Limited</span>.
+                                    with <span className="text-[#005CAA] font-bold">L&T Product Development Centre</span>.
                                 </p>
                             </div>
 

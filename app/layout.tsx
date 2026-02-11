@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "PIVOT Hackathon 2026 | SRCAS x L&T | i2i - Idea to Impact",
     template: "%s | PIVOT Hackathon SRCAS"
   },
-  description: "PIVOT Hackathon 2026 by SRCAS Programming Club in partnership with Larsen & Toubro Limited. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
+  description: "PIVOT Hackathon 2026 by SRCAS Programming Club in partnership with L&T Product Development Centre. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
   icons: {
     icon: '/favicon.ico',
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "PIVOT Hackathon 2026 | SRCAS x L&T | i2i - Idea to Impact",
-    description: "Join PIVOT Hackathon 2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with Larsen & Toubro Limited.",
+    description: "Join PIVOT Hackathon 2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with L&T Product Development Centre.",
     url: 'https://pivothackathon.web.app',
     siteName: 'PIVOT Hackathon 2026 - SRCAS',
     images: [
