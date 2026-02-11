@@ -10,28 +10,28 @@ import TeamSection from '@/components/sections/TeamSection';
 
 const studentOrganizers = [
     {
-        name: "Pravin",
+        name: "Pravin B",
         role: "Chairman",
         company: "Programming Club",
         image: "/TeamSection/pravin.jpg",
         linkedin: "https://www.linkedin.com/in/pravinboopathi/"
     },
     {
-        name: "Sarath",
+        name: "Sarath P",
         role: "Vice Chairman",
         company: "Programming Club",
         image: "/TeamSection/sarath.jpg",
         linkedin: "https://www.linkedin.com/in/thisisthesarath/"
     },
     {
-        name: "Vaishnavi",
+        name: "Vaishnavi R",
         role: "Secretary",
         company: "Programming Club",
         image: "/TeamSection/vaishnavi.jpg",
         linkedin: "https://linkedin.com"
     },
     {
-        name: "Dhanjay",
+        name: "Dhananjay R S",
         role: "Joint Secretary",
         company: "Programming Club",
         image: "/TeamSection/dhanjay.jpg",
@@ -98,11 +98,11 @@ export default function AboutPage() {
                                     About PIVOT Hackathon
                                 </span>
                             </div>
-                            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                            <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-6">
                                 Where Innovation{" "}
                                 <span className="text-[#005CAA]">Meets Excellence</span>
                             </h1>
-                            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                                 PIVOT Hackathon brings together brilliant minds from academia
                                 and cutting-edge technology from industry leaders to create
                                 solutions for tomorrow's challenges.
@@ -134,7 +134,7 @@ export default function AboutPage() {
                                         <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                             SRCAS
                                         </h3>
-                                        <p className="text-gray-600 text-base mb-4 leading-relaxed">
+                                        <p className="text-gray-600 text-base mb-4 leading-relaxed text-justify">
                                             Sri Ramakrishna College of Arts and Science
                                             (SRCAS), Coimbatore, ranked 76th in NIRF
                                             2025, excels in teaching, research, and learning
@@ -179,7 +179,7 @@ export default function AboutPage() {
                                         <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                             Programming Club of SRCAS
                                         </h3>
-                                        <p className="text-gray-600 text-base mb-4 leading-relaxed">
+                                        <p className="text-gray-600 text-base mb-4 leading-relaxed text-justify">
                                             Dedicated to fostering innovation and technical excellence
                                             among students. We organize coding competitions, workshops,
                                             and hackathons to build a strong developer community.
@@ -205,7 +205,7 @@ export default function AboutPage() {
                                 <div className="flex justify-center">
                                     <motion.div
                                         whileHover={{ y: -5 }}
-                                        className="bg-gradient-to-br from-[#005CAA]/5 via-white to-[#005CAA]/5 rounded-2xl shadow-lg border border-[#005CAA]/20 p-8 hover:shadow-xl transition-all duration-300 w-full max-w-md"
+                                        className="bg-gradient-to-br from-[#005CAA]/5 via-white to-[#005CAA]/5 rounded-2xl shadow-lg border border-[#005CAA]/20 p-8 hover:shadow-xl transition-all duration-300 w-full max-w-4xl"
                                     >
                                         <div className="flex items-start justify-between mb-4">
                                             <div className="p-3 bg-white rounded-xl shadow-sm">
@@ -221,12 +221,14 @@ export default function AboutPage() {
                                         <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                             Larsen & Toubro
                                         </h3>
-                                        <p className="text-gray-600 text-base mb-4 leading-relaxed">
-                                            Larsen & Toubro is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services.
-                                            It operates in over 50 countries worldwide. A strong, customer-focused approach and the constant quest for
-                                            top-class quality have enabled L&T to attain and sustain leadership in its major lines of business for over
-                                            eight decades.
-                                        </p>
+                                        <div className="text-gray-600 text-base mb-4 leading-relaxed space-y-4 text-justify">
+                                            <p>
+                                                Larsen & Toubro is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services, operating in over 50 countries worldwide. The Product Development Centre (PDC), a specialized product design and development organization, is positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                            </p>
+                                            <p>
+                                                With over 20 years of proven engineering excellence and a strong talent pool representing 500+ man-years of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality, enabling L&T to sustain leadership in its major lines of business.
+                                            </p>
+                                        </div>
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-base text-[#005CAA]">
                                                 <span className="w-2 h-2 bg-[#005CAA] rounded-full"></span>
@@ -266,7 +268,7 @@ export default function AboutPage() {
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                         SRCAS
                                     </h3>
-                                    <p className="text-gray-600 mb-4 leading-relaxed">
+                                    <p className="text-gray-600 mb-4 leading-relaxed text-justify">
                                         Sri Ramakrishna College of Arts and Science
                                         (SRCAS), Coimbatore, ranked 76th in NIRF
                                         2025, excels in teaching, research, and learning
@@ -313,12 +315,14 @@ export default function AboutPage() {
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                         Larsen & Toubro
                                     </h3>
-                                    <p className="text-gray-600 mb-4 leading-relaxed">
-                                        Larsen & Toubro is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services.
-                                        It operates in over 50 countries worldwide. A strong, customer-focused approach and the constant quest for
-                                        top-class quality have enabled L&T to attain and sustain leadership in its major lines of business for over
-                                        eight decades.
-                                    </p>
+                                    <div className="text-gray-600 text-sm mb-4 leading-relaxed space-y-4 text-justify">
+                                        <p>
+                                            Larsen & Toubro is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services, operating in over 50 countries worldwide. The Product Development Centre (PDC), a specialized product design and development organization, is positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                        </p>
+                                        <p>
+                                            With over 20 years of proven engineering excellence and a strong talent pool representing 500+ man-years of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality, enabling L&T to sustain leadership in its major lines of business.
+                                        </p>
+                                    </div>
                                     <div className="space-y-2">
                                         <div className="flex items-center gap-2 text-sm text-[#005CAA]">
                                             <span className="w-2 h-2 bg-[#005CAA] rounded-full"></span>
@@ -357,7 +361,7 @@ export default function AboutPage() {
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                         Programming Club of SRCAS
                                     </h3>
-                                    <p className="text-gray-600 mb-4 leading-relaxed">
+                                    <p className="text-gray-600 mb-4 leading-relaxed text-justify">
                                         Dedicated to fostering innovation and technical excellence
                                         among students. We organize coding competitions, workshops,
                                         and hackathons to build a strong developer community.
@@ -385,14 +389,14 @@ export default function AboutPage() {
                             variants={fadeInUp}
                             className="mt-12 flex justify-center"
                         >
-                            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-100 to-[#005CAA]/10 rounded-full border border-gray-200">
+                            {/* <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-100 to-[#005CAA]/10 rounded-full border border-gray-200">
                                 <span className="text-gray-700 font-medium">Powered by</span>
                                 <span className="text-2xl">🤝</span>
                                 <span className="text-[#005CAA] font-semibold">
                                     Academic-Industry Collaboration
                                 </span>
 
-                            </div>
+                            </div> */}
                         </motion.div>
                     </motion.div>
                     <span className="text-[#005CAA] font-semibold">

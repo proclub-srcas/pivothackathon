@@ -61,8 +61,11 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className
                                     src={member.image}
                                     alt={member.name}
                                     fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:grayscale-0 grayscale"
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
+
+                                {/* Sleek Bottom Shadow Overlay - Disappears on Hover */}
+                                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent transition-opacity duration-300 group-hover:opacity-0 pointer-events-none" />
 
                                 {/* Hover Overlay */}
                                 {!hideLinkedIn && (

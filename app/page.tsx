@@ -287,8 +287,8 @@ function AboutSection() {
           >
             <div className="max-w-7xl mx-auto relative z-10">
               {/* Section Title */}
-              <div className="flex flex-col items-center justify-center mb-20 text-center space-y-4">
-                <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
+              <div className="flex flex-col items-center justify-center mb-10 md:mb-20 text-center space-y-4">
+                <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(1.5rem,5vw,5rem)] leading-none">
                   <JumpingText
                     text="What is "
                     defaultColor="#000000"
@@ -297,7 +297,14 @@ function AboutSection() {
                   />
                   <span className="font-wc-rough-trad text-[#005CAA]">
                     <JumpingText
-                      text="PIVOT Hackathon"
+                      text="PIVOT"
+                      defaultColor="#005CAA"
+                      hoverColor="#003366"
+                      jumpHeight={14}
+                    />
+                    {" "}
+                    <JumpingText
+                      text="Hackathon"
                       defaultColor="#005CAA"
                       hoverColor="#003366"
                       jumpHeight={14}
@@ -309,15 +316,12 @@ function AboutSection() {
             </div>
           </motion.h2>
           <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-2 md:mb-6">
               Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">Larsen & Toubro Limited</span> to
               host an industry-focused hackathon that bridges academia and innovation.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              This 24-hour event brings together the brightest minds to solve real-world
-              challenges across sustainability, healthcare, smart cities, and emerging
-              technologies. Join us in shaping the future through collaboration, creativity,
-              and cutting-edge technology.
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
+              This 24-hour hackathon exposes students to real industry problem statements, encouraging solutions aligned with actual engineering workflows, planning challenges, and data-driven decision-making. By bringing together the brightest minds to solve challenges across emerging technologies, the event fosters innovation that translates into real-world impact.
             </p>
           </motion.div>
           <div className="mt-12 flex justify-center">

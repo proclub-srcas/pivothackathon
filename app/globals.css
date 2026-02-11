@@ -102,8 +102,8 @@ html::-webkit-scrollbar {
     --color-muted: var(--text-muted);
 
     /* Fonts */
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --font-sans: 'Google Sans', sans-serif;
+    --font-mono: 'Google Sans', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -117,22 +117,15 @@ html::-webkit-scrollbar {
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family:
-        var(--font-geist-sans),
-        system-ui,
-        -apple-system,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
+    font-family: 'Google Sans', sans-serif;
 }
 
 .font-kanit {
-    font-family: var(--font-kanit), var(--font-geist-sans), sans-serif;
+    font-family: 'Google Sans', sans-serif;
 }
 
 .font-poppins {
-    font-family: var(--font-poppins), var(--font-geist-sans), sans-serif;
+    font-family: 'Google Sans', sans-serif;
 }
 
 /* Updated brand stroke to L&T Blue */

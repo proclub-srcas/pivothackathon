@@ -124,49 +124,39 @@ export const questions: Question[] = [
 
 export const srcasQuestions: Question[] = [
   {
-    question: 'SRCAS Problem Statement 1',
+    question: 'Software Systems / AI-Enabled Productivity',
     answer: (
       <div className="text-left text-sm md:text-base space-y-4">
-        <Typography.H6>Problem Statement 1</Typography.H6>
+        <Typography.H6>Smart Work Tracking & Resource Insight Platform for Design Teams</Typography.H6>
         <div>
-          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
-          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+          <strong className="block text-gray-900 font-bold mb-1">Problem Statement:</strong>
+          <p className="text-gray-700 mb-2">
+            Design a software for a large design unit with 100+ engineers to track daily work, effort accuracy, project progress, and resource loading using manual reporting tools. Existing systems require employees to type updates, leading to less data accuracy. The goal is to design a smart, role-based software platform that captures daily work through guided interactions and converts it into meaningful insights for Employees, Project Managers, Unit Heads, and Support teams like Marketing.
+          </p>
         </div>
-      </div>
-    ),
-  },
-  {
-    question: 'SRCAS Problem Statement 2',
-    answer: (
-      <div className="text-left text-sm md:text-base space-y-4">
-        <Typography.H6>Problem Statement 2</Typography.H6>
         <div>
-          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
-          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+          <strong className="block text-gray-900 font-bold mb-1">Objective:</strong>
+          <ul className="list-disc list-outside pl-4 space-y-1 text-gray-700">
+            <li>Build a guided daily work-logging system that asks simple, structured questions instead of free typing</li>
+            <li>Allow employees to log what was worked on, project/task selected, time spent, and completion status with minimal effort</li>
+            <li>Create basic intelligence rules to compare planned vs actual hours at task or project level</li>
+            <li>Generate role-specific dashboards for Employee, Manager, and Unit Head views</li>
+            <li>Identify simple trends such as over-planning, under-planning, and consistent delays using data patterns</li>
+            <li>Provide project-level status indicators (on-track / at-risk / delayed) based on logged data</li>
+            <li>Ensure the system is scalable for 100+ users and usable as a core internal tool</li>
+          </ul>
         </div>
-      </div>
-    ),
-  },
-  {
-    question: 'SRCAS Problem Statement 3',
-    answer: (
-      <div className="text-left text-sm md:text-base space-y-4">
-        <Typography.H6>Problem Statement 3</Typography.H6>
         <div>
-          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
-          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
-        </div>
-      </div>
-    ),
-  },
-  {
-    question: 'SRCAS Problem Statement 4',
-    answer: (
-      <div className="text-left text-sm md:text-base space-y-4">
-        <Typography.H6>Problem Statement 4</Typography.H6>
-        <div>
-          <strong className="block text-gray-900 font-bold mb-1">Description:</strong>
-          <p className="text-gray-700">This problem statement will be updated soon. Stay tuned for more details.</p>
+          <strong className="block text-gray-900 font-bold mb-1">Expected Outcome:</strong>
+          <ul className="list-disc list-outside pl-4 space-y-1 text-gray-700">
+            <li>For Employee : Smart daily check-ins that adapt based on role, past work, and ongoing projects (less typing, more relevance)</li>
+            <li>For Manager : Predictive visibility into delays, over-planned tasks, and estimation reliability of team members</li>
+            <li>For Project Lead : Live project health score with lagging indicators, effort burn trends, and resource stress points</li>
+            <li>For Unit Head : High-level view of utilization %, revenue-to-effort mapping, capacity saturation, and hiring signals</li>
+            <li>For Marketing : Data-backed understanding of delivery capacity before committing new projects</li>
+            <li>Actionable inputs for leadership on capacity planning and project intake decisions</li>
+            <li>A usable prototype that the organization can extend into a real internal system</li>
+          </ul>
         </div>
       </div>
     ),

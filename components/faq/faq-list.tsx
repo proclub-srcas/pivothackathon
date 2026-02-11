@@ -109,7 +109,7 @@ export const FaqList: React.FC = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
-          className="flex flex-wrap justify-center gap-40 mt-8 mb-16 relative z-20"
+          className="flex flex-wrap justify-center gap-4 md:gap-40 mt-8 mb-16 relative z-20"
         >
           <button
             onClick={() => {
@@ -117,8 +117,8 @@ export const FaqList: React.FC = () => {
               setOpenIndex(null);
             }}
             className={`
-              relative inline-flex items-center gap-2 px-8 py-3 rounded-full 
-              font-semibold transition-all duration-300 shadow-lg border-2
+              relative inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-3 rounded-full 
+              font-semibold text-xs md:text-base transition-all duration-300 shadow-lg border-2
               ${!isSrcas
                 ? 'bg-[#005CAA] text-white border-[#005CAA] hover:bg-[#004a8c]'
                 : 'bg-white text-[#005CAA] border-[#005CAA] hover:bg-[#005CAA]/5'
@@ -134,8 +134,8 @@ export const FaqList: React.FC = () => {
               setOpenIndex(null);
             }}
             className={`
-              relative inline-flex items-center gap-2 px-8 py-3 rounded-full 
-              font-semibold transition-all duration-300 shadow-lg border-2
+              relative inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-3 rounded-full 
+              font-semibold text-xs md:text-base transition-all duration-300 shadow-lg border-2
               ${isSrcas
                 ? 'bg-[#005CAA] text-white border-[#005CAA] hover:bg-[#004a8c]'
                 : 'bg-white text-[#005CAA] border-[#005CAA] hover:bg-[#005CAA]/5'
@@ -147,11 +147,11 @@ export const FaqList: React.FC = () => {
         </motion.div>
 
       </div>
-      <div className="w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 relative z-10 items-start">
+      <div className="w-full max-w-7xl px-6 grid grid-cols-1 gap-6 mt-10 relative z-10 items-start">
         {activeQuestions.map((question, index) => (
           <Dropdown
             key={`${isSrcas ? 'srcas' : 'standard'}-question-${index}`}
-            question={question.question}
+            question={`PS${index + 1}: ${question.question}`}
             answer={question.answer}
             isOpen={openIndex === index}
             onToggle={() => handleToggle(index)}

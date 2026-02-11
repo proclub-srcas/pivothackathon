@@ -1,39 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Kanit, Poppins, Caveat } from "next/font/google";
 import "./globals.css";
 import GlassNavBar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ViewTransitions } from 'next-view-transitions'
 import SmoothScroll from "@/components/SmoothScroll";
 import InteractiveBackground from "@/components/InteractiveBackground";
+import ScrollToTop from "@/components/ScrollToTop";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
 
-const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-caveat",
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const kanit = Kanit({
-  weight: ["400", "700", "800"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-kanit",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://srcas-lnt-hackathon.com'),
@@ -75,13 +49,17 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en">
+        <head>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" />
+        </head>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${caveat.variable} ${poppins.className} antialiased overflow-x-hidden bg-white`}
+          className={`antialiased overflow-x-hidden bg-white`}
         >
           <InteractiveBackground />
           <SmoothScroll>
             <GlassNavBar />
             {children}
+            <ScrollToTop />
             <Footer />
           </SmoothScroll>
         </body>
