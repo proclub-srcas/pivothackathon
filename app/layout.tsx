@@ -10,21 +10,37 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://srcas-lnt-hackathon.com'),
+  metadataBase: new URL('https://pivothackathon.web.app'),
   title: {
-    default: "PIVOT Hackathon 2026 | i2i - Idea to Impact",
-    template: "%s | PIVOT Hackathon"
+    default: "PIVOT Hackathon 2026 | SRCAS x L&T | i2i - Idea to Impact",
+    template: "%s | PIVOT Hackathon SRCAS"
   },
-  description: "PIVOT Hackathon 2026 - i2i (Idea to Impact). Join us for 24 hours of coding, innovation, and fun. February 2026.",
+  description: "PIVOT Hackathon 2026 by SRCAS Programming Club in partnership with Larsen & Toubro Limited. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ["Hackathon", "PIVOT", "i2i", "Idea to Impact", "SRCAS", "Larsen & Toubro Limited", "Coding", "Coimbatore", "Tech Event"],
+  keywords: [
+    "pivot hackathon srcas",
+    "PIVOT Hackathon",
+    "SRCAS Hackathon",
+    "programming club hackathon",
+    "L&T hackathon",
+    "Larsen and Toubro hackathon",
+    "Coimbatore hackathon",
+    "Sri Ramakrishna College hackathon",
+    "i2i hackathon",
+    "idea to impact",
+    "engineering hackathon",
+    "coding competition",
+    "tech event Coimbatore",
+    "student hackathon 2026",
+    "Tamil Nadu hackathon"
+  ],
   openGraph: {
-    title: "PIVOT Hackathon 2026 | i2i - Idea to Impact",
-    description: "Join us for 24 hours of coding, innovation, and fun at SRCAS, Coimbatore.",
-    // url: 'https://srcas-lnt-hackathon.com',
-    siteName: 'PIVOT Hackathon 2026',
+    title: "PIVOT Hackathon 2026 | SRCAS x L&T | i2i - Idea to Impact",
+    description: "Join PIVOT Hackathon 2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with Larsen & Toubro Limited.",
+    url: 'https://pivothackathon.web.app',
+    siteName: 'PIVOT Hackathon 2026 - SRCAS',
     images: [
       {
         url: '/hackbyte_home_page.png',

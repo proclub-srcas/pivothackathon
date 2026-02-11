@@ -71,7 +71,7 @@ function HeroSection() {
       />
 
       {/* Partners Logos - Top Right */}
-      <div className="absolute top-6 right-10 z-30 hidden md:flex items-center gap-8">
+      <div className="absolute top-6 right-10 z-50 hidden md:flex items-center gap-8">
         <Image
           src="/srcas-1-logo.png"
           alt="SRCAS"
@@ -98,7 +98,7 @@ function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -115,7 +115,7 @@ function HeroSection() {
 
 
           {/* PIVOT Logo */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-7">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-7 mt-16 md:mt-28">
             {/* <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300"> */}
             <div className="flex items-center">
               <Image
@@ -132,24 +132,27 @@ function HeroSection() {
           {/* Main Headline */}
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight flex flex-wrap justify-center gap-x-4 "
+            className="text-4xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight"
           >
-            <JumpingText
-              text="Code to "
-              defaultColor="#111827"
-              hoverColor="#005CAA"
-            />
-            <JumpingText
-              text="Innovate"
-              defaultColor="#005CAA"
-              hoverColor="#003366"
-            />
-            <br />
-            <JumpingText className="text-3xl md:text-5xl"
-              text="Build the Future "
-              defaultColor="#111827"
-              hoverColor="#005CAA"
-            />
+            <div className="flex flex-wrap justify-center gap-x-4 mb-2">
+              <JumpingText
+                text="Code to "
+                defaultColor="#111827"
+                hoverColor="#005CAA"
+              />
+              <JumpingText
+                text="Innovate"
+                defaultColor="#005CAA"
+                hoverColor="#003366"
+              />
+            </div>
+            <div className="flex flex-wrap justify-center gap-x-4">
+              <JumpingText className="text-3xl md:text-6xl"
+                text="Build the Future"
+                defaultColor="#111827"
+                hoverColor="#005CAA"
+              />
+            </div>
           </motion.h1>
 
           {/* Sub-headline */}
@@ -200,22 +203,51 @@ function HeroSection() {
             </a>
           </motion.div>
 
-          {/* Stats Row */}
+          {/* Stats Row - Sleek Professional Design */}
           <motion.div
             variants={fadeInUp}
-            className="mt-6 flex flex-wrap justify-center gap-12 text-center"
+            className="mt-12 mb-20 max-w-4xl mx-auto"
           >
-            <div>
-              <p className="text-4xl font-bold text-[#005CAA]">Internship</p>
-              <p className="text-gray-500 mt-1">Opportunity</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-[#005CAA]">24</p>
-              <p className="text-gray-500 mt-1">Hours</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-[#005CAA]">4</p>
-              <p className="text-gray-500 mt-1">Tracks</p>
+            <div className="bg-white/40 backdrop-blur-sm rounded-lg border border-white/60 shadow-lg p-2 sm:p-4">
+              <div className="grid grid-cols-3 divide-x divide-gray-300">
+                <div className="py-2 px-2 sm:py-3 sm:px-8 group">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm sm:text-xl shadow-lg">12</div>
+                    </div>
+                    <div className="text-center sm:text-left">
+                      <p className="text-gray-900 font-bold text-xs sm:text-lg">Hours</p>
+                      <p className="text-gray-600 text-[9px] sm:text-sm">of Nonstop Hackathon</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="py-2 px-2 sm:py-3 sm:px-8 group">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm sm:text-xl shadow-lg">4</div>
+                    </div>
+                    <div className="text-center sm:text-left">
+                      <p className="text-gray-900 font-bold text-xs sm:text-lg">Tracks</p>
+                      <p className="text-gray-600 text-[9px] sm:text-sm">Problem Statements</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="py-2 px-2 sm:py-3 sm:px-8 group">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4">
+                    <div className="flex-shrink-0">
+                      <svg className="w-8 h-8 sm:w-12 sm:h-12 p-1.5 sm:p-2.5 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 text-white shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div className="text-center sm:text-left">
+                      <p className="text-gray-900 font-bold text-xs sm:text-lg">Internship</p>
+                      <p className="text-gray-600 text-[9px] sm:text-sm">Opportunity</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -322,7 +354,7 @@ function AboutSection() {
               host an industry-focused hackathon that bridges academia and innovation.
             </p>
             <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
-              This 24-hour hackathon exposes students to real industry problem statements, encouraging solutions aligned with actual engineering workflows, planning challenges, and data-driven decision-making. By bringing together the brightest minds to solve challenges across emerging technologies, the event fosters innovation that translates into real-world impact.
+              This 12-hour hackathon exposes students to real industry problem statements, encouraging solutions aligned with actual engineering workflows, planning challenges, and data-driven decision-making. By bringing together the brightest minds to solve challenges across emerging technologies, the event fosters innovation that translates into real-world impact.
             </p>
           </motion.div>
           <div className="mt-12 flex justify-center">

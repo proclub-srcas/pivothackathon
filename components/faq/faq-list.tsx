@@ -151,7 +151,7 @@ export const FaqList: React.FC = () => {
         {activeQuestions.map((question, index) => (
           <Dropdown
             key={`${isSrcas ? 'srcas' : 'standard'}-question-${index}`}
-            question={`PS${index + 1}: ${question.question}`}
+            question={`PS${isSrcas ? 5 : index + 1}: ${question.question}`}
             answer={question.answer}
             isOpen={openIndex === index}
             onToggle={() => handleToggle(index)}

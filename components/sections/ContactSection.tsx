@@ -82,15 +82,24 @@ const ContactSection: React.FC = () => {
                                 <div className="p-2 rounded-lg bg-[#005CAA]/10">
                                     <User className="w-5 h-5 text-[#005CAA]" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900">Staff Coordinator</h3>
+                                <h3 className="text-xl font-bold text-gray-900">Hackathon Coordinators</h3>
                             </div>
 
-                            <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
-                                <p className="font-semibold text-gray-900 mb-1">Dr. M. Praneesh</p>
-                                <a href="tel:+919629924052" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
-                                    <Phone className="w-4 h-4" />
-                                    +91 9629924052
-                                </a>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+                                    <p className="font-semibold text-gray-900 mb-1">Dr. M. Praneesh</p>
+                                    <a href="tel:+919629924052" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
+                                        <Phone className="w-4 h-4" />
+                                        +91 9629924052
+                                    </a>
+                                </div>
+                                <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+                                    <p className="font-semibold text-gray-900 mb-1">Mr. Mahendra Prasath</p>
+                                    <a href="tel:+919176070393" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
+                                        <Phone className="w-4 h-4" />
+                                        +91 91760 70393
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
 
@@ -113,7 +122,7 @@ const ContactSection: React.FC = () => {
                         </motion.div>
 
                         {/* Student Coordinators */}
-                         <motion.div variants={fadeInUp} className="space-y-6">
+                        <motion.div variants={fadeInUp} className="space-y-6">
                             {/*<div className="flex items-center gap-3 mb-4">
                                 <div className="p-2 rounded-lg bg-[#005CAA]/10">
                                     <Users className="w-5 h-5 text-[#005CAA]" />
