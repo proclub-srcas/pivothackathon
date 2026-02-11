@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PIVOT: i2i - Idea to Impact Hackathon 🚀
 
-## Getting Started
+**Code to Innovate, Build the Future**
 
-First, run the development server:
+Welcome to the official repository for the **PIVOT Hackathon Website**. This web application serves as the central hub for the PIVOT: i2i - Idea to Impact hackathon, organized by the **Programming Club of SRCAS** in partnership with **Larsen & Toubro Limited (L&T)**.
+
+## 🌟 About the Project
+
+PIVOT is an industry-focused hackathon designed to bridge the gap between academia and innovation. It starts with an abstract submission round and culminates in a 12-hour coding marathon where finalists present their solutions to real-world challenges in sustainability, healthcare, smart cities, and emerging technologies.
+
+This repository contains the source code for the landing page, registration portal, and information center for the event.
+
+### Key Features
+- **Dynamic Hero Section**: Engaging visuals with partner logos and interactive elements.
+- **Event Timeline**: A scroll-animated roadmap of the event schedule.
+- **Guidelines & FAQ**: Comprehensive details for participants.
+- **Responsive Design**: Fully optimized for mobile and desktop devices.
+- **Smooth Animations**: Powered by Framer Motion and GSAP for a premium user experience.
+- **Performance Optimized**: Fast loading times and optimized assets.
+
+## 🛠️ Tech Stack
+
+This project is built using modern web technologies to ensure high performance and scalability.
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: 
+  - [Framer Motion](https://www.framer.com/motion/)
+  - [GSAP](https://greensock.com/gsap/)
+- **Smooth Scrolling**: [Lenis](https://lenis.darkroom.engineering/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) or [pnpm](https://pnpm.io/)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd my-hackathon-site
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open in browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/                  # Next.js App Router pages and layouts
+│   ├── layout.tsx        # Root layout with smooth scroll provider
+│   ├── page.tsx          # Main landing page
+│   └── globals.css       # Global styles and Tailwind directives
+├── components/           # Reusable UI components
+│   ├── faq/              # FAQ section components
+│   ├── guidelines/       # Guidelines section components
+│   ├── sections/         # Major page sections (Timeline, Prizes, Contact)
+│   └── ui/               # Basic UI elements (Buttons, Cards)
+├── public/               # Static assets (Images, Logos, Guidelines PDF)
+└── config/               # Configuration files (if any)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗓️ Event Schedule
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Feb 6, 2026**: Registration Opens
+- **Feb 28, 2026**: Round 1 – Abstract Submission Deadline
+- **March 8, 2026**: Shortlisted Teams Announcement
+- **March 10, 2026**: Round 2 – Concept Presentation
+- **March 14, 2026**: Hackathon Finals (12-Hour Marathon)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👥 Contributors
 
-## Learn More
+- **Organizer**: [Sri Ramakrishna College of Arts and Science (SRCAS)](https://www.srcas.ac.in/)
+- **Club**: Programming Club, SRCAS
+- **Industrial Partner**: [Larsen & Toubro Limited](https://www.larsentoubro.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center">
+  Crafted with ❤️ by [உதய UD](https://udhayasankar.vercel.app/)
+</p>
