@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/humans/page": "app/humans/page.js",
+  "/page": "app/page.js",
+  "/prizes/page": "app/prizes/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/sponsors/page": "app/sponsors/page.js"
+}

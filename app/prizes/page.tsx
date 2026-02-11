@@ -51,7 +51,7 @@ export default function PrizesPage() {
 				</div>
 			</div>
 
-			<div className="min-h-screen w-screen bg-[url('/bg%20texture%20prizes.svg'),radial-gradient(circle_at_center,_#0076D6_0%,_#003366_70%)] bg-cover bg-center bg-no-repeat relative flex flex-col items-center pt-[22vw] sm:pt-25 md:pt-30 lg:pt-40 xl:pt-56 pb-30">
+			<div className="min-h-screen w-screen bg-[radial-gradient(circle_at_center,_#0076D6_0%,_#003366_70%)] bg-cover bg-center bg-no-repeat relative flex flex-col items-center pt-[22vw] sm:pt-25 md:pt-30 lg:pt-40 xl:pt-56 pb-30">
 				<Image
 					src="/MLH PINS.svg"
 					alt="MLH pins"

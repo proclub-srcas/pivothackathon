@@ -1,0 +1,51 @@
+{
+  "[project]/components/sections/timeline.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/sections/timeline.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_24ebee98._.js",
+      "static/chunks/components_sections_timeline_tsx_64b94501._.js"
+    ]
+  },
+  "[project]/components/guidelines/guidelines.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/guidelines/guidelines.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_7ef971a4._.js",
+      "static/chunks/components_guidelines_guidelines_tsx_64b94501._.js"
+    ]
+  },
+  "[project]/components/sections/PrizesSection.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/sections/PrizesSection.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_2e1e2003._.js",
+      "static/chunks/components_sections_PrizesSection_tsx_64b94501._.js"
+    ]
+  },
+  "[project]/components/sections/ContactSection.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/sections/ContactSection.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_ec509863._.js",
+      "static/chunks/components_sections_ContactSection_tsx_64b94501._.js"
+    ]
+  },
+  "[project]/components/faq/faq-list.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/faq/faq-list.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_de130a9e._.js",
+      "static/chunks/components_faq_faq-list_tsx_64b94501._.js"
+    ]
+  },
+  "[project]/components/DodgeHero.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/DodgeHero.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_DodgeHero_tsx_f6ce3dbc._.js",
+      "static/chunks/components_DodgeHero_tsx_64b94501._.js"
+    ]
+  },
+  "[project]/components/FloatingLogos.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/FloatingLogos.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_FloatingLogos_tsx_ac9130a7._.js",
+      "static/chunks/components_FloatingLogos_tsx_64b94501._.js"
+    ]
+  }
+}

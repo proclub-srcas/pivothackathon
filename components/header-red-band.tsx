@@ -4,7 +4,7 @@ export function RedBand() {
   return (
     <div className="h-20 md:h-24 lg:h-28 w-[110%] -translate-x-[5%] bg-[#005CAA] overflow-visible relative -rotate-3 mt-15">
       <div className="h-full w-full py-1">
-        <div className="h-full w-full bg-[url('/red-band-design.svg')] bg-repeat-x bg-size-[auto_100%] bg-left" />
+        <div className="h-full w-full bg-[#005CAA]" />
       </div>
 
       <div className="absolute inset-0 py-1 px-6 md:px-12 lg:px-20 xl:px-36">
