@@ -89,7 +89,7 @@ function HeroSection() {
         />
         <div className="w-[1px] h-12 bg-gray-400/30" />
         <Image
-          src="/L&T logo 1.jpeg"
+          src="/l-and-t-logo-1.jpeg"
           alt="Larsen & Toubro Limited"
           width={200}
           height={100}
