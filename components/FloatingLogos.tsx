@@ -63,19 +63,20 @@ export default function FloatingLogos({ hideInHero = false }: FloatingLogosProps
                         />
                         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
                         <Image
-                            src="/programming-club-1-logo.png"
-                            alt="Programming Club"
-                            width={80}
-                            height={80}
-                            className="h-16 w-auto object-contain"
-                        />
-                        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
-                        <Image
                             src="/L&Ts-logo.png"
                             alt="Larsen & Toubro Limited"
                             width={80}
                             height={80}
                             className="h-14 w-auto object-contain"
+                        />
+
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
+                        <Image
+                            src="/programming-club-1-logo.png"
+                            alt="Programming Club"
+                            width={80}
+                            height={80}
+                            className="h-16 w-auto object-contain"
                         />
                     </div>
                 </motion.div>

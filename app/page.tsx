@@ -81,17 +81,18 @@ function HeroSection() {
         />
         <div className="w-[1px] h-12 bg-gray-400/30" />
         <Image
-          src="/programming-club-2-logo.png"
-          alt="Programming Club"
-          width={180}
-          height={100}
-          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
-        />
-        <div className="w-[1px] h-12 bg-gray-400/30" />
-        <Image
           src="/l-and-t-logo-1.jpeg"
           alt="Larsen & Toubro Limited"
           width={200}
+          height={100}
+          className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
+        />
+
+        <div className="w-[1px] h-12 bg-gray-400/30" />
+        <Image
+          src="/programming-club-2-logo.png"
+          alt="Programming Club"
+          width={180}
           height={100}
           className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
         />

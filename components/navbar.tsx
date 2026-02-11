@@ -74,10 +74,8 @@ const NAV_ITEMS = [
 const DesktopNavBar: React.FC = () => {
   const pathname = usePathname();
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
-  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -121,150 +119,81 @@ const DesktopNavBar: React.FC = () => {
     };
   }, [pathname]);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!navRef.current) return;
-    const rect = navRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredTab(null);
-  };
-
   return (
-    <div className="fixed hidden sm:block top-8 left-10 z-50 perspective-[1000px]">
-      <div className="relative group">
-        <div />
-        <nav
-          ref={navRef}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          className="
-                        relative
-                        flex items-center gap-2 px-4 py-[3]
-                        rounded-full
-                        bg-white 
-                        backdrop-blur-[20px] 
-                        backdrop-saturate-150
-                        border border-[#E2E8F0]
-                        shadow-md
-                        overflow-hidden
-                        transition-all duration-300 ease-out
-                        hover:border-[#005CAA]/30 
-                        hover:shadow-lg
-                    "
-        >
-          <div
-            className="absolute inset-0 rounded-full pointer-events-none"
-            style={{
-              background: `
-                                radial-gradient(
-                                    150px circle at ${mousePos.x}px ${mousePos.y}px, 
-                                    rgba(0,92,170,0.15), 
-                                    transparent 60%
-                                )
-                            `,
-              mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-              maskComposite: "exclude",
-              WebkitMaskComposite: "xor",
-              padding: "1px",
-            }}
-          />
+    <div className="fixed hidden sm:block top-8 left-10 z-50">
+      <nav className="flex flex-col gap-4">
+        {NAV_ITEMS.map((item) => {
+          const isHomeItem = item.href === "/";
+          const isHashLink = item.href.startsWith("/#");
+          const sectionId = isHashLink ? item.href.replace("/#", "") : "home";
 
-          <div className="absolute inset-x-4 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#005CAA]/20 to-transparent opacity-50" />
-          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#005CAA]/5 to-transparent opacity-30 pointer-events-none rounded-t-full" />
+          let isActive = false;
 
-          {NAV_ITEMS.map((item) => {
-            const isHomeItem = item.href === "/";
-            const isHashLink = item.href.startsWith("/#");
-            const sectionId = isHashLink ? item.href.replace("/#", "") : "home";
-
-            let isActive = false;
-
-            if (pathname === "/") {
-              // We are on home page, rely on Scroll Spy
-              if (isHashLink) {
-                isActive = activeSection === sectionId;
-              } else if (isHomeItem) {
-                // Home item is active only if we are at the top (activeSection is 'home' or empty)
-                isActive = activeSection === "home" || activeSection === "";
-              }
-            } else {
-              // Other pages (e.g. /about), relies on exact match
-              isActive = pathname === item.href;
+          if (pathname === "/") {
+            if (isHashLink) {
+              isActive = activeSection === sectionId;
+            } else if (isHomeItem) {
+              isActive = activeSection === "home" || activeSection === "";
             }
+          } else {
+            isActive = pathname === item.href;
+          }
 
-            const isHovered = hoveredTab === item.id;
-            const LucideIcon = item.icon;
+          const isHovered = hoveredTab === item.id;
+          const LucideIcon = item.icon;
 
-            return (
-              <Link
-                key={item.id}
-                href={item.href}
-                onMouseEnter={() => setHoveredTab(item.id)}
-                onMouseLeave={() => setHoveredTab(null)}
-                className="
-                                    relative
-                                    group/item
-                                    flex items-center justify-center
-                                    w-12 h-12 md:w-18 md:h-12
-                                    rounded-full
-                                    transition-all duration-300 ease-out
-                                    focus:outline-none
-                                "
+          return (
+            <Link
+              key={item.id}
+              href={item.href}
+              onMouseEnter={() => setHoveredTab(item.id)}
+              onMouseLeave={() => setHoveredTab(null)}
+              className={`
+                relative
+                flex items-center
+                h-12
+                rounded-full
+                transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+                overflow-hidden
+                backdrop-blur-xl
+                border
+                ${isActive
+                  ? "bg-[#005CAA] text-white border-[#005CAA] shadow-lg shadow-blue-900/20"
+                  : "bg-white/70 text-gray-600 border-white/40 hover:bg-white/90 hover:border-white/60 shadow-sm"
+                }
+              `}
+              style={{
+                width: isHovered || isActive ? "auto" : "48px",
+                paddingRight: isHovered || isActive ? "20px" : "0",
+              }}
+            >
+              <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                {isActive || (item as { customIcon?: string }).customIcon ? (
+                  <Image
+                    src={(item as { customIcon?: string }).customIcon || item.activeIcon}
+                    alt={item.label}
+                    width={22}
+                    height={22}
+                    className={`transition-all duration-300 ${isActive ? "brightness-0 invert" : "opacity-70 group-hover:opacity-100"}`}
+                  />
+                ) : (
+                  <LucideIcon size={22} strokeWidth={2} />
+                )}
+              </div>
+
+              <span
+                className={`
+                  whitespace-nowrap font-medium text-sm
+                  transition-all duration-300
+                  ${isHovered || isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4 w-0"}
+                `}
               >
-                <div
-                  className={`
-                                        relative z-10 
-                                        transition-all duration-500 ease-out
-                                        ${isActive
-                      ? "text-[#005CAA]"
-                      : "text-[#003366]/60 hover:text-[#005CAA]"
-                    }
-                                        ${isActive && mounted
-                      ? "scale-150 -rotate-12"
-                      : "scale-100 rotate-0"
-                    }
-                                    `}
-                >
-                  {isActive || (item as { customIcon?: string }).customIcon ? (
-                    <Image
-                      src={(item as { customIcon?: string }).customIcon || item.activeIcon}
-                      alt={item.label}
-                      width={24}
-                      height={24}
-                      className={isActive ? "" : "opacity-60 hover:opacity-100 transition-opacity"}
-                    />
-                  ) : (
-                    <LucideIcon size={22} strokeWidth={2} />
-                  )}
-                </div>
-
-                <span
-                  className={`
-										absolute -top-10 
-										px-2 py-1 
-										bg-[#005CAA] backdrop-blur-md 
-										border border-[#003366]/30 
-										rounded-md 
-										text-[10px] font-medium tracking-wide uppercase text-white
-										transition-all duration-300
-										${isHovered
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2 pointer-events-none"
-                    }
-								`}
-                >
-                  {item.label}
-                </span>
-              </Link>
-            );
-          })}
-        </nav>
-      </div>
+                {item.label}
+              </span>
+            </Link>
+          );
+        })}
+      </nav>
     </div>
   );
 };

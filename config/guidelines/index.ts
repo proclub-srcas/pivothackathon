@@ -17,7 +17,7 @@ export const guidelinesData: Guideline[] = [
         icon: 'no-prerequisites',
         title: 'Only for Engineering Students',
         description:
-            'Open to final year and prefinal years Engineering Students! Whether you are a beginner or an expert, everyone is welcome.',
+            'Open to Final year students',
         isHighlighted: true,
     },
     {
@@ -39,7 +39,7 @@ export const guidelinesData: Guideline[] = [
         icon: 'team',
         title: 'Team Size: 2-4 Members',
         description:
-            'Form a team of 2 to 4 members. Cross-college teams are allowed and encouraged!',
+            'Team members can be of 2-4 students',
     },
     {
         id: 'venue',

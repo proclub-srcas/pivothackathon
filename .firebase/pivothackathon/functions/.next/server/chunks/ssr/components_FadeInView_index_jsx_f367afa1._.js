@@ -1,3 +1,0 @@
-module.exports=[90729,a=>{"use strict";var b=a.i(87924),c=a.i(46271);function d({children:a,delay:d=0,duration:e=.6,yOffset:f=50,className:g=""}){return(0,b.jsx)(c.motion.div,{initial:{opacity:0,y:f},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:"-100px"},transition:{duration:e,delay:d,ease:[.25,.46,.45,.94]},className:g,children:a})}a.s(["default",()=>d])}];
-
-//# sourceMappingURL=components_FadeInView_index_jsx_f367afa1._.js.map
