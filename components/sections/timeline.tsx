@@ -241,7 +241,7 @@ export default function Timeline() {
                     </h2>
 
                     <p className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
-                        From registration to the grand finale, here&apos;s your roadmap to innovation
+                        From registration to the grand finale, here&apos;s your roadmap.
                     </p>
 
                     <div className="flex items-center justify-center gap-2 mt-8">

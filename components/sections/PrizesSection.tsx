@@ -241,11 +241,11 @@ const PrizesSection: React.FC = () => {
                     className="mt-16 text-center"
                 >
                     <p className="text-gray-500 mb-4">
-                        All participants will receive certificates and exclusive L&T goodies!
+                        All Finalists will receive certificates and exclusive L&T goodies!
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <div className="px-4 py-2 bg-gray-100 rounded-full text-gray-600 text-sm">
-                            🎓 Certificates for All
+                            🎓 Certificates for All Finalists
                         </div>
                         <div className="px-4 py-2 bg-gray-100 rounded-full text-gray-600 text-sm">
                             🎁 Swag Kits

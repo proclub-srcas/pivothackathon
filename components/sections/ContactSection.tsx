@@ -82,7 +82,7 @@ const ContactSection: React.FC = () => {
                                 <div className="p-2 rounded-lg bg-[#005CAA]/10">
                                     <User className="w-5 h-5 text-[#005CAA]" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900">Innovation Challenge Coordinators</h3>
+                                <h3 className="text-xl font-bold text-gray-900">PIVOT Coordinators</h3>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
