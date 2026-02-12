@@ -382,8 +382,20 @@ const faqs = [
   {
     question: "What are the competition rounds and how are teams selected?",
     answer:
-      "The event has two rounds: Round 1 is abstract submission and shortlisting; Round 2 is a final presentation by shortlisted teams. Abstracts are reviewed for relevance, structure, feasibility and originality; shortlisted teams get time to refine their concept for final evaluation.",
-  },
+      <div className="space-y-4">
+        <p>
+          The event has two rounds: Round 1 is abstract submission and shortlisting; Round 2 is a final presentation by shortlisted teams. Abstracts are reviewed for relevance, structure, feasibility and originality; shortlisted teams get time to refine their concept for final evaluation.
+        </p>
+        <a
+          href="/fileFolder/Abstract Submission Guidelines.pdf"
+          download="Abstract_Submission_Guidelines.pdf"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA] text-white font-semibold rounded-lg hover:bg-[#003366] transition-all duration-300 text-sm"
+        >
+          <Download className="w-4 h-4" />
+          Download Guidelines
+        </a>
+      </div> 
+    },
   {
     question: "What must be included in the abstract and how will it be evaluated?",
     answer: (
@@ -399,7 +411,7 @@ const faqs = [
           <Download className="w-4 h-4" />
           Download Guidelines
         </a>
-      </div>
+      </div> 
     ),
   },
   {
