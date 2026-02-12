@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, User, Users, ExternalLink } from 'lucide-react';
+import JumpingText from '@/components/JumpingText';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -44,10 +45,9 @@ const ContactSection: React.FC = () => {
                                     variants={fadeInUp}
                                     className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4"
                                 >
-                                    How can we<br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#005CAA] to-blue-500">
-                                        Help you?
-                                    </span>
+                                    <JumpingText text="How can we " defaultColor="#111827" hoverColor="#005CAA" />
+                                    <br />
+                                    <JumpingText text="Help you?" defaultColor="#005CAA" hoverColor="#003366" />
                                 </motion.h2>
                                 <motion.p
                                     variants={fadeInUp}
@@ -82,7 +82,7 @@ const ContactSection: React.FC = () => {
                                 <div className="p-2 rounded-lg bg-[#005CAA]/10">
                                     <User className="w-5 h-5 text-[#005CAA]" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900">Hackathon Coordinators</h3>
+                                <h3 className="text-xl font-bold text-gray-900">Innovation Challenge Coordinators</h3>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -98,6 +98,20 @@ const ContactSection: React.FC = () => {
                                     <a href="tel:+919176070393" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
                                         <Phone className="w-4 h-4" />
                                         +91 91760 70393
+                                    </a>
+                                </div>
+                                <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+                                    <p className="font-semibold text-gray-900 mb-1">Mr. ABHISHEK RAJ</p>
+                                    <a href="tel:+919176070393" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
+                                        <Phone className="w-4 h-4" />
+                                        +91 85904 16233
+                                    </a>
+                                </div>
+                                <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
+                                    <p className="font-semibold text-gray-900 mb-1">Ms. DAISYMARY</p>
+                                    <a href="tel:+919176070393" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
+                                        <Phone className="w-4 h-4" />
+                                        +91 ---
                                     </a>
                                 </div>
                             </div>
@@ -155,7 +169,7 @@ const ContactSection: React.FC = () => {
                             </div> */}
                         </motion.div>
 
-                        {/* Email */}
+                        {/* Email
                         <motion.div variants={fadeInUp} className="space-y-6">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="p-2 rounded-lg bg-[#005CAA]/10">
@@ -173,7 +187,7 @@ const ContactSection: React.FC = () => {
                                     proclub@srcas.ac.in
                                 </a>
                             </div>
-                        </motion.div>
+                        </motion.div>*/}
                     </motion.div>
 
                     {/* Map Section */}

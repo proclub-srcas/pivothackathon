@@ -11,7 +11,7 @@ async function StatsSection() {
     {
       number: "425",
       label: "Participants",
-      description: "400+ participants joined the offline hackathon!",
+      description: "400+ participants joined the offline Innovation Challenge!",
     },
     {
       number: "100+",

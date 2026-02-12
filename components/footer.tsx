@@ -46,7 +46,7 @@ export function Footer() {
           <div className="w-full max-w-4xl p-6 rounded-2xl bg-white/80 backdrop-blur-md shadow-xl border border-gray-900 hover:border-[#005CAA]/100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center justify-center">
               <Image
-                src="/pivot-logo.png"
+                src="/PIVOT.png"
                 alt="PIVOT"
                 width={500}
                 height={300}

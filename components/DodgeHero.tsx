@@ -268,7 +268,7 @@ const DodgeHero: React.FC = () => {
                                     Innovating for Tomorrow
                                 </p>
                                 <p className="text-base text-[#005CAA] font-semibold mt-2">
-                                    PIVOT Hackathon 2026
+                                    PIVOT Innovation Challenge2026
                                 </p>
                             </motion.div>
                         )}
@@ -301,7 +301,7 @@ const DodgeHero: React.FC = () => {
             >
                 <p className="text-gray-500 text-lg">
                     {isCaught
-                        ? "Now click to register for the hackathon! 🚀"
+                        ? "Now click to register for the Innovation Challenge! 🚀"
                         : dodgeCount > 15
                             ? "Don't give up! You're so close! 😈"
                             : dodgeCount > 8

@@ -15,18 +15,12 @@ export const guidelinesData: Guideline[] = [
     {
         id: 'engineering',
         icon: 'no-prerequisites',
-        title: 'Only for Engineering Students',
+        title: 'Open to Engineering Students from all streams',
         description:
-            'Open to Final year students',
+            '',
         isHighlighted: true,
     },
-    {
-        id: 'hackathon',
-        icon: 'hackathon',
-        title: '12-Hour Hackathon',
-        description:
-            'An intense 12-hour coding marathon where you build innovative solutions to real-world problems.',
-    },
+
     {
         id: 'register',
         icon: 'register',

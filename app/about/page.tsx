@@ -5,63 +5,7 @@ import Image from "next/image";
 import GlassNavBar from "@/components/navbar";
 
 
-import TeamSection from '@/components/sections/TeamSection';
-
-
-const studentOrganizers = [
-    {
-        name: "Pravin B",
-        role: "Chairman",
-        company: "Programming Club",
-        image: "/TeamSection/pravin.jpg",
-        linkedin: "https://www.linkedin.com/in/pravinboopathi/"
-    },
-    {
-        name: "Sarath P",
-        role: "Vice Chairman",
-        company: "Programming Club",
-        image: "/TeamSection/sarath.jpg",
-        linkedin: "https://www.linkedin.com/in/thisisthesarath/"
-    },
-    {
-        name: "Vaishnavi R",
-        role: "Secretary",
-        company: "Programming Club",
-        image: "/TeamSection/vaishnavi.jpg",
-        linkedin: "https://linkedin.com"
-    },
-    {
-        name: "Dhananjay R S",
-        role: "Joint Secretary",
-        company: "Programming Club",
-        image: "/TeamSection/dhanjay.jpg",
-        linkedin: "https://www.linkedin.com/in/dhananjay-r-s-aa1ab7341"
-    }
-];
-
-const facultyCoordinators = [
-    {
-        name: "Dr.N.Sumathi",
-        role: "",
-        company: "Programming Club Staff Coordinator",
-        image: "/TeamSection/sumathi.png",
-        linkedin: "https://linkedin.com"
-    },
-    {
-        name: "Dr.M.Praneesh",
-        role: "",
-        company: "Programming Club Staff Coordinator",
-        image: "/TeamSection/praneesh.png",
-        linkedin: "https://linkedin.com"
-    },
-    {
-        name: "Dr.M.Praneesh",
-        role: "",
-        company: "Programming Club Staff Coordinator",
-        image: "/TeamSection/manoj.png",
-        linkedin: "https://linkedin.com"
-    }
-];
+import OrganizersSection from '@/components/sections/OrganizersSection';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -95,7 +39,7 @@ export default function AboutPage() {
                         <motion.div variants={fadeInUp} className="text-center mb-16">
                             <div className="inline-block px-6 py-2 bg-[#005CAA]/10 rounded-full mb-6">
                                 <span className="text-[#005CAA] font-semibold uppercase tracking-wider text-sm">
-                                    About PIVOT Hackathon
+                                    About PIVOT Innovation Challenge
                                 </span>
                             </div>
                             <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -103,7 +47,7 @@ export default function AboutPage() {
                                 <span className="text-[#005CAA]">Meets Excellence</span>
                             </h1>
                             <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                PIVOT Hackathon brings together brilliant minds from academia
+                                PIVOT Innovation Challenge brings together brilliant minds from academia
                                 and cutting-edge technology from industry leaders to create
                                 solutions for tomorrow's challenges.
                             </p>
@@ -182,7 +126,7 @@ export default function AboutPage() {
                                         <p className="text-gray-600 text-base mb-4 leading-relaxed text-justify">
                                             Dedicated to fostering innovation and technical excellence
                                             among students. We organize coding competitions, workshops,
-                                            and hackathons to build a strong developer community.
+                                            and Innovation Challenges to build a strong developer community.
                                         </p>
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-sm text-[#005CAA]">
@@ -195,7 +139,7 @@ export default function AboutPage() {
                                             </div>
                                             <div className="flex items-center gap-2 text-sm text-[#005CAA]">
                                                 <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                                                <span>Hackathon Events</span>
+                                                <span>Innovation ChallengeEvents</span>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -364,7 +308,7 @@ export default function AboutPage() {
                                     <p className="text-gray-600 mb-4 leading-relaxed text-justify">
                                         Dedicated to fostering innovation and technical excellence
                                         among students. We organize coding competitions, workshops,
-                                        and hackathons to build a strong developer community.
+                                        and Innovation Challenges to build a strong developer community.
                                     </p>
                                     <div className="space-y-2">
                                         <div className="flex items-center gap-2 text-sm text-[#005CAA]">
@@ -377,7 +321,7 @@ export default function AboutPage() {
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-[#005CAA]">
                                             <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                                            <span>Hackathon Events</span>
+                                            <span>Innovation ChallengeEvents</span>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -403,8 +347,7 @@ export default function AboutPage() {
                         .
                     </span>
                 </div>
-                <TeamSection title="Student Organizers" members={studentOrganizers} id="student-organizers" />
-                <TeamSection title="Faculty Coordinators" members={facultyCoordinators} id="faculty-coordinators" hideLinkedIn={true} centerItems={true} />
+                <OrganizersSection />
             </section>
         </main>
     );

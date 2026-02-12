@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { Calendar, Code, Trophy, Users, Lightbulb, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import JumpingText from '@/components/JumpingText';
 
 interface TimelineEvent {
     date: string;
@@ -19,7 +20,7 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
     {
-        date: 'Feb 6, 2026',
+        date: 'Feb 13, 2026',
         title: 'Registration Opens',
         description: 'Online registrations begin. Form your teams and sign up!',
         icon: <Users className="w-6 h-6" />,
@@ -32,7 +33,7 @@ const timelineEvents: TimelineEvent[] = [
     },
     {
         date: 'Feb 28, 2026',
-        title: 'Round 1 – Abstract Submission Deadline',
+        title: 'Abstract Submission Date',
         description: 'Submit your innovative ideas and project proposals.',
         icon: <Lightbulb className="w-6 h-6" />,
         type: 'milestone',
@@ -44,23 +45,9 @@ const timelineEvents: TimelineEvent[] = [
     },
     {
         date: 'March 8, 2026',
-        title: 'Shortlisted Teams Announced',
+        title: 'Announcing Shortlisted Teams',
         description: 'Selected teams will be notified via email.',
         icon: <CheckCircle className="w-6 h-6" />,
-        type: 'milestone',
-    },
-    {
-        date: 'March 10, 2026',
-        title: 'Round 2 – Concept Presentation',
-        description: 'PPT preparation & refinement',
-        icon: <CheckCircle className="w-6 h-6" />,
-        type: 'milestone',
-    },
-    {
-        date: 'March 14, 2026',
-        title: 'Hackathon Begins',
-        description: '12-hour coding marathon starts! Build, innovate, create.',
-        icon: <Code className="w-6 h-6" />,
         type: 'milestone',
     },
     {
@@ -140,8 +127,8 @@ function TimelineItem({
                     <div className={`absolute -top-10 -right-10 w-32 h-32 ${styles.glow} rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                     {/* Date Badge */}
-                    <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r ${styles.badge} text-white text-sm font-semibold mb-4 shadow-lg`}>
-                        <Calendar className="w-4 h-4" />
+                    <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r ${styles.badge} text-white text-lg font-semibold mb-4 shadow-lg`}>
+                        <Calendar className="w-5 h-5" />
                         {event.date}
                     </div>
 
@@ -249,10 +236,8 @@ export default function Timeline() {
                     </motion.div>
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                        Event{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#005CAA] to-blue-500">
-                            Timeline
-                        </span>
+                        <JumpingText text="Event " defaultColor="#111827" hoverColor="#005CAA" />
+                        <JumpingText text="Timeline" defaultColor="#005CAA" hoverColor="#003366" />
                     </h2>
 
                     <p className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
@@ -308,7 +293,7 @@ export default function Timeline() {
                 >
                     <div className="inline-block p-8 bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-white/50">
                         <p className="text-gray-600 mb-6 text-lg">
-                            📅 Don&apos;t miss out on any important dates!
+                            📅 Don&apos;t miss out on any important date!
                         </p>
                         <a
                             href="#register"

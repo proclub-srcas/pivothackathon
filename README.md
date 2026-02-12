@@ -1,12 +1,12 @@
-# PIVOT: i2i - Idea to Impact Hackathon 🚀
+# PIVOT: i2i - Idea to Impact Innovation Challenge🚀
 
 **Code to Innovate, Build the Future**
 
-Welcome to the official repository for the **PIVOT Hackathon Website**. This web application serves as the central hub for the PIVOT: i2i - Idea to Impact hackathon, organized by the **Programming Club of SRCAS** in partnership with **Larsen & Toubro Limited (L&T)**.
+Welcome to the official repository for the **PIVOT Innovation ChallengeWebsite**. This web application serves as the central hub for the PIVOT: i2i - Idea to Impact Innovation Challenge, organized by the **Programming Club of SRCAS** in partnership with **Larsen & Toubro Limited (L&T)**.
 
 ## 🌟 About the Project
 
-PIVOT is an industry-focused hackathon designed to bridge the gap between academia and innovation. It starts with an abstract submission round and culminates in a 12-hour coding marathon where finalists present their solutions to real-world challenges in sustainability, healthcare, smart cities, and emerging technologies.
+PIVOT is an industry-focused Innovation Challengedesigned to bridge the gap between academia and innovation. It starts with an abstract submission round and culminates in a 12-hour coding marathon where finalists present their solutions to real-world challenges in sustainability, healthcare, smart cities, and emerging technologies.
 
 This repository contains the source code for the landing page, registration portal, and information center for the event.
 
@@ -92,7 +92,7 @@ Ensure you have the following installed:
 - **Feb 28, 2026**: Round 1 – Abstract Submission Deadline
 - **March 8, 2026**: Shortlisted Teams Announcement
 - **March 10, 2026**: Round 2 – Concept Presentation
-- **March 14, 2026**: Hackathon Finals (12-Hour Marathon)
+- **March 14, 2026**: Innovation ChallengeFinals (12-Hour Marathon)
 
 ## 👥 Contributors
 

@@ -115,18 +115,16 @@ function HeroSection() {
 
 
           {/* PIVOT Logo */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-7 mt-16 md:mt-28">
-            {/* <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300"> */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-7 mt-0 md:mt-10">
             <div className="flex items-center">
               <Image
-                src="/pivot-logo.png"
+                src="/PIVOT.png"
                 alt="PIVOT"
-                width={500}
-                height={300}
+                width={700}
+                height={500}
                 className="h-42 md:h-60 w-auto object-contain"
               />
             </div>
-            {/* </div> */}
           </div>
 
           {/* Main Headline */}
@@ -136,23 +134,23 @@ function HeroSection() {
           >
             <div className="flex flex-wrap justify-center gap-x-4 mb-2">
               <JumpingText
-                text="Code to "
+                text="Innovate to "
                 defaultColor="#111827"
                 hoverColor="#005CAA"
               />
               <JumpingText
-                text="Innovate"
+                text="Build the Future"
                 defaultColor="#005CAA"
                 hoverColor="#003366"
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-x-4">
+            {/* <div className="flex flex-wrap justify-center gap-x-4">
               <JumpingText className="text-3xl md:text-6xl"
-                text="Build the Future"
+                text=""
                 defaultColor="#111827"
                 hoverColor="#005CAA"
               />
-            </div>
+            </div> */}
           </motion.h1>
 
           {/* Sub-headline */}
@@ -204,7 +202,7 @@ function HeroSection() {
           </motion.div>
 
           {/* Stats Row - Sleek Professional Design */}
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             className="mt-12 mb-20 max-w-4xl mx-auto"
           >
@@ -217,7 +215,7 @@ function HeroSection() {
                     </div>
                     <div className="text-center sm:text-left">
                       <p className="text-gray-900 font-bold text-xs sm:text-lg">Hours</p>
-                      <p className="text-gray-600 text-[9px] sm:text-sm">of Nonstop Hackathon</p>
+                      <p className="text-gray-600 text-[9px] sm:text-sm">of Nonstop Innovation Challenge</p>
                     </div>
                   </div>
                 </div>
@@ -249,7 +247,7 @@ function HeroSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
 
 
 
@@ -272,7 +270,7 @@ function HeroSection() {
       >
         <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-medium backdrop-blur-sm border border-[#005CAA]/20">
           <Calendar className="w-4 h-4" />
-          March  2026
+          14th March  2026
         </span>
       </motion.div>
       {/* Scroll indicator */}
@@ -336,12 +334,12 @@ function AboutSection() {
                       jumpHeight={14}
                     />
                     {" "}
-                    <JumpingText
-                      text="Hackathon"
+                    {/* <JumpingText
+                      text="Innovation Challenge"
                       defaultColor="#005CAA"
                       hoverColor="#003366"
                       jumpHeight={14}
-                    />
+                    /> */}
                   </span>
                 </Typography.H2>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
@@ -351,10 +349,10 @@ function AboutSection() {
           <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
             <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-2 md:mb-6">
               Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">L&T Product Development Centre</span> to
-              host an industry-focused hackathon that bridges academia and innovation.
+              host an industry-focused Innovation Challenge that bridges academia and innovation.
             </p>
             <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
-              This 12-hour hackathon exposes students to real industry problem statements, encouraging solutions aligned with actual engineering workflows, planning challenges, and data-driven decision-making. By bringing together the brightest minds to solve challenges across emerging technologies, the event fosters innovation that translates into real-world impact.
+              This Innovation Challenge exposes students to real industry problem statements, encouraging solutions aligned with actual engineering workflows, planning challenges, and data-driven decision-making. By bringing together the brightest minds to solve challenges across emerging technologies, the event fosters innovation that translates into real-world impact.
             </p>
           </motion.div>
           <div className="mt-12 flex justify-center">
@@ -378,9 +376,9 @@ function AboutSection() {
 // ============================================
 const faqs = [
   {
-    question: "Who can participate in the hackathon?",
+    question: "Who can participate in the Innovation Challenge?",
     answer:
-      "The hackathon is open to final year and prefinal years Engineering Students! Whether you are a beginner or an expert, everyone is welcome. Teams can have 2-4 members. At least one team member must be from a recognized institution.",
+      "The Innovation Challenge is open to all Engineering Students! Whether you are a beginner or an expert, everyone is welcome. Teams can have 2-4 members.",
   },
   {
     question: "Is there a registration fee?",
@@ -390,17 +388,30 @@ const faqs = [
   {
     question: "What are the competition rounds and how are teams selected?",
     answer:
-      "The event has two rounds: Round 1 is abstract submission and shortlisting; Round 2 is a concept presentation by shortlisted teams. Abstracts are reviewed for relevance, structure, feasibility and originality; shortlisted teams get time to refine their concept for final evaluation.",
+      "The event has two rounds: Round 1 is abstract submission and shortlisting; Round 2 is a final presentation by shortlisted teams. Abstracts are reviewed for relevance, structure, feasibility and originality; shortlisted teams get time to refine their concept for final evaluation.",
   },
   {
     question: "What must be included in the abstract and how will it be evaluated?",
-    answer:
-      "The abstract should show your understanding of the chosen problem statement, the core idea/solution, planned approach or framework, and expected outcome/usefulness. Evaluators score submissions on relevance to the problem, logical structure, feasibility within the timeline, and originality.",
+    answer: (
+      <div className="space-y-4">
+        <p>
+          The abstract should show your understanding of the chosen problem statement, the core idea/solution, planned approach or framework, and expected outcome/usefulness. Evaluators score submissions on relevance to the problem, logical structure, feasibility within the timeline, and originality.
+        </p>
+        <a
+          href="/fileFolder/Abstract Submission Guidelines.pdf"
+          download="Abstract_Submission_Guidelines.pdf"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA] text-white font-semibold rounded-lg hover:bg-[#003366] transition-all duration-300 text-sm"
+        >
+          <Download className="w-4 h-4" />
+          Download Guidelines
+        </a>
+      </div>
+    ),
   },
   {
-    question: "What should I bring to the hackathon?",
+    question: "What should I bring to the Innovation Challenge?",
     answer:
-      "Bring your laptop, charger, any hardware you might need, and your creativity! We'll provide food, drinks, and a comfortable workspace.",
+      "Bring your laptop, charger, any hardware you might need, and your creativity! We'll provide food, refreshments, free wifi, and a comfortable workspace.",
   },
   {
     question: "Can I start working on my project before the event?",
@@ -410,7 +421,7 @@ const faqs = [
   {
     question: "How are the winners selected?",
     answer:
-      "Projects are judged based on innovation, technical complexity, practical applicability, and presentation quality by a panel of industry experts from L&T Product Development Centre.",
+      "Projects are judged based on innovation, technical complexity, practical applicability, and presentation quality by a panel of industry experts.",
   },
 ];
 
@@ -466,9 +477,9 @@ function FAQSection() {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-5 text-gray-600 leading-relaxed">
+                  <div className="px-6 pb-5 text-gray-600 leading-relaxed">
                     {faq.answer}
-                  </p>
+                  </div>
                 </motion.div>
               </div>
             ))}

@@ -100,25 +100,25 @@ const PrizesSection: React.FC = () => {
                     <motion.div variants={fadeInUp} className="mb-4">
                         <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#005CAA]/10 text-[#005CAA] rounded-full text-sm font-semibold uppercase tracking-wider">
                             <Trophy className="w-4 h-4" />
-                            Career Defining Opportunities
+                            {/* Career Defining Opportunities */}
                         </span>
                     </motion.div>
 
-                    <motion.h2
+                    {/* <motion.h2
                         variants={fadeInUp}
                         className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
                     >
-                        Win Big at{' '}
-                        <span className="text-[#005CAA]">PIVOT Hackathon</span>
-                    </motion.h2>
+                        {/* Win Big at{' '} 
+                        <span className="text-[#005CAA]">Exciting Rewards and Opportunities</span>
+                    </motion.h2> */}
 
                     <motion.p
                         variants={fadeInUp}
                         className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
                     >
-                        More than just a hackathon — it's your gateway to the industry.
-                        Top performers will secure <span className="text-[#005CAA] font-semibold">career-defining internship opportunities</span> with
-                        L&T Product Development Centre, working on real-world engineering challenges.
+                        {/* It's your gateway to the industry. */}
+                        {/* Top performers will secure  with
+                        L&T Product Development Centre, working on real-world engineering challenges. */}
                     </motion.p>
                 </motion.div>
 
@@ -162,23 +162,23 @@ const PrizesSection: React.FC = () => {
                             <h3 className="text-2xl font-bold text-gray-500 mb-2 uppercase tracking-wider">Top Performers</h3>
                             <div className="mb-8">
                                 <p className={`text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent leading-tight mb-4`}>
-                                    Internship Opportunity
+                                    {/* Internship Opportunity */}
                                 </p>
-                                <p className="text-gray-600 font-medium text-xl leading-relaxed">
-                                    Best performing teams will get exclusive Internship Opportunities
-                                    with <span className="text-[#005CAA] font-bold">L&T Product Development Centre</span>.
+                                <p className="text-gray-600 font-medium text-3xl leading-relaxed">
+                                    Exciting Rewards and Opportunities. <br />
+                                    It's your gateway to the industry.
                                 </p>
                             </div>
 
                             {/* Features */}
-                            <ul className="flex flex-wrap justify-center gap-4 mt-6">
+                            {/* <ul className="flex flex-wrap justify-center gap-4 mt-6">
                                 {['Direct Industry Entry', 'Executive Mentorship', 'Exclusive L&T Swag Kit', 'Certificate of Excellence'].map((feature, i) => (
                                     <li key={i} className="flex items-center gap-2 text-gray-700 bg-gray-50 px-4 py-2 rounded-full border border-gray-100">
                                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500`} />
                                         {feature}
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     </motion.div>
                 </motion.div>

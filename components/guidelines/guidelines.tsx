@@ -3,6 +3,7 @@
 import React from 'react';
 import { Typography } from '@/components/Typography';
 import { guidelinesData } from '@/config/guidelines';
+import JumpingText from '@/components/JumpingText';
 import {
   Clock,
   FileText,
@@ -50,9 +51,9 @@ const GuidelinesSection: React.FC = () => {
             Everything you need to know
           </div>
           <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
-            Guidelines for{' '}
+            <JumpingText text="Guidelines for " defaultColor="#000000" hoverColor="#005CAA" />
             <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
-              PIVOT Hackathon
+              <JumpingText text="PIVOT Innovation Challenge" defaultColor="#005CAA" hoverColor="#003366" />
             </span>
           </Typography.H2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />

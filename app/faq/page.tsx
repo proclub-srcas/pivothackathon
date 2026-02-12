@@ -15,7 +15,7 @@ export default function FaqPage() {
 		{
 			question: "How many team members do I need?",
 			answer:
-				"You can participate only in teams of 3 to 4 members. If you are interested in participating in the hackathon but do not have a team, we will assist you in connecting with other individual participants to form a team.",
+				"You can participate only in teams of 3 to 4 members. If you are interested in participating in the Innovation Challengebut do not have a team, we will assist you in connecting with other individual participants to form a team.",
 		},
 		{
 			question: "How much are the participation fees?",
@@ -23,7 +23,7 @@ export default function FaqPage() {
 				"Participation is absolutely free inclusive of food and accomodation. Isnt that great? So register ASAP!!",
 		},
 		{
-			question: "Will the Hackathon be in person or online ?",
+			question: "Will the Innovation Challengebe in person or online ?",
 			answer: "HackByte will be conducted in complete offline/in-person mode.",
 		},
 		{
@@ -32,15 +32,15 @@ export default function FaqPage() {
 				"IIITDM Jabalpur, explore our beautiful campus while thinking about innovating some crazy thing.",
 		},
 		{
-			question: "What are the prerequisites to participate in this hackathon ?",
+			question: "What are the prerequisites to participate in this Innovation Challenge?",
 			answer:
-				"No prerequisites are required to participate in this hackathon. This event is open to participants of all skill levels.",
+				"No prerequisites are required to participate in this Innovation Challenge. This event is open to participants of all skill levels.",
 		},
 		{
 			question:
 				"Is the food and accommodation provided free of charge or are there any associated costs ?",
 			answer:
-				"We've got you covered when it comes to food, water, and coffee – they're on us. However, any additional snacks can be purchased separately. As for accommodation, we will provide arrangements similar to those found in other hackathons, which typically involve a set of mattresses in a common hall.",
+				"We've got you covered when it comes to food, water, and coffee – they're on us. However, any additional snacks can be purchased separately. As for accommodation, we will provide arrangements similar to those found in other Innovation Challenge, which typically involve a set of mattresses in a common hall.",
 		},
 		{
 			question:
@@ -49,9 +49,9 @@ export default function FaqPage() {
 				"Yes, your friend can join the team by submitting an individual application. Once both your friend's individual application and your team's application are accepted, you will be able to add your friend to the team.",
 		},
 		{
-			question: "Can we bring a pre-built project to the hackathon?",
+			question: "Can we bring a pre-built project to the Innovation Challenge?",
 			answer:
-				"No, participants are not allowed to bring pre-built projects to the hackathon. All work must be started from scratch after the hackathon begins to ensure fairness",
+				"No, participants are not allowed to bring pre-built projects to the Innovation Challenge. All work must be started from scratch after the Innovation Challengebegins to ensure fairness",
 		},
 		{
 			question: "Do projects need to be related to the theme?",
@@ -108,7 +108,7 @@ export default function FaqPage() {
 								</p>
 
 								<p className="font-poppins text-[#1A1A1A] sm:text-xl text-md font-medium">
-									Everything you need to know about participating in the Hackathon.
+									Everything you need to know about participating in the Innovation Challenge.
 								</p>
 
 								<p className="font-poppins text-[#003366] sm:text-2xl text-xl font-bold">OR</p>

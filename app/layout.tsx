@@ -12,15 +12,15 @@ import ScrollToTop from "@/components/ScrollToTop";
 export const metadata: Metadata = {
   metadataBase: new URL('https://pivothackathon.web.app'),
   title: {
-    default: "PIVOT Hackathon 2026 | SRCAS x L&T | i2i - Idea to Impact",
-    template: "%s | PIVOT Hackathon SRCAS"
+    default: "PIVOT Innovation Challenge2026 | SRCAS x L&T | i2i - Idea to Impact",
+    template: "%s | PIVOT Innovation ChallengeSRCAS"
   },
-  description: "PIVOT Hackathon 2026 by SRCAS Programming Club in partnership with L&T Product Development Centre. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
+  description: "PIVOT Innovation Challenge2026 by SRCAS Programming Club in partnership with L&T Product Development Centre. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
   icons: {
     icon: '/favicon.ico',
   },
   keywords: [
-    "pivot hackathon srcas",
+    "pivot Innovation Challengesrcas",
     "PIVOT Hackathon",
     "SRCAS Hackathon",
     "programming club hackathon",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     "engineering hackathon",
     "coding competition",
     "tech event Coimbatore",
-    "student hackathon 2026",
+    "student Innovation Challenge2026",
     "Tamil Nadu hackathon"
   ],
   openGraph: {
-    title: "PIVOT Hackathon 2026 | SRCAS x L&T | i2i - Idea to Impact",
-    description: "Join PIVOT Hackathon 2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with L&T Product Development Centre.",
+    title: "PIVOT Innovation Challenge2026 | SRCAS x L&T | i2i - Idea to Impact",
+    description: "Join PIVOT Innovation Challenge2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with L&T Product Development Centre.",
     url: 'https://pivothackathon.web.app',
-    siteName: 'PIVOT Hackathon 2026 - SRCAS',
+    siteName: 'PIVOT Innovation Challenge2026 - SRCAS',
     images: [
       {
         url: '/hackbyte_home_page.png',
