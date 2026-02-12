@@ -62,7 +62,7 @@ const GuidelinesSection: React.FC = () => {
         {/* Guidelines Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {guidelinesData.map((guideline) => (
-            <div key={guideline.id} className="group relative h-full transform-gpu will-change-transform">
+            <div key={guideline.id} className={`group relative h-full transform-gpu will-change-transform ${guideline.id === 'in-person' ? 'md:col-span-2 lg:col-span-3 lg:w-1/3 lg:mx-auto' : ''}`}>
               {/* Card Background & Border */}
               <div
                 className={`absolute inset-0 rounded-2xl border shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2
