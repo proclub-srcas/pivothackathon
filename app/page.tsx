@@ -319,14 +319,14 @@ function AboutSection() {
             <div className="max-w-7xl mx-auto relative z-10">
               {/* Section Title */}
               <div className="flex flex-col items-center justify-center mb-10 md:mb-20 text-center space-y-4">
-                <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(1.5rem,5vw,5rem)] leading-none">
+                <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(1.5rem,3.5vw,3.5rem)] leading-none">
                   <JumpingText
                     text="What is "
                     defaultColor="#000000"
                     hoverColor="#005CAA"
                     jumpHeight={12}
                   />
-                  <span className="font-wc-rough-trad text-[#005CAA]">
+                  <span className="font-wc-rough-trad text-[#005CAA] whitespace-nowrap">
                     <JumpingText
                       text="PIVOT INNOVATION CHALLENGE"
                       defaultColor="#005CAA"
@@ -334,12 +334,6 @@ function AboutSection() {
                       jumpHeight={14}
                     />
                     {" "}
-                    {/* <JumpingText
-                      text="Innovation Challenge"
-                      defaultColor="#005CAA"
-                      hoverColor="#003366"
-                      jumpHeight={14}
-                    /> */}
                   </span>
                 </Typography.H2>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-gray-700 to-black rounded-full mt-4" />
