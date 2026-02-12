@@ -4,7 +4,6 @@ import React from 'react';
 import TeamSection, { TeamMember } from './TeamSection';
 
 const landtMembers: TeamMember[] = [
-    { name: 'Ms. Daisy Mary M', role: 'Committee Member', company: 'L&T Product Development' },
     { name: 'Mr. Abhishek Raj R', role: 'Committee Member', company: 'L&T Product Development' },
     { name: 'Mr. Mahendra Prasath S', role: 'Committee Member', company: 'L&T Product Development' },
 ];

@@ -26,7 +26,7 @@ export const guidelinesData: Guideline[] = [
         icon: 'register',
         title: 'Free Registration',
         description:
-            'Participation is completely free! No registration fees required to join the hackathon.',
+            'Participation is completely free! No registration fees required to join the PIVOT Innovation Challenge.',
     },
     {
         id: 'team',
@@ -40,7 +40,7 @@ export const guidelinesData: Guideline[] = [
         icon: 'venue',
         title: 'SRCAS Campus',
         description:
-            'The hackathon will be held at Sri Ramakrishna College of Arts and Science, Coimbatore.',
+            'The PIVOT Innovation Challenge will be held at Sri Ramakrishna College of Arts and Science, Coimbatore.',
     },
     {
         id: 'id-card',
@@ -49,26 +49,13 @@ export const guidelinesData: Guideline[] = [
         description:
             'All participants must carry a valid college ID card for verification during the event.',
     },
-    {
-        id: 'connectivity',
-        icon: 'connectivity',
-        title: 'Wi-Fi & Connectivity',
-        description:
-            'Internet and charging stations will be available for all participants.',
-    },
-
-    {
-        id: 'in-person',
-        icon: 'in-person',
-        title: 'Guidelines for PIVOT Hackathon',
-        description:
-            'Round 1 is focused on evaluating the idea and approach, not the final solution. Each team must submit a PDF abstract.',
-        downloadLink: {
-            url: '/fileFolder/Abstract Submission Guidelines.pdf',
-            text: 'Download Guidelines',
-            filename: 'Abstract_Submission_Guidelines.pdf'
-        }
-    },
+    // {
+    //     id: 'connectivity',
+    //     icon: 'connectivity',
+    //     title: 'Wi-Fi & Connectivity',
+    //     description:
+    //         'Internet and charging stations will be available for all participants.',
+    // },
     {
         id: 'Submission Format',
         icon: 'safe',
@@ -78,5 +65,17 @@ export const guidelinesData: Guideline[] = [
             'Word limit 1200 words (strict)',
             'Pages Maximum 3 page.'
         ]
+    },
+        {
+        id: 'in-person',
+        icon: 'in-person',
+        title: 'Guidelines for PIVOT Innovation Challenge',
+        description:
+            'Round 1 is focused on evaluating the idea and approach, not the final solution. Each team must submit a PDF abstract.',
+        downloadLink: {
+            url: '/fileFolder/Abstract Submission Guidelines.pdf',
+            text: 'Download Guidelines',
+            filename: 'Abstract_Submission_Guidelines.pdf'
+        }
     },
 ];

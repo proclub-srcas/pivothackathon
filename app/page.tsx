@@ -328,7 +328,7 @@ function AboutSection() {
                   />
                   <span className="font-wc-rough-trad text-[#005CAA]">
                     <JumpingText
-                      text="PIVOT"
+                      text="PIVOT INNOVATION CHALLENGE"
                       defaultColor="#005CAA"
                       hoverColor="#003366"
                       jumpHeight={14}

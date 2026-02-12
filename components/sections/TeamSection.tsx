@@ -47,7 +47,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className
                     <JumpingText text={title} defaultColor="#111827" hoverColor="#005CAA" />
                 </h2>
 
-                <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 ${centerItems ? 'lg:grid-cols-3 justify-items-center' : 'md:grid-cols-4'}`}>
+                <div className={`gap-8 ${centerItems ? 'flex flex-wrap justify-center' : 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4'}`}>
                     {members.map((member, idx) => (
                         <motion.div
                             key={idx}
@@ -55,7 +55,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, id, className
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className={`group relative ${textOnly ? 'w-full' : ''}`}
+                            className={`group relative ${centerItems ? 'w-full sm:w-80' : (textOnly ? 'w-full' : '')}`}
                         >
                             {textOnly ? (
                                 <div className="h-full p-6 rounded-2xl bg-white/60 backdrop-blur-md border border-gray-200 group-hover:border-[#005CAA] group-hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center gap-2 group-hover:-translate-y-1">
