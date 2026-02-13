@@ -174,7 +174,10 @@ const DesktopNavBar: React.FC = () => {
                     alt={item.label}
                     width={22}
                     height={22}
-                    className="transition-all duration-300"
+                    className={`transition-all duration-300 ${((item as { customIcon?: string }).customIcon || item.activeIcon).endsWith('.svg')
+                        ? 'brightness-0 invert'
+                        : ''
+                      }`}
                   />
                 ) : (
                   <LucideIcon size={22} strokeWidth={2} />
@@ -405,6 +408,10 @@ const MobileNavBar: React.FC = () => {
                       alt={item.label}
                       width={24}
                       height={24}
+                      className={`transition-all duration-300 ${((item as { customIcon?: string }).customIcon || item.activeIcon).endsWith('.svg')
+                          ? 'brightness-0 invert'
+                          : ''
+                        }`}
                     />
                   ) : (
                     <LucideIcon size={24} strokeWidth={1.5} />
