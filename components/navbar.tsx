@@ -168,13 +168,13 @@ const DesktopNavBar: React.FC = () => {
               }}
             >
               <div className="w-12 h-12 flex items-center justify-center shrink-0">
-                {isActive || (item as { customIcon?: string }).customIcon ? (
+                {isActive ? (
                   <Image
                     src={(item as { customIcon?: string }).customIcon || item.activeIcon}
                     alt={item.label}
                     width={22}
                     height={22}
-                    className={`transition-all duration-300 ${isActive ? "brightness-0 invert" : "opacity-70 group-hover:opacity-100"}`}
+                    className="transition-all duration-300"
                   />
                 ) : (
                   <LucideIcon size={22} strokeWidth={2} />
@@ -203,6 +203,7 @@ const MobileNavBar: React.FC = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [showLabels, setShowLabels] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const menuRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = () => {
@@ -221,6 +222,44 @@ const MobileNavBar: React.FC = () => {
     setShowLabels(false);
     setTimeout(() => setIsOpen(false), 200);
   };
+
+  // Scroll Spy Logic
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5, rootMargin: "-10% 0px -10% 0px" }
+    );
+
+    NAV_ITEMS.forEach((item) => {
+      if (item.href.startsWith("/#")) {
+        const id = item.href.replace("/#", "");
+        const element = document.getElementById(id);
+        if (element) observer.observe(element);
+      }
+    });
+
+    // Special case for Home/Top
+    const handleScroll = () => {
+      if (window.scrollY < 100) setActiveSection("home");
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -316,7 +355,22 @@ const MobileNavBar: React.FC = () => {
                     `}
         >
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
+            const isHomeItem = item.href === "/";
+            const isHashLink = item.href.startsWith("/#");
+            const sectionId = isHashLink ? item.href.replace("/#", "") : "home";
+
+            let isActive = false;
+
+            if (pathname === "/") {
+              if (isHashLink) {
+                isActive = activeSection === sectionId;
+              } else if (isHomeItem) {
+                isActive = activeSection === "home" || activeSection === "";
+              }
+            } else {
+              isActive = pathname === item.href;
+            }
+
             const LucideIcon = item.icon;
 
             return (
@@ -345,13 +399,12 @@ const MobileNavBar: React.FC = () => {
                     }
                                     `}
                 >
-                  {isActive || (item as { customIcon?: string }).customIcon ? (
+                  {isActive ? (
                     <Image
                       src={(item as { customIcon?: string }).customIcon || item.activeIcon}
                       alt={item.label}
                       width={24}
                       height={24}
-                      className={isActive ? "" : "opacity-60"}
                     />
                   ) : (
                     <LucideIcon size={24} strokeWidth={1.5} />

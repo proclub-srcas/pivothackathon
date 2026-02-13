@@ -31,6 +31,7 @@ export default function JumpingText({
                 // Check if this character or nearby characters are hovered
                 const isHovered = hoveredIndex !== null && Math.abs(hoveredIndex - index) <= 1;
                 const isDirectlyHovered = hoveredIndex === index;
+                const isSpace = char === " ";
 
                 // Calculate jump height based on proximity to hovered character
                 const getJumpAmount = () => {
@@ -42,15 +43,15 @@ export default function JumpingText({
                 return (
                     <motion.span
                         key={index}
-                        className="inline-block cursor-default"
+                        className={isSpace ? "inline" : "inline-block cursor-default"}
                         style={{
                             color: isHovered ? hoverColor : defaultColor,
-                            whiteSpace: char === " " ? "pre" : "normal",
+                            whiteSpace: "normal",
                         }}
-                        animate={{
+                        animate={!isSpace ? {
                             y: getJumpAmount(),
                             scale: isDirectlyHovered ? 1.1 : 1,
-                        }}
+                        } : undefined}
                         transition={{
                             type: "spring",
                             stiffness: 500,
@@ -60,7 +61,7 @@ export default function JumpingText({
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        {char === " " ? "\u00A0" : char}
+                        {char}
                     </motion.span>
                 );
             })}

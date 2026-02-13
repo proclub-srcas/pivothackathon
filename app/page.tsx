@@ -115,14 +115,14 @@ function HeroSection() {
 
 
           {/* PIVOT Logo */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-7 mt-0 md:mt-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-18 mb-2 mt-0 md:mt-10">
             <div className="flex items-center">
               <Image
                 src="/PIVOT.png"
                 alt="PIVOT"
                 width={700}
                 height={500}
-                className="h-42 md:h-60 w-auto object-contain"
+                className="h-56 md:h-96 w-auto object-contain"
               />
             </div>
           </div>
@@ -130,7 +130,7 @@ function HeroSection() {
           {/* Main Headline */}
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight"
+            className="text-3xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight"
           >
             <div className="flex flex-wrap justify-center gap-x-4 mb-2">
               <JumpingText
@@ -144,13 +144,6 @@ function HeroSection() {
                 hoverColor="#003366"
               />
             </div>
-            {/* <div className="flex flex-wrap justify-center gap-x-4">
-              <JumpingText className="text-3xl md:text-6xl"
-                text=""
-                defaultColor="#111827"
-                hoverColor="#005CAA"
-              />
-            </div> */}
           </motion.h1>
 
           {/* Sub-headline */}
@@ -394,8 +387,8 @@ const faqs = [
           <Download className="w-4 h-4" />
           Download Guidelines
         </a>
-      </div> 
-    },
+      </div>
+  },
   {
     question: "What must be included in the abstract and how will it be evaluated?",
     answer: (
@@ -411,7 +404,7 @@ const faqs = [
           <Download className="w-4 h-4" />
           Download Guidelines
         </a>
-      </div> 
+      </div>
     ),
   },
   {

@@ -17,7 +17,8 @@ export const metadata: Metadata = {
   },
   description: "PIVOT Innovation Challenge2026 by SRCAS Programming Club in partnership with L&T Product Development Centre. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/PIVOT.png',
+    apple: '/PIVOT.png',
   },
   keywords: [
     "pivot Innovation Challengesrcas",

@@ -57,7 +57,12 @@ export default function OrganizersSection() {
 
             <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-900 text-center mb-16 tracking-wide">
-                    <JumpingText text="Organizers Committee" defaultColor="#111827" hoverColor="#005CAA" />
+                    <span className="inline-block">
+                        <JumpingText text="Organizers " defaultColor="#111827" hoverColor="#005CAA" />
+                    </span>
+                    <span className="inline-block">
+                        <JumpingText text="Committee" defaultColor="#111827" hoverColor="#005CAA" />
+                    </span>
                 </h2>
 
                 <div className="space-y-12">
