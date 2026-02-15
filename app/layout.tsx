@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "PIVOT Innovation Challenge2026 | SRCAS x L&T | i2i - Idea to Impact",
     template: "%s | PIVOT Innovation ChallengeSRCAS"
   },
-  description: "PIVOT Innovation Challenge2026 by SRCAS Programming Club in partnership with L&T Product Development Centre. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
+  description: "PIVOT Innovation Challenge2026 by SRCAS Programming Club in partnership with L&T Product Development Center. Join 12 hours of intensive coding, innovation, and real-world problem solving. Register now for i2i (Idea to Impact).",
   icons: {
     icon: '/PIVOT.png',
     apple: '/PIVOT.png',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
 
     title: "PIVOT Innovation Challenge2026 | SRCAS x L&T | i2i - Idea to Impact",
-    description: "Join PIVOT Innovation Challenge2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with L&T Product Development Centre.",
+    description: "Join PIVOT Innovation Challenge2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with L&T Product Development Center.",
     url: 'https://pivothackathon.web.app',
     siteName: 'PIVOT Innovation Challenge2026 - SRCAS',
     images: [
@@ -100,7 +100,7 @@ export default function RootLayout({
                   "https://pivothackathon.web.app/PIVOT.png",
                   "https://pivothackathon.web.app/hackbyte_home_page.png"
                 ],
-                "description": "PIVOT Innovation Challenge 2026: A 12-hour intensive hackathon by SRCAS Programming Club & L&T Product Development Centre.",
+                "description": "PIVOT Innovation Challenge 2026: A 12-hour intensive hackathon by SRCAS Programming Club & L&T Product Development Center.",
                 "performer": {
                   "@type": "Organization",
                   "name": "SRCAS Programming Club"

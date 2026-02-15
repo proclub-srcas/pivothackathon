@@ -52,15 +52,22 @@ const GuidelinesSection: React.FC = () => {
           </div>
           <Typography.H2 className="font-wc-rough-trad text-black text-[clamp(3rem,5vw,5rem)] leading-none">
             <span className="inline-block">
-              <JumpingText text="Guidelines for " defaultColor="#000000" hoverColor="#005CAA" />
+              <JumpingText text="Guidelines" defaultColor="#000000" hoverColor="#005CAA" />
             </span>
-            <span className="font-wc-rough-trad text-[#005CAA] block md:inline">
+            {' '}
+            <span className="inline-block">
+              <JumpingText text="for" defaultColor="#000000" hoverColor="#005CAA" />
+            </span>
+            {' '}
+            <span className="font-wc-rough-trad text-[#005CAA] inline">
               <span className="inline-block">
-                <JumpingText text="PIVOT " defaultColor="#005CAA" hoverColor="#003366" />
+                <JumpingText text="PIVOT" defaultColor="#005CAA" hoverColor="#003366" />
               </span>
+              {' '}
               <span className="inline-block">
-                <JumpingText text="Innovation " defaultColor="#005CAA" hoverColor="#003366" />
+                <JumpingText text="Innovation" defaultColor="#005CAA" hoverColor="#003366" />
               </span>
+              {' '}
               <span className="inline-block">
                 <JumpingText text="Challenge" defaultColor="#005CAA" hoverColor="#003366" />
               </span>

@@ -20,7 +20,7 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
     {
-        date: 'Feb 13, 2026',
+        date: 'Feb 16, 2026',
         title: 'Registration Opens',
         description: 'Online registrations begin. Form your teams and sign up!',
         icon: <Users className="w-6 h-6" />,

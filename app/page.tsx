@@ -82,7 +82,7 @@ function HeroSection() {
         <div className="w-[1px] h-12 bg-gray-400/30" />
         <Image
           src="/l-and-t-logo-1.jpeg"
-          alt="L&T Product Development Centre"
+          alt="L&T Product Development Center"
           width={200}
           height={100}
           className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300 rounded-xl"
@@ -277,7 +277,7 @@ function AboutSection() {
           </motion.h2>
           <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
             <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-2 md:mb-6">
-              Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">L&T Product Development Centre</span> to
+              Sri Ramakrishna College of Arts and Science (SRCAS) is proud to partner with <span className="font-semibold text-[#005CAA]">L&T Product Development Center</span> to
               host an industry-focused Innovation Challenge that bridges academia and innovation.
             </p>
             <p className="text-sm md:text-lg text-gray-600 leading-relaxed">

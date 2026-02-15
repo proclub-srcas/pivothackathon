@@ -11,9 +11,9 @@ interface TeamMember {
 }
 
 const landtMembers: TeamMember[] = [
-    { name: 'Daisy Mary M', role: 'Committee Member', company: 'L&T Product Development' },
-    { name: 'Mahendra Prasath S', role: 'Committee Member', company: 'L&T Product Development' },
-    { name: 'Abhishek Raj R', role: 'Committee Member', company: 'L&T Product Development' },
+    { name: 'Daisy Mary M', role: 'Committee Member', company: 'L&T PDC' },
+    { name: 'Mahendra Prasath S', role: 'Committee Member', company: 'L&T PDC' },
+    { name: 'Abhishek Raj R', role: 'Committee Member', company: 'L&T PDC' },
 ];
 
 const facultyMembers: TeamMember[] = [
@@ -59,10 +59,7 @@ export default function OrganizersSection() {
             <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-900 text-center mb-16 tracking-wide">
                     <span className="inline-block">
-                        <JumpingText text="Organizers " defaultColor="#111827" hoverColor="#005CAA" />
-                    </span>
-                    <span className="inline-block">
-                        <JumpingText text="Committee" defaultColor="#111827" hoverColor="#005CAA" />
+                        <JumpingText text="Organizers Committee" defaultColor="#111827" hoverColor="#005CAA" />
                     </span>
                 </h2>
 
