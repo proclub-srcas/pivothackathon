@@ -64,7 +64,7 @@ export default function FloatingLogos({ hideInHero = false }: FloatingLogosProps
                         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent" />
                         <Image
                             src="/L&Ts-logo.png"
-                            alt="L&T Product Development Center"
+                            alt="L&T Product Development Centre"
                             width={80}
                             height={80}
                             className="h-14 w-auto object-contain"

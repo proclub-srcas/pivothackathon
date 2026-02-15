@@ -118,7 +118,7 @@ const PrizesSection: React.FC = () => {
                     >
                         {/* It's your gateway to the industry. */}
                         {/* Top performers will secure  with
-                        L&T Product Development Center, working on real-world engineering challenges. */}
+                        L&T Product Development Centre, working on real-world engineering challenges. */}
                     </motion.p>
                 </motion.div>
 

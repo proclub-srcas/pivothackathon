@@ -145,7 +145,7 @@ export default function AboutPage() {
                                     </motion.div>
                                 </div>
 
-                                {/* Second Row:  L&T Product Development Center(Centered) */}
+                                {/* Second Row:  L&T Product Development Centre(Centered) */}
                                 <div className="flex justify-center">
                                     <motion.div
                                         whileHover={{ y: -5 }}
@@ -155,7 +155,7 @@ export default function AboutPage() {
                                             <div className="p-3 bg-white rounded-xl shadow-sm">
                                                 <Image
                                                     src="/L&Ts-logo.jpeg"
-                                                    alt="L&T Product Development Center"
+                                                    alt="L&T Product Development Centre"
                                                     width={80}
                                                     height={80}
                                                     className="w-20 h-20 object-contain"
@@ -163,11 +163,11 @@ export default function AboutPage() {
                                             </div>
                                         </div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                                            L&T Product Development Center
+                                            L&T Product Development Centre
                                         </h3>
                                         <div className="text-gray-600 text-base mb-4 leading-relaxed space-y-4 text-justify">
                                             <p>
-                                                Product Development Center (PDC) is a specialized product design and development organization positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                                Product Development Centre (PDC) is a specialized product design and development organization positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
                                                 With over 20 years of proven engineering excellence and a strong talent pool of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality.
                                             </p>
                                         </div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
 
 
 
-                                {/*L&T Product Development Center Card - Mobile */}
+                                {/*L&T Product Development Centre Card - Mobile */}
                                 <motion.div
                                     whileHover={{ y: -5 }}
                                     className="bg-gradient-to-br from-[#005CAA]/5 via-white to-[#005CAA]/5 rounded-2xl shadow-lg border border-[#005CAA]/20 p-8 hover:shadow-xl transition-all duration-300"
@@ -247,7 +247,7 @@ export default function AboutPage() {
                                         <div className="p-3 bg-white rounded-xl shadow-sm">
                                             <Image
                                                 src="/L&Ts-logo.jpeg"
-                                                alt="L&T Product Development Center"
+                                                alt="L&T Product Development Centre"
                                                 width={80}
                                                 height={80}
                                                 className="w-20 h-20 object-contain"
@@ -255,11 +255,11 @@ export default function AboutPage() {
                                         </div>
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                                        L&T Product Development Center
+                                        L&T Product Development Centre
                                     </h3>
                                     <div className="text-gray-600 text-sm mb-4 leading-relaxed space-y-4 text-justify">
                                         <p>
-                                            Product Development Center (PDC) is a specialized product design and development organization positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                            Product Development Centre (PDC) is a specialized product design and development organization positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
                                             With over 20 years of proven engineering excellence and a strong talent pool of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality.
                                         </p>
                                     </div>

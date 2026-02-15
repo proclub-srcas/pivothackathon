@@ -82,7 +82,7 @@ export function Footer() {
           <div className="flex items-center justify-center w-full h-24 relative grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300">
             <Image
               src="/l-and-t-logo-1.png"
-              alt="L&T Product Development Center"
+              alt="L&T Product Development Centre"
               fill
               className="object-contain"
             />
