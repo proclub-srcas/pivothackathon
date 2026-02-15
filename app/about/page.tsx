@@ -167,7 +167,7 @@ export default function AboutPage() {
                                         </h3>
                                         <div className="text-gray-600 text-base mb-4 leading-relaxed space-y-4 text-justify">
                                             <p>
-                                                L&T Product Development Centre is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services, operating in over 50 countries worldwide. The Product Development Centre (PDC), a specialized product design and development organization, is positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                                L&T Product Development Centre (PDC), a specialized product design and development organization, is positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
                                             </p>
                                             <p>
                                                 With over 20 years of proven engineering excellence and a strong talent pool representing 500+ man-years of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality, enabling L&T to sustain leadership in its major lines of business.
@@ -333,14 +333,6 @@ export default function AboutPage() {
                             variants={fadeInUp}
                             className="mt-12 flex justify-center"
                         >
-                            {/* <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-100 to-[#005CAA]/10 rounded-full border border-gray-200">
-                                <span className="text-gray-700 font-medium">Powered by</span>
-                                <span className="text-2xl">🤝</span>
-                                <span className="text-[#005CAA] font-semibold">
-                                    Academic-Industry Collaboration
-                                </span>
-
-                            </div> */}
                         </motion.div>
                     </motion.div>
                     <span className="text-[#005CAA] font-semibold">

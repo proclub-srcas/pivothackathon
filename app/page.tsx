@@ -193,65 +193,7 @@ function HeroSection() {
               Guidelines for the Abstract
             </a>
           </motion.div>
-
-          {/* Stats Row - Sleek Professional Design */}
-          {/* <motion.div
-            variants={fadeInUp}
-            className="mt-12 mb-20 max-w-4xl mx-auto"
-          >
-            <div className="bg-white/40 backdrop-blur-sm rounded-lg border border-white/60 shadow-lg p-2 sm:p-4">
-              <div className="grid grid-cols-3 divide-x divide-gray-300">
-                <div className="py-2 px-2 sm:py-3 sm:px-8 group">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm sm:text-xl shadow-lg">12</div>
-                    </div>
-                    <div className="text-center sm:text-left">
-                      <p className="text-gray-900 font-bold text-xs sm:text-lg">Hours</p>
-                      <p className="text-gray-600 text-[9px] sm:text-sm">of Nonstop Innovation Challenge</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="py-2 px-2 sm:py-3 sm:px-8 group">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm sm:text-xl shadow-lg">4</div>
-                    </div>
-                    <div className="text-center sm:text-left">
-                      <p className="text-gray-900 font-bold text-xs sm:text-lg">Tracks</p>
-                      <p className="text-gray-600 text-[9px] sm:text-sm">Problem Statements</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="py-2 px-2 sm:py-3 sm:px-8 group">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4">
-                    <div className="flex-shrink-0">
-                      <svg className="w-8 h-8 sm:w-12 sm:h-12 p-1.5 sm:p-2.5 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 text-white shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div className="text-center sm:text-left">
-                      <p className="text-gray-900 font-bold text-xs sm:text-lg">Internship</p>
-                      <p className="text-gray-600 text-[9px] sm:text-sm">Opportunity</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div> */}
-
-
-
-
-
-
         </motion.div>
-
-
-
-
       </div>
 
       {/* Badge - Bottom Right */}
@@ -485,7 +427,6 @@ function FAQSection() {
           </motion.div>
         </motion.div>
       </div>
-      {/* </div> */}
     </section>
   );
 }
@@ -499,7 +440,7 @@ export default function Home() {
     <main className="bg-transparent">
       <HeroSection />
       <FloatingLogos hideInHero={true} />
-      <DodgeHero />
+      {/* <DodgeHero /> */}
       <AboutSection />
       <FaqList />
       <GuidelinesSection />

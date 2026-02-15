@@ -94,17 +94,10 @@ const ContactSection: React.FC = () => {
                                     </a>
                                 </div>
                                 <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
-                                    <p className="font-semibold text-gray-900 mb-1">Mr. ABHISHEK RAJ R<br /> (L&T PDC)</p>
-                                    <a href="tel:+919176070393" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
-                                        <Phone className="w-4 h-4" />
-                                        +91 85904 16233
-                                    </a>
-                                </div>
-                                <div className="p-5 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 hover:border-[#005CAA]/30 hover:shadow-xl transition-all duration-300">
                                     <p className="font-semibold text-gray-900 mb-1">Dr. M. Praneesh<br /> (SRCAS)</p>
                                     <a href="tel:+919629924052" className="text-gray-600 hover:text-[#005CAA] transition-colors flex items-center gap-2">
                                         <Phone className="w-4 h-4" />
-                                        +91 9629924052
+                                        +91 96299 24052
                                     </a>
                                 </div>
                             </div>

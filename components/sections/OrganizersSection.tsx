@@ -11,8 +11,9 @@ interface TeamMember {
 }
 
 const landtMembers: TeamMember[] = [
-    { name: 'Mr. Abhishek Raj R', role: 'Committee Member', company: 'L&T Product Development' },
-    { name: 'Mr. Mahendra Prasath S', role: 'Committee Member', company: 'L&T Product Development' },
+    { name: 'Daisy Mary M', role: 'Committee Member', company: 'L&T Product Development' },
+    { name: 'Mahendra Prasath S', role: 'Committee Member', company: 'L&T Product Development' },
+    { name: 'Abhishek Raj R', role: 'Committee Member', company: 'L&T Product Development' },
 ];
 
 const facultyMembers: TeamMember[] = [
