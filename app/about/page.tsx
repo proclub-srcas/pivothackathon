@@ -167,10 +167,8 @@ export default function AboutPage() {
                                         </h3>
                                         <div className="text-gray-600 text-base mb-4 leading-relaxed space-y-4 text-justify">
                                             <p>
-                                                L&T Product Development Center (PDC), a specialized product design and development organization, is positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
-                                            </p>
-                                            <p>
-                                                With over 20 years of proven engineering excellence and a strong talent pool representing 500+ man-years of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality, enabling L&T to sustain leadership in its major lines of business.
+                                                Product Development Center (PDC) is a specialized product design and development organization positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                                With over 20 years of proven engineering excellence and a strong talent pool of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality.
                                             </p>
                                         </div>
                                         <div className="space-y-2">
@@ -261,10 +259,8 @@ export default function AboutPage() {
                                     </h3>
                                     <div className="text-gray-600 text-sm mb-4 leading-relaxed space-y-4 text-justify">
                                         <p>
-                                            L&T Product Development Center is an Indian multinational engaged in EPC Projects, Hi-Tech Manufacturing and Services, operating in over 50 countries worldwide. The Product Development Center (PDC), a specialized product design and development organization, is positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
-                                        </p>
-                                        <p>
-                                            With over 20 years of proven engineering excellence and a strong talent pool representing 500+ man-years of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality, enabling L&T to sustain leadership in its major lines of business.
+                                            Product Development Center (PDC) is a specialized product design and development organization positioned as an innovation engine for industrial transformation. It drives mechanization, automation, import substitution, faster speed-to-market, and operational excellence through practical and scalable engineering solutions.
+                                            With over 20 years of proven engineering excellence and a strong talent pool of skilled experience, the unit delivers end-to-end product development across diverse domains—from concept and detailed design to validation and manufacturing support. Its strength lies in deep domain knowledge supported by established processes that ensure scalability, reliability, and consistent quality.
                                         </p>
                                     </div>
                                     <div className="space-y-2">
