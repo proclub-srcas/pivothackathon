@@ -20,24 +20,25 @@ export const metadata: Metadata = {
     icon: '/PIVOT.png',
     apple: '/PIVOT.png',
   },
+  verification: {
+    google: "Qapgpbhb6qfWXY7t-nkErGJYidL8_7t7jxNKHYrxP9A",
+  },
   keywords: [
-    "pivot Innovation Challengesrcas",
-    "PIVOT Hackathon",
+    "PIVOT Innovation Challenge 2026",
     "SRCAS Hackathon",
-    "programming club hackathon",
-    "L&T hackathon",
-    "Larsen and Toubro hackathon",
-    "Coimbatore hackathon",
-    "Sri Ramakrishna College hackathon",
-    "i2i hackathon",
-    "idea to impact",
-    "engineering hackathon",
-    "coding competition",
-    "tech event Coimbatore",
-    "student Innovation Challenge2026",
-    "Tamil Nadu hackathon"
+    "L&T Hackathon",
+    "Coimbatore Hackathon",
+    "Programming Club SRCAS",
+    "Idea to Impact",
+    "i2i",
+    "Hackathon 2026",
+    "Student Innovation",
+    "Tamil Nadu Tech Event",
+    "Larsen and Toubro",
+    "Sri Ramakrishna College of Arts and Science"
   ],
   openGraph: {
+
     title: "PIVOT Innovation Challenge2026 | SRCAS x L&T | i2i - Idea to Impact",
     description: "Join PIVOT Innovation Challenge2026 - 12 hours of intensive coding, innovation, and real-world problem solving at SRCAS, Coimbatore in partnership with L&T Product Development Centre.",
     url: 'https://pivothackathon.web.app',
@@ -72,6 +73,46 @@ export default function RootLayout({
         <body
           className={`antialiased overflow-x-hidden bg-white`}
         >
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": "PIVOT Innovation Challenge 2026",
+                "startDate": "2026-02-27T08:30:00+05:30",
+                "endDate": "2026-02-27T20:30:00+05:30",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Sri Ramakrishna College of Arts and Science",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Nava India, Avinashi Rd",
+                    "addressLocality": "Coimbatore",
+                    "postalCode": "641006",
+                    "addressRegion": "Tamil Nadu",
+                    "addressCountry": "IN"
+                  }
+                },
+                "image": [
+                  "https://pivothackathon.web.app/PIVOT.png",
+                  "https://pivothackathon.web.app/hackbyte_home_page.png"
+                ],
+                "description": "PIVOT Innovation Challenge 2026: A 12-hour intensive hackathon by SRCAS Programming Club & L&T Product Development Centre.",
+                "performer": {
+                  "@type": "Organization",
+                  "name": "SRCAS Programming Club"
+                },
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Sri Ramakrishna College of Arts and Science",
+                  "url": "https://srcas.ac.in"
+                }
+              })
+            }}
+          />
           <InteractiveBackground />
           <SmoothScroll>
             <GlassNavBar />
