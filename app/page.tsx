@@ -8,6 +8,7 @@ import {
   Calendar,
   Download,
   ArrowRight,
+  Clock,
 } from "lucide-react";
 
 // Lazy load below-the-fold components
@@ -25,6 +26,9 @@ import JumpingText from "@/components/JumpingText";
 import { Typography } from '@/components/Typography';
 import Image from "next/image"
 import { Link } from "next-view-transitions";
+
+
+import AnnouncementModal from "@/components/AnnouncementModal";
 
 
 
@@ -146,16 +150,24 @@ function HeroSection() {
             </div>
           </motion.h1>
 
-          {/* Sub-headline */}
-          <motion.p
+          {/* Deadline Extended Banner */}
+          <motion.div
             variants={fadeInUp}
-            className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto gap-16 md:gap-27 mb-12"
+            className="flex justify-center mb-8"
           >
-            <span className=" text-5xl font-semibold text-[#005CAA]  "></span>  <span className="text-5xl font-semibold text-gray-800"></span>
-            <span className="text-lg mt-2 block">
-              <span className="font-semibold text-[#005CAA]"> </span>
-            </span>
-          </motion.p>
+            <div className="inline-flex items-center gap-3 px-5 py-3 bg-amber-50/90 backdrop-blur-sm border border-amber-200/60 rounded-2xl shadow-sm">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+              </span>
+              <span className="text-sm md:text-base font-medium text-amber-800">
+                Abstract Submission Deadline Extended to{" "}
+                <span className="font-bold text-[#005CAA]">March 1, 2026</span>{" "}
+                <span className="hidden sm:inline">at 11:59 PM</span>
+              </span>
+              <Clock className="w-4 h-4 text-amber-600 hidden sm:block" />
+            </div>
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
@@ -438,6 +450,7 @@ function FAQSection() {
 export default function Home() {
   return (
     <main className="bg-transparent">
+      <AnnouncementModal />
       <HeroSection />
       <FloatingLogos hideInHero={true} />
       {/* <DodgeHero /> */}

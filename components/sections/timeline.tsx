@@ -32,9 +32,9 @@ const timelineEvents: TimelineEvent[] = [
         }
     },
     {
-        date: 'Feb 28, 2026',
+        date: 'March 1, 2026',
         title: 'Abstract Submission Date',
-        description: 'Submit your innovative ideas and project proposals.',
+        description: 'Submit your innovative ideas and project proposals. ⏰ Deadline extended from Feb 28 to March 1, 2026 (11:59 PM)!',
         icon: <Lightbulb className="w-6 h-6" />,
         type: 'milestone',
         downloadLink: {
