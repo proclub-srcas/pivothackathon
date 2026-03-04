@@ -17,48 +17,48 @@ interface Team {
 }
 
 const finalistsData: Team[] = [
-    {
-        sno: 1,
-        teamName: 'Circuit C',
-        leader: 'Sathish G',
-        institution: 'SRMIST, Kattankulathur',
-        problemStatement: 'PS 01',
-    },
-    {
-        sno: 2,
-        teamName: 'theenginAI',
-        leader: 'SWETHA S N',
-        institution: 'PSG COLLEGE OF ENGINEERING AND TECHNOLOGY',
-        problemStatement: 'PS 01',
-    },
-    {
-        sno: 3,
-        teamName: 'Tech Mavericks',
-        leader: 'Abdul Munaf Z',
-        institution: 'Sri Krishna Arts and Science College',
-        problemStatement: 'PS 01',
-    },
-    {
-        sno: 4,
-        teamName: 'Innovators',
-        leader: 'M Rosi',
-        institution: 'Sona Vazhvi Engineering College for women',
-        problemStatement: 'PS 01',
-    },
-    {
-        sno: 5,
-        teamName: 'Circuit Breakers',
-        leader: 'John Doe',
-        institution: 'Anna University',
-        problemStatement: 'PS 02',
-    },
-    {
-        sno: 6,
-        teamName: 'Code Warriors',
-        leader: 'Jane Smith',
-        institution: 'VIT Chennai',
-        problemStatement: 'PS 02',
-    },
+    // {
+    //     sno: 1,
+    //     teamName: 'Circuit C',
+    //     leader: 'Sathish G',
+    //     institution: 'SRMIST, Kattankulathur',
+    //     problemStatement: 'PS 01',
+    // },
+    // {
+    //     sno: 2,
+    //     teamName: 'theenginAI',
+    //     leader: 'SWETHA S N',
+    //     institution: 'PSG COLLEGE OF ENGINEERING AND TECHNOLOGY',
+    //     problemStatement: 'PS 01',
+    // },
+    // {
+    //     sno: 3,
+    //     teamName: 'Tech Mavericks',
+    //     leader: 'Abdul Munaf Z',
+    //     institution: 'Sri Krishna Arts and Science College',
+    //     problemStatement: 'PS 01',
+    // },
+    // {
+    //     sno: 4,
+    //     teamName: 'Innovators',
+    //     leader: 'M Rosi',
+    //     institution: 'Sona Vazhvi Engineering College for women',
+    //     problemStatement: 'PS 01',
+    // },
+    // {
+    //     sno: 5,
+    //     teamName: 'Circuit Breakers',
+    //     leader: 'John Doe',
+    //     institution: 'Anna University',
+    //     problemStatement: 'PS 02',
+    // },
+    // {
+    //     sno: 6,
+    //     teamName: 'Code Warriors',
+    //     leader: 'Jane Smith',
+    //     institution: 'VIT Chennai',
+    //     problemStatement: 'PS 02',
+    // },
     // Add more teams as needed
 ];
 
@@ -113,7 +113,7 @@ const FinalistsPage: React.FC = () => {
                         className="text-center"
                     >
                         {/* Logo/Badge Area */}
-                        <motion.div variants={fadeInUp} className="mb-8 flex justify-center">
+                        {/* <motion.div variants={fadeInUp} className="mb-8 flex justify-center">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-[#005CAA]/20 blur-xl rounded-full" />
                                 <div className="relative bg-white border-4 border-[#FBA919] rounded-2xl px-8 py-4 shadow-xl rotate-3 hover:rotate-0 transition-transform duration-300">
@@ -124,41 +124,42 @@ const FinalistsPage: React.FC = () => {
                                     </h1>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* Main Heading */}
-                        <motion.h1
+                        {/* <motion.h1
                             variants={fadeInUp}
                             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
                         >
                             Finalists of <br />
                             <span className="text-[#005CAA]">PIVOT INNOVATION CHALLENGE</span>
-                        </motion.h1>
+                        </motion.h1> */}
 
-                        {/* Subtitle */}
+                        {/* Subtitle 
                         <motion.p
                             variants={fadeInUp}
                             className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-8"
                         >
                             Congratulations to all the selected finalists! Your innovative solutions have earned you a spot in the next stage. Detailed instructions regarding the upcoming rounds will be shared with you shortly.
-                        </motion.p>
+                        </motion.p>*/}
 
-                        {/* Stats Badge */}
+                        {/* Stats Badge 
                         <motion.div
                             variants={fadeInUp}
                             className="inline-flex items-center gap-2 px-6 py-3 bg-[#FBA919]/20 border border-[#FBA919]/30 rounded-full"
                         >
                             <Trophy className="w-5 h-5 text-[#FBA919]" />
                             <span className="font-semibold text-[#005CAA]">
-                                {totalTeams} Teams Selected
+                                 Teams Selected
+                                {/* {totalTeams} Teams Selected 
                             </span>
-                        </motion.div>
+                        </motion.div>*/}
                     </motion.div>
                 </div>
             </section>
 
             {/* Filter Section */}
-            <section className="py-8 px-4 bg-white border-y border-gray-200">
+            {/* <section className="py-8 px-4 bg-white border-y border-gray-200">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <div className="flex items-center gap-2 text-gray-700">
@@ -166,7 +167,7 @@ const FinalistsPage: React.FC = () => {
                             <span className="font-semibold">Filter by PS:</span>
                         </div>
 
-                        {/* Dropdown */}
+                        {/* Dropdown 
                         <div className="relative">
                             <select
                                 value={selectedPS}
@@ -187,19 +188,19 @@ const FinalistsPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Teams Table/Cards Section */}
             <section className="py-16 px-4">
                 <div className="max-w-7xl mx-auto">
-                    <motion.div
+                    {/*<motion.div
                         key={selectedPS}
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
-                    >
+                    >*/}
                         {/* Desktop Table View */}
-                        <div className="hidden md:block bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        {/* <div className="hidden md:block bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
                             <table className="w-full">
                                 <thead className="bg-gradient-to-r from-[#005CAA] to-[#003366]">
                                     <tr>
@@ -247,10 +248,10 @@ const FinalistsPage: React.FC = () => {
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </div> */}
 
                         {/* Mobile Card View */}
-                        <div className="md:hidden space-y-4">
+                        {/* <div className="md:hidden space-y-4">
                             {filteredTeams.map((team, index) => (
                                 <motion.div
                                     key={team.sno}
@@ -286,7 +287,7 @@ const FinalistsPage: React.FC = () => {
                                                 <span className="text-gray-700">{team.institution}</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </motion.div>
                             ))}
                         </div>
@@ -300,7 +301,9 @@ const FinalistsPage: React.FC = () => {
                             className="text-center py-16"
                         >
                             <Trophy className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                            <p className="text-gray-500 text-lg">No teams found for this problem statement.</p>
+                            <p className="text-gray-500 text-lg">The wait is almost over!<br />
+                                Results for the <span className="font-bold text-[#005CAA]">PIVOT Innovation Challenge</span> will be announced soon.</p>
+                            {/* <p className="text-gray-500 text-lg">No teams found for this problem statement.</p> */}
                         </motion.div>
                     )}
                 </div>
