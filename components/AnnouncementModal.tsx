@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Clock, CalendarClock, AlertTriangle } from 'lucide-react';
+import { X, Megaphone, CalendarDays } from 'lucide-react';
 
 const AnnouncementModal: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,95 +22,100 @@ const AnnouncementModal: React.FC = () => {
                 <>
                     {/* Backdrop */}
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
+                        animate={{ opacity: 1, backdropFilter: 'blur(4px)' }}
+                        exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
                         onClick={() => setIsOpen(false)}
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100]"
+                        className="fixed inset-0 bg-slate-900/40 z-[100]"
                     />
 
                     {/* Modal */}
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 pointer-events-none">
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 pointer-events-none">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.85, y: 30 }}
-                            transition={{ type: 'spring', damping: 22, stiffness: 280 }}
-                            className="relative max-w-md w-full bg-gradient-to-br from-white via-white to-blue-50 rounded-3xl shadow-2xl border border-[#005CAA]/20 overflow-hidden pointer-events-auto"
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                            className="relative max-w-lg w-full pointer-events-auto mt-10 md:mt-0"
                         >
-                            {/* Top accent bar */}
-                            <div className="h-1.5 bg-gradient-to-r from-[#005CAA] via-blue-400 to-[#005CAA]" />
+                            {/* Blue Accent Frame Backgrounds */}
+                            {/* Top right block */}
+                            <div className="absolute -top-6 -right-6 w-3/4 h-3/4 bg-[#005CAA] rounded-[3rem] -z-10 shadow-xl" />
+                            {/* Bottom left block */}
+                            <div className="absolute -bottom-6 -left-6 w-3/4 h-3/4 bg-[#005CAA] rounded-[3rem] -z-10 shadow-xl" />
 
-                            {/* Close Button */}
-                            <button
-                                onClick={() => setIsOpen(false)}
-                                className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-white transition-colors z-10 group shadow-sm"
-                            >
-                                <X className="w-5 h-5 text-gray-500 group-hover:text-gray-900 transition-colors" />
-                            </button>
+                            {/* Main White Card */}
+                            <div className="relative bg-[#f8f9fa] rounded-[2.5rem] p-8 md:p-12 shadow-[inset_0_2px_10px_rgba(255,255,255,0.8),0_15px_30px_rgba(0,0,0,0.15)] text-center flex flex-col items-center">
 
-                            {/* Content */}
-                            <div className="p-8 text-center relative">
-                                {/* Decorative background elements */}
-                                <div className="absolute top-0 right-0 w-40 h-40 bg-[#005CAA]/5 rounded-full blur-3xl" />
-                                <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-400/5 rounded-full blur-3xl" />
-
-                                {/* Icon */}
+                                {/* Megaphone Icon (protruding) */}
                                 <motion.div
-                                    initial={{ scale: 0, rotate: -180 }}
-                                    animate={{ scale: 1, rotate: 0 }}
-                                    transition={{ delay: 0.2, type: 'spring', damping: 15 }}
-                                    className="relative inline-flex items-center justify-center w-20 h-20 mb-5 bg-gradient-to-br from-[#005CAA] to-blue-600 rounded-2xl shadow-lg shadow-[#005CAA]/30"
+                                    initial={{ scale: 0, rotate: -40 }}
+                                    animate={{ scale: 1, rotate: -15 }}
+                                    transition={{ type: 'spring', damping: 12, delay: 0.2 }}
+                                    className="absolute -top-10 -left-4 md:-top-14 md:-left-12"
                                 >
-                                    <CalendarClock className="w-10 h-10 text-white" />
+                                    <div className="relative">
+                                        {/* Glow effect */}
+                                        <div className="absolute inset-0 bg-blue-300 blur-2xl opacity-40 rounded-full" />
+                                        <Megaphone className="w-32 h-32 md:w-36 md:h-36 text-[#005CAA] drop-shadow-xl fill-[#005CAA]/10" strokeWidth={1} />
+                                    </div>
                                 </motion.div>
 
-                                {/* Alert Badge */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.3 }}
-                                    className="flex justify-center mb-4"
+                                {/* Close Button */}
+                                <button
+                                    onClick={() => setIsOpen(false)}
+                                    className="absolute top-6 right-6 p-2 rounded-full bg-gray-200/60 hover:bg-gray-300 transition-colors z-10 group"
                                 >
-                                    <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full text-sm font-semibold">
-                                        <AlertTriangle className="w-4 h-4" />
-                                        Important Update
-                                    </span>
-                                </motion.div>
+                                    <X className="w-5 h-5 text-gray-600 transition-colors" />
+                                </button>
 
                                 {/* Title */}
-                                <motion.h2
+                                <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.4 }}
-                                    className="text-2xl md:text-3xl font-bold text-gray-900 mb-3"
+                                    transition={{ delay: 0.3 }}
+                                    className="pt-10 mb-6 flex flex-col items-center w-full"
                                 >
-                                    Deadline Extended!
-                                </motion.h2>
+                                    <h1 className="text-2xl md:text-3xl font-black text-[#005CAA] uppercase tracking-tight leading-loose text-center">
+                                        Results Announcement
+                                    </h1>
+                                </motion.div>
 
                                 {/* Message */}
-                                <motion.p
+                                <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.5 }}
-                                    className="text-gray-600 text-base mb-5 leading-relaxed relative z-10"
+                                    transition={{ delay: 0.4 }}
+                                    className="text-gray-800 text-base md:text-lg mb-6 space-y-4 font-medium leading-relaxed max-w-sm mx-auto"
                                 >
-                                    The <span className="font-semibold text-[#005CAA]">Abstract Submission Deadline</span> for PIVOT Innovation Challenge has been extended.
-                                </motion.p>
+                                    <p>
+                                        The wait is almost over!<br />
+                                        Results for the <span className="font-bold text-[#005CAA]">PIVOT Innovation Challenge</span> will be announced soon.
+                                    </p>
+                                </motion.div>
 
-                                {/* New Date Highlight */}
+                                {/* Date Box */}
                                 <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.55 }}
-                                    className="mb-6 p-4 bg-[#005CAA]/5 border border-[#005CAA]/15 rounded-2xl relative z-10"
+                                    transition={{ delay: 0.5 }}
+                                    className="mb-6 p-5 bg-blue-50/50 border border-blue-100 rounded-2xl shadow-sm text-center flex flex-col items-center justify-center w-full max-w-xs mx-auto"
                                 >
-                                    <p className="text-sm text-gray-500 uppercase tracking-wider font-medium mb-1">New Deadline</p>
-                                    <p className="text-2xl font-bold text-[#005CAA]">March 1, 2026</p>
-                                    <div className="flex items-center justify-center gap-1.5 mt-1 text-gray-500">
-                                        <Clock className="w-4 h-4" />
-                                        <span className="text-sm font-medium">11:59 PM IST</span>
+                                    <div className="flex items-center justify-center gap-2 mb-2">
+                                        <CalendarDays className="w-5 h-5 text-[#005CAA]" />
+                                        <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Announcement Date</p>
                                     </div>
+                                    <p className="text-2xl md:text-3xl font-black text-[#005CAA]">March 5, 2026</p>
+                                </motion.div>
+
+                                {/* Instruction Text */}
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.55 }}
+                                    className="text-gray-600 text-sm mb-8 font-medium max-w-sm mx-auto"
+                                >
+                                    <p>Stay tuned to the website and your email for updates.</p>
                                 </motion.div>
 
                                 {/* CTA Button */}
@@ -118,24 +123,15 @@ const AnnouncementModal: React.FC = () => {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.6 }}
+                                    className="w-full"
                                 >
                                     <button
                                         onClick={() => setIsOpen(false)}
-                                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#005CAA] to-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-[#005CAA]/25 hover:shadow-xl hover:shadow-[#005CAA]/35 transform hover:scale-105 transition-all duration-300"
+                                        className="w-full max-w-xs inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-[#005CAA] text-white font-bold rounded-xl shadow-lg hover:bg-[#004a8c] hover:shadow-[#005CAA]/25 transform transition-all duration-300 mx-auto"
                                     >
                                         Got it!
                                     </button>
                                 </motion.div>
-
-                                {/* Footer Text */}
-                                <motion.p
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.7 }}
-                                    className="mt-5 text-xs text-gray-400 relative z-10"
-                                >
-                                    Don&apos;t miss the new deadline — submit your abstract now! 🚀
-                                </motion.p>
                             </div>
                         </motion.div>
                     </div>

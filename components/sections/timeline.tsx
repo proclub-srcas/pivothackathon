@@ -44,7 +44,7 @@ const timelineEvents: TimelineEvent[] = [
         }
     },
     {
-        date: 'March 8, 2026',
+        date: 'March 5, 2026',
         title: 'Announcing Shortlisted Teams',
         description: 'Selected teams will be notified via email.',
         icon: <CheckCircle className="w-6 h-6" />,

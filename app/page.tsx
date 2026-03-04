@@ -155,17 +155,15 @@ function HeroSection() {
             variants={fadeInUp}
             className="flex justify-center mb-8"
           >
-            <div className="inline-flex items-center gap-3 px-5 py-3 bg-amber-50/90 backdrop-blur-sm border border-amber-200/60 rounded-2xl shadow-sm">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#005CAA]/10 to-blue-50 backdrop-blur-sm border border-[#005CAA]/20 rounded-full shadow-sm">
               <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#005CAA]"></span>
               </span>
-              <span className="text-sm md:text-base font-medium text-amber-800">
-                Abstract Submission Deadline Extended to{" "}
-                <span className="font-bold text-[#005CAA]">March 1, 2026</span>{" "}
-                <span className="hidden sm:inline">at 11:59 PM</span>
+              <span className="text-sm md:text-base font-medium text-blue-900">
+                Results will be announced tomorrow{" "}
+                <span className="font-bold text-[#005CAA]">- 05/03/2026</span>
               </span>
-              <Clock className="w-4 h-4 text-amber-600 hidden sm:block" />
             </div>
           </motion.div>
 
