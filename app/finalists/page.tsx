@@ -35,7 +35,7 @@ const finalistsData: Team[] = [
         "sno": 3,
         "teamName": "Team SheCode",
         "leader": "Sruthinaya M",
-        "institution": "Sri Ramakrishna Engineering College",
+        "institution": "",
         "problemStatement": "PS 02"
     },
     {
