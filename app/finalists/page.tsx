@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Users, Award, Search } from 'lucide-react';
+import { Trophy, Users, Award, Search, Download } from 'lucide-react';
 import Image from 'next/image';
 
 // Problem Statement type
@@ -172,6 +172,23 @@ const FinalistsPage: React.FC = () => {
                 <div className="absolute top-40 right-10 w-96 h-96 bg-[#FBA919]/10 rounded-full blur-3xl" />
 
                 <div className="max-w-7xl mx-auto relative z-10">
+                    {/* PDF Download — absolutely pinned to the bottom-right of the header */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="absolute bottom-0 right-0"
+                    >
+                        <a
+                            href="/fileFolder/Presentation Round Guidelines.pdf"
+                            download="Presentation_Round_Guidelines.pdf"
+                            className="inline-flex items-center gap-5 px-4 py-5 text-lg bg-[#005CAA] text-white font-semibold rounded-xl shadow-md hover:bg-[#004a8c] hover:shadow-lg transition-all duration-300 text-sm"
+                        >
+                            <Download className="w-4 h-4" />
+                            Guidelines for the Presentation
+                        </a>
+                    </motion.div>
+
                     <motion.div
                         initial="hidden"
                         animate="visible"
@@ -216,7 +233,6 @@ const FinalistsPage: React.FC = () => {
                         >
                             <Trophy className="w-5 h-5 text-[#FBA919]" />
                             <span className="font-semibold text-[#005CAA]">
-                                {/* Teams Selected */}
                                 {totalTeams} Teams Selected
                             </span>
                         </motion.div>
@@ -225,7 +241,7 @@ const FinalistsPage: React.FC = () => {
             </section>
 
             {/* Filter Section */}
-            <section className="py-8 px-4 bg-white border-y border-gray-200">
+            <section className="py-6 px-4 bg-white border-y border-gray-200">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         {/* Search Box */}
@@ -303,9 +319,8 @@ const FinalistsPage: React.FC = () => {
                                 </thead>
                                 <tbody className="divide-y divide-gray-200">
                                     {filteredTeams.map((team, index) => (
-                                        <motion.tr
+                                        <tr
                                             key={team.sno}
-                                            variants={fadeInUp}
                                             className="hover:bg-gray-50 transition-colors"
                                         >
                                             <td className="px-6 py-4 text-gray-700 font-medium">{index + 1}</td>
@@ -319,7 +334,7 @@ const FinalistsPage: React.FC = () => {
                                                     {team.problemStatement}
                                                 </span>
                                             </td>
-                                        </motion.tr>
+                                        </tr>
                                     ))}
                                 </tbody>
                             </table>
@@ -328,9 +343,8 @@ const FinalistsPage: React.FC = () => {
                         {/* Mobile Card View */}
                         <div className="md:hidden space-y-4">
                             {filteredTeams.map((team, index) => (
-                                <motion.div
+                                <div
                                     key={team.sno}
-                                    variants={fadeInUp}
                                     className="bg-white/70 backdrop-blur-sm rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow"
                                 >
                                     <div className="flex items-start justify-between mb-4">
@@ -357,7 +371,7 @@ const FinalistsPage: React.FC = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
                     </motion.div>

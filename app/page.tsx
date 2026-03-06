@@ -181,12 +181,12 @@ function HeroSection() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="/fileFolder/Abstract Submission Guidelines.pdf"
-              download="Abstract_Submission_Guidelines.pdf"
+              href="/fileFolder/Presentation Round Guidelines.pdf"
+              download="Presentation_Round_Guidelines.pdf"
               className="flex items-center gap-2 px-8 py-4 border-2 border-[#005CAA] text-[#005CAA] font-semibold rounded-xl hover:bg-[#005CAA]/5 transition-all duration-300"
             >
               <Download className="w-5 h-5" />
-              Guidelines for the Abstract
+              Guidelines for the Presentation
             </a>
           </motion.div>
         </motion.div>
