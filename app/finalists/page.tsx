@@ -35,7 +35,7 @@ const finalistsData: Team[] = [
         "sno": 3,
         "teamName": "Team SheCode",
         "leader": "Sruthinaya M",
-        "institution": "Sri Ramakrishna Engineering College",
+        "institution": "",
         "problemStatement": "PS 02"
     },
     {
@@ -54,60 +54,68 @@ const finalistsData: Team[] = [
     },
     {
         "sno": 6,
+        "teamName": "Tech Jayam",
+        "leader": "Prakash Jayavel",
+        "institution": "Sri Krishna College of Engineering and Technology (SKCET), Coimbatore",
+        "problemStatement": "PS 02"
+    },
+    {
+        "sno": 7,
         "teamName": "VectorOne",
         "leader": "ROHIT S K",
         "institution": "SRI RAMAKRISHANA ENGINEERING COLLEGE",
         "problemStatement": "PS 03"
     },
     {
-        "sno": 7,
+        "sno": 8,
         "teamName": "She3 codes",
         "leader": "Hema G",
         "institution": "Sri Sai Ram Engineering College , Chennai",
         "problemStatement": "PS 04"
     },
     {
-        "sno": 8,
+        "sno": 9,
         "teamName": "Fly High",
         "leader": "Sidharth K",
         "institution": "Sri Ramakrishna Engineering College",
         "problemStatement": "PS 04"
     },
     {
-        "sno": 9,
+        "sno": 10,
         "teamName": "Nijilee",
         "leader": "Zayan Naazim Abdulla",
         "institution": "Model Engineering College, Thrikkakara",
         "problemStatement": "PS 04"
     },
     {
-        "sno": 10,
+        "sno": 11,
         "teamName": "EffortIQ",
         "leader": "SAMRUTHA S",
         "institution": "SRI RAMAKRISHNA COLLEGE OF ARTS AND SCIENCE",
         "problemStatement": "PS 05"
     },
     {
-        "sno": 11,
+        "sno": 12,
         "teamName": "Odyssey",
         "leader": "B Sibhi",
         "institution": "SRI RAMAKRISHNA COLLEGE OF ARTS AND SCIENCE",
         "problemStatement": "PS 05"
     },
     {
-        "sno": 12,
+        "sno": 13,
         "teamName": "Enter To Execute",
         "leader": "DARSHAN S",
         "institution": "SRI RAMAKRISHNA COLLEGE OF ARTS AND SCIENCE",
         "problemStatement": "PS 05"
     },
     {
-        "sno": 13,
+        "sno": 14,
         "teamName": "NonLinear",
         "leader": "KAVINRAJ J S",
         "institution": "SRI RAMAKRISHNA COLLEGE OF ARTS AND SCIENCE",
         "problemStatement": "PS 05"
     }
+
     // Add more teams as needed
 ];
 
