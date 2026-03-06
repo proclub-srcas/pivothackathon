@@ -54,9 +54,9 @@ const finalistsData: Team[] = [
     },
     {
         "sno": 6,
-        "teamName": "Tech Jayam",
-        "leader": "Prakash Jayavel",
-        "institution": "Sri Krishna College of Engineering and Technology (SKCET), Coimbatore",
+        "teamName": "FLUX",
+        "leader": "Sania N",
+        "institution": "Sri Ramakrishna Engineering College",
         "problemStatement": "PS 02"
     },
     {
@@ -113,6 +113,13 @@ const finalistsData: Team[] = [
         "teamName": "NonLinear",
         "leader": "KAVINRAJ J S",
         "institution": "SRI RAMAKRISHNA COLLEGE OF ARTS AND SCIENCE",
+        "problemStatement": "PS 05"
+    },
+    {
+        "sno": 15,
+        "teamName": "GenZ.exe",
+        "leader": "Ragul  D",
+        "institution": "SRI RAMAKRISHNA COLLEGE OF ARTS &SCIENCE",
         "problemStatement": "PS 05"
     }
 
