@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Megaphone, CalendarDays } from 'lucide-react';
+import { Link } from 'next-view-transitions';
+import { ArrowRight } from "lucide-react";
 
 const AnnouncementModal: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +47,7 @@ const AnnouncementModal: React.FC = () => {
                             <div className="absolute -bottom-6 -left-6 w-3/4 h-3/4 bg-[#005CAA] rounded-[3rem] -z-10 shadow-xl" />
 
                             {/* Main White Card */}
-                            <div className="relative bg-[#f8f9fa] rounded-[2.5rem] p-8 md:p-12 shadow-[inset_0_2px_10px_rgba(255,255,255,0.8),0_15px_30px_rgba(0,0,0,0.15)] text-center flex flex-col items-center">
+                            <div className="relative bg-[#f8f9fa] rounded-[2.5rem] px-8 pt-6 pb-10 md:px-12 md:pt-8 md:pb-12 shadow-[inset_0_2px_10px_rgba(255,255,255,0.8),0_15px_30px_rgba(0,0,0,0.15)] text-center flex flex-col items-center">
 
                                 {/* Megaphone Icon (protruding) */}
                                 <motion.div
@@ -74,10 +76,10 @@ const AnnouncementModal: React.FC = () => {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 }}
-                                    className="pt-10 mb-6 flex flex-col items-center w-full"
+                                    className="pt-14 mb-4 flex flex-col items-center w-full"
                                 >
                                     <h1 className="text-2xl md:text-3xl font-black text-[#005CAA] uppercase tracking-tight leading-loose text-center">
-                                        Results Announcement
+                                        🎉 Results Announced! 🎉
                                     </h1>
                                 </motion.div>
 
@@ -86,15 +88,14 @@ const AnnouncementModal: React.FC = () => {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.4 }}
-                                    className="text-gray-800 text-base md:text-lg mb-6 space-y-4 font-medium leading-relaxed max-w-sm mx-auto"
+                                    className="text-gray-800 text-base md:text-lg mb-5 font-medium leading-relaxed max-w-sm mx-auto"
                                 >
                                     <p>
-                                        The wait is almost over!<br />
-                                        Results for the <span className="font-bold text-[#005CAA]">PIVOT Innovation Challenge</span> will be announced soon.
+                                        The finalists for <span className="font-bold text-[#005CAA]">PIVOT Innovation Challenge</span> have been selected! Check if your team made it to the finals.
                                     </p>
                                 </motion.div>
 
-                                {/* Date Box */}
+                                {/* Date Box
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -106,16 +107,17 @@ const AnnouncementModal: React.FC = () => {
                                         <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Announcement Date</p>
                                     </div>
                                     <p className="text-2xl md:text-3xl font-black text-[#005CAA]">March 5, 2026</p>
-                                </motion.div>
+                                </motion.div> */}
+
 
                                 {/* Instruction Text */}
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.55 }}
-                                    className="text-gray-600 text-sm mb-8 font-medium max-w-sm mx-auto"
+                                    className="text-gray-500 text-sm mb-6 font-medium max-w-sm mx-auto"
                                 >
-                                    <p>Stay tuned to the website and your email for updates.</p>
+                                    <p>Congratulations to all selected teams! 🏆</p>
                                 </motion.div>
 
                                 {/* CTA Button */}
@@ -125,12 +127,14 @@ const AnnouncementModal: React.FC = () => {
                                     transition={{ delay: 0.6 }}
                                     className="w-full"
                                 >
-                                    <button
+                                    <Link
+                                        href="/finalists"
                                         onClick={() => setIsOpen(false)}
-                                        className="w-full max-w-xs inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-[#005CAA] text-white font-bold rounded-xl shadow-lg hover:bg-[#004a8c] hover:shadow-[#005CAA]/25 transform transition-all duration-300 mx-auto"
+                                        className="w-full max-w-xs inline-flex justify-center items-center gap-2 px-8 py-4 bg-[#005CAA] text-white font-bold rounded-xl shadow-lg hover:bg-[#004a8c] hover:shadow-[#005CAA]/25 transform transition-all duration-300 mx-auto"
                                     >
-                                        Got it!
-                                    </button>
+                                        View Finalists! 🏆
+                                        <ArrowRight className="w-5 h-5" />
+                                    </Link>
                                 </motion.div>
                             </div>
                         </motion.div>

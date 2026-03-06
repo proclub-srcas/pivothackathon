@@ -161,8 +161,8 @@ function HeroSection() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#005CAA]"></span>
               </span>
               <span className="text-sm md:text-base font-medium text-blue-900">
-                Results will be announced tomorrow{" "}
-                <span className="font-bold text-[#005CAA]">- 05/03/2026</span>
+                🎉 Results Announced! {" "}
+                <span className="font-bold text-[#005CAA]">- check out now 🎉</span>
               </span>
             </div>
           </motion.div>
@@ -172,28 +172,14 @@ function HeroSection() {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              animate={{
-                boxShadow: [
-                  "0px 0px 0px rgba(0, 92, 170, 0)",
-                  "0px 0px 20px rgba(0, 92, 170, 0.4)",
-                  "0px 0px 0px rgba(0, 92, 170, 0)",
-                ],
-              }}
-              transition={{
-                boxShadow: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-              }}
+
+            <Link
+              href="/finalists"
               className="flex items-center gap-2 px-8 py-4 bg-[#005CAA] text-white font-semibold rounded-xl hover:bg-[#004a8c] transition-all duration-300 shadow-lg"
             >
-              Register Now
+              View Finalists
               <ArrowRight className="w-5 h-5" />
-            </motion.button>
+            </Link>
             <a
               href="/fileFolder/Abstract Submission Guidelines.pdf"
               download="Abstract_Submission_Guidelines.pdf"

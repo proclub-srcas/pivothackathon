@@ -9,6 +9,7 @@ import {
   Image as ImageIcon,
   Handshake,
   Trophy,
+  Star,
   Calendar,
   Users,
   Info,
@@ -46,6 +47,13 @@ const NAV_ITEMS = [
     activeIcon: "/Prizes.svg",
     icon: Trophy,
     href: "/#prizes",
+  },
+  {
+    id: "finalists",
+    label: "Finalists",
+    activeIcon: "",
+    icon: Star,
+    href: "/finalists",
   },
   {
     id: "timeline",
@@ -168,15 +176,15 @@ const DesktopNavBar: React.FC = () => {
               }}
             >
               <div className="w-12 h-12 flex items-center justify-center shrink-0">
-                {isActive ? (
+                {isActive && ((item as { customIcon?: string }).customIcon || item.activeIcon) ? (
                   <Image
                     src={(item as { customIcon?: string }).customIcon || item.activeIcon}
                     alt={item.label}
                     width={22}
                     height={22}
                     className={`transition-all duration-300 ${((item as { customIcon?: string }).customIcon || item.activeIcon).endsWith('.svg')
-                        ? 'brightness-0 invert'
-                        : ''
+                      ? 'brightness-0 invert'
+                      : ''
                       }`}
                   />
                 ) : (
@@ -402,15 +410,15 @@ const MobileNavBar: React.FC = () => {
                     }
                                     `}
                 >
-                  {isActive ? (
+                  {isActive && ((item as { customIcon?: string }).customIcon || item.activeIcon) ? (
                     <Image
                       src={(item as { customIcon?: string }).customIcon || item.activeIcon}
                       alt={item.label}
                       width={24}
                       height={24}
                       className={`transition-all duration-300 ${((item as { customIcon?: string }).customIcon || item.activeIcon).endsWith('.svg')
-                          ? 'brightness-0 invert'
-                          : ''
+                        ? 'brightness-0 invert'
+                        : ''
                         }`}
                     />
                   ) : (

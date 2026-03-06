@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { Calendar, Code, Trophy, Users, Lightbulb, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'next-view-transitions';
 import JumpingText from '@/components/JumpingText';
 
 interface TimelineEvent {
@@ -15,6 +16,10 @@ interface TimelineEvent {
         url: string;
         text: string;
         filename: string;
+    };
+    navLink?: {
+        href: string;
+        text: string;
     };
 }
 
@@ -49,6 +54,10 @@ const timelineEvents: TimelineEvent[] = [
         description: 'Selected teams will be notified via email.',
         icon: <CheckCircle className="w-6 h-6" />,
         type: 'milestone',
+        navLink: {
+            href: '/finalists',
+            text: 'View Shortlisted Teams',
+        },
     },
     {
         date: 'March 14, 2026',
@@ -152,6 +161,17 @@ function TimelineItem({
                             </svg>
                             {event.downloadLink.text}
                         </a>
+                    )}
+
+                    {/* Nav Link if available */}
+                    {event.navLink && (
+                        <Link
+                            href={event.navLink.href}
+                            className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-[#005CAA] text-white font-semibold rounded-lg hover:bg-[#003366] transition-all duration-300 text-sm"
+                        >
+                            <ArrowRight className="w-4 h-4" />
+                            {event.navLink.text}
+                        </Link>
                     )}
 
                     {/* Type indicator */}
